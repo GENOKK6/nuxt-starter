@@ -1,18 +1,13 @@
 <script setup>
+// Configuration globale de la page
 useHead({
-  htmlAttrs: { lang: "en-US" },
-  title: "Nuxt Starter",
-  meta: [
-    {
-      name: "description",
-      content:
-        "Nuxt Starter is a minimal template created for quick landing pages, built with Nuxt and Tailwind CSS.",
-    },
-  ],
+  htmlAttrs: {
+    lang: 'fr'
+  },
   bodyAttrs: {
-    class: 'font-display'
+    class: 'font-sans antialiased'
   }
-});
+})
 </script>
 
 <template>

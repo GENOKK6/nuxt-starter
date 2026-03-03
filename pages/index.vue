@@ -1,36 +1,43 @@
 <script setup>
-import pageData from '@/data/index.json'
-const page = ref(pageData)
+// Configuration SEO
+useHead({
+  title: 'Gospel - Portfolio BTS SIO SLAM',
+  meta: [
+    {
+      name: 'description',
+      content: 'Portfolio de Gospel, étudiant en BTS SIO option SLAM. Développeur web spécialisé en Vue.js, PHP, et Python. Compétences, projets et veille technologique.'
+    },
+    {
+      name: 'keywords',
+      content: 'BTS SIO, SLAM, développeur web, portfolio, Vue.js, PHP, Python, alternance, stage, informatique'
+    },
+    {
+      property: 'og:title',
+      content: 'Gospel - Portfolio BTS SIO SLAM'
+    },
+    {
+      property: 'og:description',
+      content: 'Portfolio étudiant BTS SIO SLAM - Développement web, compétences techniques, projets et veille technologique'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    }
+  ]
+})
 
+// Définir le layout
 definePageMeta({
-  layout: "default",
-});
+  layout: 'default'
+})
 </script>
 
 <template>
-  <Container>
-    <Hero
-      :title="page.hero.title"
-      :description="page.hero.description"
-      :image="page.hero.image"
-      :imageAlt="page.hero.imageAlt"
-      :buttons="page.hero.buttons"
-    ></Hero>
-    <Logos :title="page.logos.title" :icons="page.logos.icons"></Logos>
-    <Features
-      :title="page.features.title"
-      :description="page.features.description"
-      :items="page.features.items"
-    ></Features>
-    <Testimonials
-      :title="page.testimonials.title"
-      :description="page.testimonials.description"
-      :items="page.testimonials.items"
-    ></Testimonials>
-    <Cta
-      :title="page.cta.title"
-      :description="page.cta.description"
-      :buttons="page.cta.buttons"
-    ></Cta>
-  </Container>
+  <!-- Toutes les sections sont directement appelées ici -->
+  <HeroSection />
+  <AboutSection />
+  <SkillsSection />
+  <ProjectsSection />
+  <WatchSection />
+  <ContactSection />
 </template>
