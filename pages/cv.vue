@@ -161,16 +161,13 @@ onMounted(() => {
           Compétences techniques
         </h2>
 
-        <div class="space-y-6">
-          <div v-for="category in skills" :key="category.name" class="pb-6 border-b border-gray-800 last:border-0">
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="font-semibold">{{ category.name }}</h3>
-              <span class="text-blue-400 font-mono font-bold">{{ category.level }}%</span>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-fill" :style="'width: ' + category.level + '%'"></div>
-            </div>
-            <p class="text-sm text-gray-400 mt-2">{{ category.description }}</p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div v-for="category in skills" :key="category.name" class="bg-apple-light-gray/30 p-5 rounded-2xl border border-gray-800 transition-all hover:border-blue-500/30">
+            <h3 class="font-bold text-white mb-2 flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              {{ category.name }}
+            </h3>
+            <p class="text-sm text-gray-400 leading-relaxed">{{ category.description }}</p>
           </div>
         </div>
       </div>

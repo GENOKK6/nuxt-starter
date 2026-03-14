@@ -242,10 +242,7 @@ onMounted(() => {
               </div>
             </form>
 
-            <p class="text-xs text-gray-500 mt-6 text-center">
-              ⚡ Ce formulaire est une simulation. En production, il faudrait intégrer
-              un service d'envoi d'emails (SendGrid, Mailgun, ou SMTP).
-            </p>
+
           </div>
         </div>
       </div>
