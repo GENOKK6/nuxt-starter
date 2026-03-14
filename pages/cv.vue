@@ -13,6 +13,16 @@ definePageMeta({
   layout: 'simple'
 })
 
+const skillsData = [
+  { name: 'PHP, C#, SQL', level: 85, description: 'Bases solides en programmation backend et développement d\'applications.' },
+  { name: 'HTML / CSS', level: 90, description: 'Maîtrise du développement frontend responsive.' },
+  { name: 'SQL - Bases de données', level: 80, description: 'Conception et gestion de bases de données relationnelles.' },
+  { name: 'Réseaux et systèmes', level: 75, description: 'Notions fondamentales en infrastructure et réseaux.' },
+  { name: 'Outils informatiques professionnels', level: 88, description: 'Utilisation experte des outils de développement et de bureautique.' }
+]
+
+const skills = ref(skillsData)
+
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -37,7 +47,7 @@ onMounted(() => {
       <!-- Header -->
       <div class="mb-16 reveal-up text-center">
         <div class="mb-6">
-          <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-blue-600 to-purple-700 flex items-center justify-center text-5xl font-bold text-white mb-4">
+          <div class="w-32 h-32 mx-auto rounded-full bg-linear-to-br from-blue-600 to-purple-700 flex items-center justify-center text-5xl font-bold text-white mb-4">
             GK
           </div>
           <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full text-xs text-blue-400 mb-4">
@@ -339,24 +349,7 @@ onMounted(() => {
   </section>
 </template>
 
-<script>
-const skillsData = [
-  { name: 'PHP, C#, SQL', level: 85, description: 'Bases solides en programmation backend et développement d\'applications.' },
-  { name: 'HTML / CSS', level: 90, description: 'Maîtrise du développement frontend responsive.' },
-  { name: 'SQL - Bases de données', level: 80, description: 'Conception et gestion de bases de données relationnelles.' },
-  { name: 'Réseaux et systèmes', level: 75, description: 'Notions fondamentales en infrastructure et réseaux.' },
-  { name: 'Outils informatiques professionnels', level: 88, description: 'Utilisation experte des outils de développement et de bureautique.' }
-]
 
-export default {
-  setup() {
-    const skills = ref(skillsData)
-    return {
-      skills
-    }
-  }
-}
-</script>
 
 <style scoped>
 .info-box {

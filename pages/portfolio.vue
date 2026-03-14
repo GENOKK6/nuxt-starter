@@ -148,8 +148,8 @@ const projects = ref(projectsData)
         <div v-for="project in projects" :key="project.id" class="reveal-up" :style="{ animationDelay: project.id * 0.1 + 's' }">
           <div class="project-card">
             <!-- Project image -->
-            <div class="project-image aspect-[16/10]">
-              <div class="w-full h-full bg-gradient-to-br" :class="project.gradient"></div>
+            <div class="project-image aspect-16/10">
+              <div class="w-full h-full bg-linear-to-br" :class="project.gradient"></div>
               <div class="project-image-content">
                 <div class="mb-3">
                   <span class="badge">
@@ -179,7 +179,7 @@ const projects = ref(projectsData)
                 <h4 class="text-sm font-semibold mb-3 text-gray-300">Fonctionnalités clés</h4>
                 <ul class="space-y-2">
                   <li v-for="highlight in project.highlights" :key="highlight" class="flex items-center gap-2 text-sm text-gray-400">
-                    <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-4 h-4 text-green-500 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
                     </svg>
                     <span>{{ highlight }}</span>
