@@ -41,22 +41,40 @@ const submitForm = async () => {
   errorMessage.value = ''
   successMessage.value = ''
 
-  // Simulate form submission
-  setTimeout(() => {
+  try {
+    const formData = new FormData()
+    formData.append('form-name', 'contact')
+    formData.append('name', form.name)
+    formData.append('email', form.email)
+    formData.append('subject', form.subject)
+    formData.append('message', form.message)
+
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    })
+
+    if (response.ok) {
+      successMessage.value = '✓ Votre message a été envoyé avec succès ! Je vous répondrai par email très prochainement.'
+      // Reset form
+      form.name = ''
+      form.email = ''
+      form.subject = ''
+      form.message = ''
+    } else {
+      throw new Error('Erreur réseau')
+    }
+  } catch (error) {
+    errorMessage.value = "Une erreur est survenue lors de l'envoi. Veuillez réessayer ou m'écrire directement à gospel14@gmail.com."
+  } finally {
     isSubmitting.value = false
-    successMessage.value = '✓ Message envoyé avec succès ! (Ceci est une démo - aucun email réellement envoyé)'
-
-    // Reset form
-    form.name = ''
-    form.email = ''
-    form.subject = ''
-    form.message = ''
-
-    // Auto-hide success after 10s
+    // Auto-hide messages after 10s
     setTimeout(() => {
       successMessage.value = ''
+      errorMessage.value = ''
     }, 10000)
-  }, 2000)
+  }
 }
 
 const isValidEmail = (email) => {
@@ -174,12 +192,23 @@ onMounted(() => {
           <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 h-full">
             <h2 class="text-2xl font-semibold mb-6">Envoyez-moi un message</h2>
 
-            <form @submit.prevent="submitForm">
+            <form 
+              name="contact" 
+              method="POST" 
+              data-netlify="true" 
+              data-netlify-honeypot="bot-field"
+              @submit.prevent="submitForm"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p class="hidden">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+              </p>
               <div class="form-group">
                 <label class="form-label" for="name">Nom complet</label>
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   v-model="form.name"
                   required
                   class="form-input"
@@ -192,6 +221,7 @@ onMounted(() => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   v-model="form.email"
                   required
                   class="form-input"
@@ -204,6 +234,7 @@ onMounted(() => {
                 <input
                   type="text"
                   id="subject"
+                  name="subject"
                   v-model="form.subject"
                   required
                   class="form-input"
@@ -215,6 +246,7 @@ onMounted(() => {
                 <label class="form-label" for="message">Message</label>
                 <textarea
                   id="message"
+                  name="message"
                   v-model="form.message"
                   required
                   class="form-input"
