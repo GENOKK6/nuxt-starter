@@ -267,8 +267,5 @@ onMounted(() => {
   margin-bottom: 24px;
 }
 
-/* Ensure Alpine works */
-[x-data] {
-  /* Alpine will handle this */
-}
+
 </style>
