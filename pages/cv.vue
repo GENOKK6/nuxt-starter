@@ -154,13 +154,13 @@ onMounted(() => {
         <div class="space-y-6">
           <div v-for="category in skills" :key="category.name" class="pb-6 border-b border-gray-800 last:border-0">
             <div class="flex justify-between items-center mb-4">
-              <h3 class="font-semibold" x-text="category.name"></h3>
-              <span class="text-blue-400 font-mono font-bold" x-text="category.level + '%'"></span>
+              <h3 class="font-semibold">{{ category.name }}</h3>
+              <span class="text-blue-400 font-mono font-bold">{{ category.level }}%</span>
             </div>
             <div class="progress-bar">
               <div class="progress-fill" :style="'width: ' + category.level + '%'"></div>
             </div>
-            <p class="text-sm text-gray-400 mt-2" x-text="category.description"></p>
+            <p class="text-sm text-gray-400 mt-2">{{ category.description }}</p>
           </div>
         </div>
       </div>
