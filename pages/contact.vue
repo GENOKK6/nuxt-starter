@@ -42,17 +42,18 @@ const submitForm = async () => {
   successMessage.value = ''
 
   try {
-    const formData = new FormData()
-    formData.append('form-name', 'contact')
-    formData.append('name', form.name)
-    formData.append('email', form.email)
-    formData.append('subject', form.subject)
-    formData.append('message', form.message)
-
-    const response = await fetch('/', {
+    const response = await fetch('https://formspree.io/f/xaqpdnnr', {
       method: 'POST',
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString()
+      headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        subject: form.subject,
+        message: form.message
+      })
     })
 
     if (response.ok) {
@@ -193,16 +194,9 @@ onMounted(() => {
             <h2 class="text-2xl font-semibold mb-6">Envoyez-moi un message</h2>
 
             <form 
-              name="contact" 
-              method="POST" 
-              data-netlify="true" 
-              data-netlify-honeypot="bot-field"
               @submit.prevent="submitForm"
+              class="space-y-6"
             >
-              <input type="hidden" name="form-name" value="contact" />
-              <p class="hidden">
-                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-              </p>
               <div class="form-group">
                 <label class="form-label" for="name">Nom complet</label>
                 <input
