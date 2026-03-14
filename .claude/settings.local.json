@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(del Navbar.vue Hero.vue Container.vue Logos.vue Features.vue Testimonials.vue Cta.vue)",
+      "Bash(tree \"C:/Users/gospe/OneDrive/Dokumenty/PortFolio/nuxt-starter\" -I 'node_modules|.nuxt|.git' -L 3)",
+      "Bash(nuxt clean)",
+      "Bash(npm run dev)",
+      "Bash(dir .. /b)",
+      "Bash(dir /ad /b ..)",
+      "Bash(findstr /i portfolio)",
+      "Bash(Get-ChildItem -Path .. -Directory)",
+      "Bash(Where-Object { $_Name -match 'portfolio|PorteFolio' -i })",
+      "Bash(ls -d ../*/)",
+      "Bash(ls -d */)",
+      "Bash(test -f pages/certifications.vue)",
+      "Bash(powershell -Command \"Get-Content ''C:\\\\Users\\\\gospe\\\\OneDrive\\\\Dokumenty\\\\PortFolio\\\\nuxt-starter\\\\PorteFolio\\\\project-1.html'' | Select-Object -First 300\")",
+      "WebFetch(domain:)",
+      "Bash(powershell -Command \"Get-Content ''C:\\\\Users\\\\gospe\\\\OneDrive\\\\Dokumenty\\\\PortFolio\\\\nuxt-starter\\\\PorteFolio\\\\project-1.html'' -Raw | Select-String -Pattern ''<h1|</h1>|<p|<h2|</h2>|<ul>|<li>'' -AllMatches | ForEach-Object { $_Matches.Value } | Select-Object -First 50\")",
+      "Bash(powershell -Command \"Get-Content ''C:\\\\Users\\\\gospe\\\\OneDrive\\\\Dokumenty\\\\PortFolio\\\\nuxt-starter\\\\PorteFolio\\\\stage-2024.html'' -Raw | Select-String -Pattern ''<h1|</h1>|<p[^>]*>|</p>|<h2|</h2>|<ul>|<li>'' | Select-Object -First 80\")",
+      "Bash(timeout 10)",
+      "Bash(more \"%TEMP%\\\\claude\\\\C--Users-gospe-OneDrive-Dokumenty-PortFolio-nuxt-starter\\\\tasks\\\\b600a66.output\")",
+      "Bash(findstr /i \"error\\\\|warn\")",
+      "Bash(tasklist)",
+      "Bash(findstr /i \"node\")",
+      "Bash(curl -s http://localhost:3001)"
+    ]
+  }
+}

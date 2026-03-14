@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(del Navbar.vue Hero.vue Container.vue Logos.vue Features.vue Testimonials.vue Cta.vue)",
+      "Bash(tree \"C:/Users/gospe/OneDrive/Dokumenty/PortFolio/nuxt-starter\" -I 'node_modules|.nuxt|.git' -L 3)",
+      "Bash(nuxt clean)"
+    ]
+  }
+}
