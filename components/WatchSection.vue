@@ -76,12 +76,12 @@ const getTagColor = (index) => {
         <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           Une compétence essentielle en informatique : je me tiens informé des nouvelles technologies et tendances du secteur
         </p>
-        <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-4"></div>
+        <div class="w-20 h-1 bg-linear-to-r from-blue-600 to-purple-600 mx-auto mt-4"></div>
       </div>
 
       <!-- Section Thème actuel -->
       <div class="mb-16">
-        <div class="bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-800 rounded-2xl p-8 border border-blue-100 dark:border-gray-700 shadow-lg">
+        <div class="bg-linear-to-r from-blue-50 via-purple-50 to-pink-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-800 rounded-2xl p-8 border border-blue-100 dark:border-gray-700 shadow-lg">
           <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div class="flex-1">
               <span class="inline-block px-4 py-1 bg-blue-600 text-white text-sm font-bold rounded-full mb-4">
@@ -171,7 +171,7 @@ const getTagColor = (index) => {
       </div>
 
       <!-- Section Méthodologie -->
-      <div class="bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-800 dark:to-gray-800 rounded-2xl p-8 border border-green-100 dark:border-gray-700">
+      <div class="bg-linear-to-br from-green-50 to-blue-50 dark:from-gray-800 dark:to-gray-800 rounded-2xl p-8 border border-green-100 dark:border-gray-700">
         <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <span class="text-green-600 dark:text-green-400">🔄</span>
           Ma méthodologie de veille
@@ -223,17 +223,17 @@ const getTagColor = (index) => {
       <!-- Appel à l'action -->
       <div class="mt-12 text-center">
         <p class="text-gray-700 dark:text-gray-300 mb-4">
-          La veille technologique est une activité continue qui me permet de rester à jour dans un domaine en constante évolution.
+          La veille technologique est une activité continue qui me permet de rester à jour.
         </p>
-        <a
-          href="#contact"
-          class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+        <NuxtLink
+          to="/veille"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-linear-to-r from-blue-600 to-purple-600 text-white font-bold rounded-xl hover:scale-105 transition-all duration-300 shadow-xl"
         >
+          Découvrir ma veille complète
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
-          Partager votre propre veille
-        </a>
+        </NuxtLink>
       </div>
     </div>
   </section>
