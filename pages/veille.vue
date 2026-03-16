@@ -37,24 +37,93 @@ const tools = [
   }
 ]
 
-const pillars = [
+const recentArticles = [
+  {
+    title: 'Lancement du Model Context Protocol (MCP)',
+    source: 'Anthropic',
+    date: 'Nov 2025',
+    link: 'https://www.blogdumoderateur.com/model-context-protocol-mcp/',
+    tags: ['Standard', 'Infrastructure'],
+    summary: 'Le point de départ : unifier l\'accès aux données pour toutes les IA.'
+  },
+  {
+    title: 'Introducing Cowork: Claude for the rest of your work',
+    source: 'Anthropic',
+    date: '12 Jan 2026',
+    link: 'https://claude.com/blog/cowork-research-preview',
+    tags: ['Productivité', 'Agents'],
+    summary: 'Anthropic étend ses capacités d\'agent au-delà du code pour toutes les tâches pro.'
+  },
+  {
+    title: 'Introducing Claude Sonnet 4.6',
+    source: 'Anthropic',
+    date: '17 Fév 2026',
+    link: 'https://www.anthropic.com/news/claude-sonnet-4-6',
+    tags: ['Modèles', 'Performance'],
+    summary: 'Saut qualitatif majeur dans le raisonnement et la fenêtre de contexte de 1M tokens.'
+  },
+  {
+    title: 'OpenAI déploie GPT-5.4 Thinking',
+    source: 'OpenAI',
+    date: '05 Mars 2026',
+    link: 'https://openai.com/index/introducing-gpt-5-4/',
+    tags: ['Modèles', 'Agentic'],
+    summary: 'Capacités de pilotage OS natives : l\'IA manipule l\'ordinateur comme un humain.'
+  },
+  {
+    title: 'Codex Security: now in research preview',
+    source: 'OpenAI',
+    date: '06 Mars 2026',
+    link: 'https://openai.com/index/codex-security-now-in-research-preview/',
+    tags: ['Sécurité', 'Audit'],
+    summary: 'L\'IA s\'attaque à la détection proactive des failles dans le code source.'
+  },
+  {
+    title: 'The era of "AI as text" is over',
+    source: 'GitHub Blog',
+    date: '10 Mars 2026',
+    link: 'https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/',
+    tags: ['Majeur', 'Vision'],
+    summary: 'GitHub annonce que l\'interface de demain n\'est plus le texte, mais l\'exécution.'
+  },
+  {
+    title: 'Copilot Cowork : Microsoft intègre Anthropic',
+    source: 'BDM',
+    date: '10 Mars 2026',
+    link: 'https://www.blogdumoderateur.com/copilot-cowork-microsoft-integre-technologie-anthropic-deleguer-taches-microsoft-365/',
+    tags: ['Entreprise', 'Synergie'],
+    summary: 'Alliance stratégique pour porter les agents dans la suite Office 365.'
+  },
+  {
+    title: 'Code Review : Claude inspecte vos Pull Requests',
+    source: 'BDM',
+    date: '12 Mars 2026',
+    link: 'https://www.blogdumoderateur.com/claude-code-review-deploie-agents-ia-inspecter-pull-requests/',
+    tags: ['Qualité', 'Automation'],
+    summary: 'Déploiement d\'agents autonomes pour la revue de code sur GitHub.'
+  },
+  {
+    title: 'Gemini CLI : Google déploie le "Plan Mode"',
+    source: 'Google / BDM',
+    date: '15 Mars 2026',
+    link: 'https://www.blogdumoderateur.com/gemini-cli-google-deploie-plan-mode/',
+    tags: ['Outil', 'Architecture'],
+    summary: 'Sécurisation des modifications critiques via une étape de planification IA.'
+  }
+]
+
+const externalSources = [
   { 
-    title: 'Fiabilité', 
-    desc: 'La source fait-elle autorité ? (Blogs officiels, experts reconnus).', 
-    icon: 'i-heroicons-shield-check',
-    color: 'bg-green-500/20 text-green-400'
+    title: 'The Diary Of A CEO', 
+    desc: 'Podcast Strategy & Vision',
+    icon: 'i-heroicons-microphone',
+    info: 'Essentiel pour comprendre la vision business et les enjeux de société derrière l\'IA.'
   },
   { 
-    title: 'Actualité', 
-    desc: 'L\'information est-elle récente ? (Utile pour l\'IA qui évolue chaque semaine).', 
-    icon: 'i-heroicons-clock',
-    color: 'bg-blue-500/20 text-blue-400'
-  },
-  { 
-    title: 'Pertinence', 
-    desc: 'Est-ce vraiment utile pour mon projet ou ma carrière de dev ?', 
-    icon: 'i-heroicons-light-bulb',
-    color: 'bg-amber-500/20 text-amber-400'
+    title: 'YouTube Technique', 
+    desc: 'Démos & Architecture des Agents',
+    icon: 'i-heroicons-video-camera',
+    info: 'Vidéos de démonstration technique pour valider les annonces et comprendre le Computer Use.'
   }
 ]
 
@@ -83,12 +152,6 @@ const impacts = [
     risks: 'Flous juridiques sur la propriété intellectuelle et risques de fuites de données sensibles.', 
     icon: 'i-heroicons-scale' 
   }
-]
-
-const sources = [
-  { title: 'Podcasts Entrepreneurs', desc: 'Écouter les fondateurs parler de l\'arrivée de Claude Work ou GitHub Agent.' },
-  { title: 'YouTube Spécialisé', desc: 'Vidéos de démonstration technique pour valider les annonces marketing.' },
-  { title: 'Blogs d\'Ingénierie', desc: 'Les sources primaires comme OpenAI, Anthropic ou GitHub Blog.' }
 ]
 
 onMounted(() => {
@@ -142,17 +205,19 @@ onMounted(() => {
               </p>
             </div>
           </div>
-          <div class="w-full md:w-1/3 p-8 bg-white/5 border border-white/10 rounded-3xl text-center">
+          <div class="w-full md:w-1/3 p-8 bg-white/5 border border-white/10 rounded-3xl text-center shadow-2xl relative overflow-hidden group">
+            <div class="absolute inset-0 bg-linear-to-br from-blue-500/10 to-transparent"></div>
             <div class="text-5xl mb-4">🔍</div>
-            <p class="text-sm italic text-white/60">"Observer pour ne pas être dépassé."</p>
+            <p class="text-sm italic text-white/60 font-medium">"Observer pour ne pas être dépassé."</p>
           </div>
         </div>
       </section>
 
-      <!-- Section Outils (Le COMMENT) -->
+      <!-- Section Stratégie (Outils) -->
       <section class="mb-32">
-        <h2 class="text-section apple-heading text-white text-center mb-16 reveal-up">Mes outils de collecte</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <h2 class="text-section apple-heading text-white text-center mb-16 reveal-up">Ma Stratégie de Collecte</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div v-for="tool in tools" :key="tool.name" class="stat-card p-8 reveal-up">
             <div class="mb-6 inline-flex p-3 rounded-2xl bg-white/5">
               <UIcon :name="tool.icon" class="w-8 h-8" :class="tool.color" />
@@ -161,89 +226,165 @@ onMounted(() => {
             <p class="text-sm text-white/50 leading-relaxed">{{ tool.description }}</p>
           </div>
         </div>
-      </section>
 
-      <!-- Section Choix Critiques (Honnêteté) -->
-      <section class="mb-32 reveal-up">
-        <div class="bg-red-500/5 border border-red-500/20 rounded-4xl p-10 md:p-16">
+        <!-- Pourquoi PAS ? -->
+        <div class="bg-red-500/5 border border-red-500/20 rounded-4xl p-10 md:p-16 mb-16 reveal-up">
           <h2 class="text-2xl font-bold text-white mb-8 apple-heading">Ce que j'ai écarté (et pourquoi)</h2>
           <div class="grid md:grid-cols-2 gap-12">
             <div class="space-y-4">
-              <h3 class="text-xl font-bold text-red-400">❌ Réseaux & Newsletters</h3>
-              <p class="apple-body italic">
-                "Je voulais m'éloigner de l'addiction aux réseaux sociaux. De plus, on y rouve énormément d'articles 'bidons' ou créés par des IA pour faire du clic."
+              <h3 class="text-xl font-bold text-red-500 flex items-center gap-2">
+                <UIcon name="i-heroicons-x-circle" class="w-6 h-6" />
+                Réseaux & Newsletters
+              </h3>
+              <p class="apple-body italic text-white/60">
+                "Je voulais m'éloigner de l'addiction aux réseaux sociaux. De plus, on y trouve énormément d'articles 'bidons' ou créés par des IA pour faire du clic sans réelle valeur technique."
               </p>
             </div>
             <div class="space-y-4">
-              <h3 class="text-xl font-bold text-red-400">⚠️ Google Alerts</h3>
-              <p class="apple-body italic">
-                "Trop de bruit. J'ai reçu beaucoup de liens peu intéressants ou hors-sujet. J'ai préféré la précision de Gemini Pro."
+              <h3 class="text-xl font-bold text-red-500 flex items-center gap-2">
+                <UIcon name="i-heroicons-exclamation-triangle" class="w-6 h-6" />
+                Google Alerts
+              </h3>
+              <p class="apple-body italic text-white/60">
+                "Trop de bruit. J'ai reçu beaucoup de liens peu intéressants ou hors-sujet. J'ai préféré la précision de Gemini Pro et Anthropic pour filtrer les vrais signaux."
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Mes Trois Piliers -->
+      <!-- Section Synthèse & Organisation (Captures) -->
       <section class="mb-32">
         <div class="text-center mb-16 reveal-up">
-          <h2 class="text-section apple-heading text-white mb-4">Mes trois piliers de sélection</h2>
-          <p class="apple-body">Pourquoi je choisis un article plutôt qu'un autre ?</p>
+          <h2 class="text-section apple-heading text-white mb-4">Synthèse & Organisation</h2>
+          <p class="apple-body">Visualisation de mes murs de veille et outils de tri.</p>
         </div>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div v-for="pillar in pillars" :key="pillar.title" class="p-10 rounded-4xl bg-white/5 border border-white/5 hover:border-white/20 transition-all text-center reveal-up">
-            <div :class="['w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto', pillar.color]">
-              <UIcon :name="pillar.icon" class="w-8 h-8" />
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Gemini -->
+          <div class="reveal-up group">
+             <div class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-blue-500/50 transition-colors">
+                <UIcon name="i-heroicons-sparkles" class="w-12 h-12 text-blue-500/20 mb-2 transition-transform group-hover:scale-110" />
+                <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black to-transparent">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-white/40">Tri Intelligent (Gemini)</p>
+                </div>
+             </div>
+          </div>
+          <!-- Padlet -->
+          <div class="reveal-up group">
+             <div class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-pink-500/50 transition-colors">
+                <UIcon name="i-heroicons-rectangle-group" class="w-12 h-12 text-pink-500/20 mb-2 transition-transform group-hover:scale-110" />
+                <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black to-transparent">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-white/40">Mur Mural (Padlet)</p>
+                </div>
+             </div>
+          </div>
+          <!-- Feedly 1 -->
+          <div class="reveal-up group">
+             <div class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-orange-500/50 transition-colors">
+                <NuxtImg src="/veille_feedly_placeholder_1773605979200.png" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity" />
+                <UIcon name="i-heroicons-rss" class="w-12 h-12 text-orange-500/20 mb-2 transition-transform group-hover:scale-110" />
+                <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black to-transparent">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-white/40">Flux Flux RSS (Feedly 1/2)</p>
+                </div>
+             </div>
+          </div>
+          <!-- Feedly 2 -->
+          <div class="reveal-up group">
+             <div class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-orange-500/50 transition-colors">
+                <NuxtImg src="/veille_feedly_placeholder_1773605979200.png" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity" />
+                <UIcon name="i-heroicons-list-bullet" class="w-12 h-12 text-orange-500/20 mb-2 transition-transform group-hover:scale-110" />
+                <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black to-transparent">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-white/40">Organisation Hebdo (Feedly 2/2)</p>
+                </div>
+             </div>
+          </div>
+          <!-- Podcast Thumbnail -->
+          <div class="reveal-up group">
+             <div class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-blue-400/50 transition-colors">
+                <NuxtImg src="/veille_podcast_placeholder_1773605995255.png" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity" />
+                <UIcon name="i-heroicons-microphone" class="w-12 h-12 text-blue-400/20 mb-2 transition-transform group-hover:scale-110" />
+                <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black to-transparent">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-white/40">Podcast (Diary of a CEO)</p>
+                </div>
+             </div>
+          </div>
+          <!-- CTA Padlet -->
+          <div class="reveal-up">
+            <a href="https://padlet.com/gospelkizamba/veille-ia-bts-sio-2026" target="_blank" class="w-full h-full flex flex-col items-center justify-center p-8 bg-white/5 border border-white/10 rounded-3xl hover:bg-white/10 transition-colors group">
+              <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-10 h-10 text-white mb-4 transition-transform group-hover:scale-110 group-hover:rotate-12" />
+              <p class="text-sm font-bold text-white text-center">Accéder au Padlet complet</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Timeline d\'Articles -->
+      <section class="mb-32 relative">
+        <div class="text-center mb-16 reveal-up">
+          <h2 class="text-section apple-heading text-white mb-4">L\'Évolution du Signal</h2>
+          <p class="apple-body">Chronologie de ma veille : du standard MCP aux agents autonomes.</p>
+        </div>
+        
+        <!-- Timeline Line -->
+        <div class="absolute left-1/2 top-[180px] bottom-0 w-px bg-linear-to-b from-blue-500 via-purple-500 to-transparent -translate-x-1/2 hidden lg:block"></div>
+
+        <div class="space-y-12 lg:space-y-24 relative">
+          <div v-for="(article, index) in recentArticles" :key="article.title" :class="[
+            'timeline-item relative flex flex-col lg:flex-row items-center gap-8 w-full group',
+            index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+          ]">
+            <!-- Content Card -->
+            <div class="w-full lg:w-[45%]">
+              <div :class="[
+                'stat-card p-8 group-hover:border-blue-500/30 transition-all duration-500 reveal-up',
+                index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'
+              ]">
+                <div :class="['flex items-center gap-2 mb-4 text-[10px] font-bold uppercase tracking-widest text-blue-400', index % 2 === 0 ? 'lg:justify-end' : 'justify-start']">
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full">{{ article.date }}</span>
+                  <span class="text-white/30">•</span>
+                  <span class="italic text-white/40">{{ article.source }}</span>
+                </div>
+                
+                <h3 class="text-xl font-bold text-white mb-4 leading-tight group-hover:text-blue-400 transition-colors">{{ article.title }}</h3>
+                <p class="text-sm text-white/50 mb-6 leading-relaxed">{{ article.summary }}</p>
+                
+                <div :class="['flex flex-wrap gap-2 mb-8', index % 2 === 0 ? 'lg:justify-end' : 'justify-start']">
+                   <span v-for="tag in article.tags" :key="tag" class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-bold uppercase tracking-widest text-white/30">
+                      {{ tag }}
+                   </span>
+                </div>
+
+                <div :class="['flex', index % 2 === 0 ? 'lg:justify-end' : 'justify-start']">
+                  <a :href="article.link" target="_blank" class="flex items-center gap-2 text-[10px] font-bold tracking-widest uppercase text-white hover:text-blue-400 transition-colors group/link">
+                    Lire l'article
+                    <UIcon name="i-heroicons-arrow-up-right" class="w-4 h-4 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1" />
+                  </a>
+                </div>
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-4">{{ pillar.title }}</h3>
-            <p class="text-sm text-white/60 leading-relaxed">{{ pillar.desc }}</p>
+
+            <!-- Central Point -->
+            <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center justify-center">
+              <div class="w-4 h-4 rounded-full bg-apple-dark border-2 border-blue-500 group-hover:scale-150 group-hover:bg-blue-500 transition-all duration-300 z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
+            </div>
+
+            <!-- Spacer for the other side -->
+            <div class="hidden lg:block lg:w-[45%]"></div>
           </div>
         </div>
       </section>
 
-      <!-- Espace Captures d'écran -->
-      <section class="mb-32">
-        <h2 class="text-section apple-heading text-white text-center mb-12 reveal-up">Démonstration visuelle</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Capture 1 -->
-          <div class="reveal-up">
-             <div class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center group overflow-hidden relative shadow-2xl">
-                <div class="z-10 text-center">
-                   <UIcon name="i-heroicons-camera" class="w-10 h-10 text-white/20 mb-2 mx-auto" />
-                   <p class="text-xs uppercase tracking-widest text-white/40">Capture : Mon Mur Padlet</p>
-                </div>
-                <div class="absolute inset-0 bg-linear-to-tr from-pink-500/5 to-transparent"></div>
-             </div>
-             <p class="mt-4 text-sm text-center text-white/50">Mon mur Padlet où j'organise mes articles essentiels.</p>
-          </div>
-          <!-- Capture 2 -->
-          <div class="reveal-up">
-             <div class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center group overflow-hidden relative shadow-2xl">
-                <div class="z-10 text-center">
-                   <UIcon name="i-heroicons-sparkles" class="w-10 h-10 text-white/20 mb-2 mx-auto" />
-                   <p class="text-xs uppercase tracking-widest text-white/40">Capture : Tri avec Gemini</p>
-                </div>
-                <div class="absolute inset-0 bg-linear-to-tr from-blue-500/5 to-transparent"></div>
-             </div>
-             <p class="mt-4 text-sm text-center text-white/50">Exemple de tri intelligent avec Gemini Pro.</p>
-          </div>
-        </div>
-        <div class="mt-12 text-center reveal-up">
-          <a href="https://padlet.com" target="_blank" class="btn-primary inline-flex items-center gap-3">
-            <UIcon name="i-heroicons-link" class="w-5 h-5" />
-            Accéder à mon Padlet Public
-          </a>
-        </div>
-      </section>
-
-      <!-- Impact & Synthèse -->
+      <!-- Impact & Synthèse (Double Face) -->
       <section class="mb-32 reveal-up">
-        <div class="bg-linear-to-br from-blue-600 to-purple-800 rounded-[3rem] p-12 md:p-20 text-white">
-          <h2 class="text-3xl font-bold mb-8 apple-heading">L'impact de l'IA aujourd'hui</h2>
+        <div class="bg-linear-to-br from-blue-600 to-purple-800 rounded-[3rem] p-12 md:p-16 text-white shadow-2xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[120px]"></div>
+          <h2 class="text-3xl font-bold mb-12 apple-heading text-center">Vision Critique des Impacts</h2>
+          
           <div class="grid lg:grid-cols-2 gap-8">
-            <div v-for="impact in impacts" :key="impact.title" class="p-8 md:p-10 rounded-[2.5rem] bg-white/5 backdrop-blur-md border border-white/10 hover:border-white/20 transition-all">
-              <div class="flex items-center gap-4 mb-8">
-                <div class="p-3 bg-white/10 rounded-2xl">
+            <div v-for="impact in impacts" :key="impact.title" class="p-8 md:p-10 rounded-[2.5rem] bg-white/5 backdrop-blur-md border border-white/10 hover:border-white/20 transition-all group">
+              <div class="flex items-center gap-4 mb-10">
+                <div class="p-3 bg-white/10 rounded-2xl group-hover:scale-110 transition-transform">
                   <UIcon :name="impact.icon" class="w-8 h-8 text-white" />
                 </div>
                 <h3 class="text-2xl font-bold apple-heading">{{ impact.title }}</h3>
@@ -251,20 +392,20 @@ onMounted(() => {
               
               <div class="space-y-6">
                 <!-- Bénéfices -->
-                <div class="flex gap-4 p-4 rounded-2xl bg-green-500/10 border border-green-500/20">
+                <div class="flex gap-4 p-5 rounded-2xl bg-green-500/10 border border-green-500/20">
                   <UIcon name="i-heroicons-check-circle" class="w-6 h-6 text-green-400 shrink-0" />
                   <div>
-                    <p class="text-xs font-bold uppercase tracking-widest text-green-400 mb-1">Bénéfices</p>
-                    <p class="text-white/80 text-sm leading-relaxed">{{ impact.benefits }}</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-green-400 mb-2">Opportunités</p>
+                    <p class="text-white/80 text-[15px] leading-relaxed">{{ impact.benefits }}</p>
                   </div>
                 </div>
 
                 <!-- Risques -->
-                <div class="flex gap-4 p-4 rounded-2xl bg-red-500/10 border border-red-500/20">
+                <div class="flex gap-4 p-5 rounded-2xl bg-red-500/10 border border-red-500/20">
                   <UIcon name="i-heroicons-exclamation-triangle" class="w-6 h-6 text-red-400 shrink-0" />
                   <div>
-                    <p class="text-xs font-bold uppercase tracking-widest text-red-400 mb-1">Risques & Limites</p>
-                    <p class="text-white/80 text-sm leading-relaxed">{{ impact.risks }}</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-red-400 mb-2">Risques & Limites</p>
+                    <p class="text-white/80 text-[15px] leading-relaxed">{{ impact.risks }}</p>
                   </div>
                 </div>
               </div>
@@ -273,21 +414,28 @@ onMounted(() => {
         </div>
       </section>
 
-      <!-- Conclusion & Avis -->
+      <!-- Conclusion Fin -->
       <section class="max-w-4xl mx-auto mb-32 reveal-up">
-        <div class="bg-white p-12 md:p-20 rounded-[3rem] text-black shadow-2xl">
-          <h2 class="text-4xl font-bold mb-8 apple-heading tracking-tight">Le métier demain ?</h2>
-          <div class="apple-body text-lg space-y-6 text-black/80 font-normal">
+        <div class="bg-white p-12 md:p-20 rounded-[3rem] text-black shadow-2xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 blur-[50px]"></div>
+          <h2 class="text-4xl font-bold mb-10 apple-heading tracking-tight">Le métier demain ?</h2>
+          <div class="apple-body text-xl space-y-8 text-black/80 font-normal">
             <p>
               Je suis convaincu que l'ingénieur de 2026 sera avant tout un <strong class="text-black font-bold">chef d'orchestre</strong>. Mais pour bien diriger cet orchestre numérique, il est vital de ne pas oublier le solfège : l'algorithmie et la logique pure.
             </p>
             <p>
-              L'IA doit rester un <strong class="text-black">amplificateur</strong> et non une béquille. Ma veille m'a appris que ma valeur ajoutée humaine résidera dans cet esprit critique : savoir quand faire confiance à la machine et quand reprendre la main pour garantir la sécurité et la pérennité de notre code.
+              L'IA doit rester un <strong class="text-black font-bold">amplificateur</strong> et non une béquille. Ma veille m'a appris que ma valeur ajoutée humaine résidera dans cet esprit critique : savoir quand faire confiance à la machine et quand reprendre la main pour garantir la sécurité et la pérennité de notre code.
             </p>
           </div>
-          <div class="mt-12 pt-8 border-t border-black/10 flex items-center justify-between">
-            <div class="text-sm font-bold tracking-widest uppercase italic">Gospel Kizamba</div>
-            <NuxtLink to="/contact" class="text-blue-600 font-bold hover:underline">Discutons-en →</NuxtLink>
+          <div class="mt-16 pt-10 border-t border-black/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-4">
+               <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold tracking-tighter">GK</div>
+               <div>
+                  <div class="text-sm font-bold uppercase tracking-widest">Gospel Kizamba</div>
+                  <div class="text-[10px] text-black/40 font-bold uppercase tracking-wider">Mise à jour : Mars 2026</div>
+               </div>
+            </div>
+            <NuxtLink to="/contact" class="px-8 py-3 bg-black text-white font-bold rounded-xl hover:scale-105 transition-transform">Me contacter</NuxtLink>
           </div>
         </div>
       </section>
@@ -304,14 +452,14 @@ onMounted(() => {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 2rem;
+  border-radius: 2.5rem;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .stat-card:hover {
   background: rgba(255, 255, 255, 0.06);
   transform: translateY(-8px);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(0, 122, 255, 0.3);
 }
 
 .gradient-text {
