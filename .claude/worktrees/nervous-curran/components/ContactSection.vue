@@ -193,7 +193,7 @@ const getSocialIcon = (iconName) => {
             <div v-if="submitMessage" :class="[
               'p-4 rounded-lg mb-6',
               submitStatus === 'success' ? 'bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-800 dark:text-green-200' :
-              'bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-800 dark:text-red-200'
+              'bg-red-50 dark:bg-amber-900/20 border border-red-200 dark:border-red-800 text-red-800 dark:text-red-200'
             ]">
               <div class="flex items-center gap-2 mb-1 font-semibold">
                 <svg v-if="submitStatus === 'success'" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -211,7 +211,7 @@ const getSocialIcon = (iconName) => {
               <div class="grid md:grid-cols-2 gap-6">
                 <div>
                   <label for="name" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Nom complet <span class="text-red-500">*</span>
+                    Nom complet <span class="text-amber-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -225,7 +225,7 @@ const getSocialIcon = (iconName) => {
 
                 <div>
                   <label for="email" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Email <span class="text-red-500">*</span>
+                    Email <span class="text-amber-500">*</span>
                   </label>
                   <input
                     type="email"
@@ -240,7 +240,7 @@ const getSocialIcon = (iconName) => {
 
               <div>
                 <label for="subject" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                  Sujet <span class="text-red-500">*</span>
+                  Sujet <span class="text-amber-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -254,7 +254,7 @@ const getSocialIcon = (iconName) => {
 
               <div>
                 <label for="message" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                  Message <span class="text-red-500">*</span>
+                  Message <span class="text-amber-500">*</span>
                 </label>
                 <textarea
                   id="message"

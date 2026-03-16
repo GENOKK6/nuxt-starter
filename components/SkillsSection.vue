@@ -3,7 +3,7 @@ const skillCategories = [
   {
     title: 'Front-end',
     icon: '💻',
-    color: 'blue',
+    color: 'amber',
     description: 'Création d\'interfaces web modernes et responsives',
     skills: [
       { name: 'HTML5', level: 90, status: 'Maîtrisé' },
@@ -17,7 +17,7 @@ const skillCategories = [
   {
     title: 'Back-end & BDD',
     icon: '⚙️',
-    color: 'purple',
+    color: 'orange',
     description: 'Développement côté serveur et gestion des données',
     skills: [
       { name: 'PHP / Laravel', level: 75, status: 'Compétent' },
@@ -45,34 +45,34 @@ const skillCategories = [
 
 const getColorClasses = (color) => {
   const colors = {
-    blue: {
-      bg: 'bg-blue-100 dark:bg-blue-900/30',
-      text: 'text-blue-600 dark:text-blue-400',
-      border: 'border-blue-200 dark:border-blue-700',
-      progress: 'bg-blue-600',
-      light: 'bg-blue-50 dark:bg-blue-900/50'
+    amber: {
+      bg: 'bg-amber-900/30',
+      text: 'text-amber-400',
+      border: 'border-amber-700',
+      progress: 'bg-amber-500',
+      light: 'bg-amber-900/50'
     },
-    purple: {
-      bg: 'bg-purple-100 dark:bg-purple-900/30',
-      text: 'text-purple-600 dark:text-purple-400',
-      border: 'border-purple-200 dark:border-purple-700',
-      progress: 'bg-purple-600',
-      light: 'bg-purple-50 dark:bg-purple-900/50'
+    orange: {
+      bg: 'bg-orange-900/30',
+      text: 'text-orange-400',
+      border: 'border-orange-700',
+      progress: 'bg-orange-500',
+      light: 'bg-orange-900/50'
     },
     green: {
-      bg: 'bg-green-100 dark:bg-green-900/30',
-      text: 'text-green-600 dark:text-green-400',
-      border: 'border-green-200 dark:border-green-700',
-      progress: 'bg-green-600',
-      light: 'bg-green-50 dark:bg-green-900/50'
+      bg: 'bg-green-900/30',
+      text: 'text-green-400',
+      border: 'border-green-700',
+      progress: 'bg-green-500',
+      light: 'bg-green-900/50'
     }
   }
-  return colors[color] || colors.blue
+  return colors[color] || colors.amber
 }
 </script>
 
 <template>
-  <section id="skills" class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+  <section id="skills" class="py-20 bg-black transition-colors duration-300">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -81,7 +81,7 @@ const getColorClasses = (color) => {
         <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           Compétences techniques acquises au cours de ma formation BTS SIO SLAM et de mes projets personnels
         </p>
-        <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-4"></div>
+        <div class="w-20 h-1 bg-linear-to-r from-amber-500 to-orange-600 mx-auto mt-4"></div>
       </div>
 
       <div class="grid lg:grid-cols-3 gap-8">
@@ -89,7 +89,7 @@ const getColorClasses = (color) => {
         <div
           v-for="category in skillCategories"
           :key="category.title"
-          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+          class="bg-gray-900 rounded-2xl p-6 shadow-lg border border-gray-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
         >
           <!-- Header de catégorie -->
           <div class="flex items-center gap-4 mb-6">
@@ -112,19 +112,19 @@ const getColorClasses = (color) => {
             <div v-for="skill in category.skills" :key="skill.name" class="space-y-2">
               <!-- Header avec nom et niveau -->
               <div class="flex justify-between items-center">
-                <span class="text-sm font-semibold text-gray-800 dark:text-gray-200">
+                <span class="text-sm font-semibold text-gray-200">
                   {{ skill.name }}
                 </span>
                 <span class="text-xs px-2 py-1 rounded-full"
                       :class="skill.status === 'Maîtrisé' ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' :
-                               skill.status === 'Compétent' ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400' :
+                               skill.status === 'Compétent' ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400' :
                                'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400'">
                   {{ skill.status }}
                 </span>
               </div>
 
               <!-- Barre de progression -->
-              <div class="w-full h-2.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+              <div class="w-full h-2.5 bg-gray-800 rounded-full overflow-hidden">
                 <div
                   class="h-full rounded-full transition-all duration-1000 ease-out"
                   :class="getColorClasses(category.color).progress"
@@ -140,9 +140,9 @@ const getColorClasses = (color) => {
           </div>
 
           <!-- Badge de maîtrise globale de la catégorie -->
-          <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+          <div class="mt-6 pt-4 border-t border-gray-800">
             <div class="flex items-center justify-between text-sm">
-              <span class="text-gray-600 dark:text-gray-400">Maîtrise moyenne</span>
+              <span class="text-gray-400">Maîtrise moyenne</span>
               <span class="font-bold"
                     :class="getColorClasses(category.color).text">
                 {{
@@ -157,31 +157,31 @@ const getColorClasses = (color) => {
       </div>
 
       <!-- Section certifications / extras -->
-      <div class="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-800 rounded-2xl p-8 border border-blue-100 dark:border-gray-700">
+      <div class="mt-16 bg-gray-900 rounded-2xl p-8 border border-gray-800">
         <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center gap-2">
-          <span class="text-blue-600 dark:text-blue-400">🎓</span>
+          <span class="text-amber-500">🎓</span>
           Certifications & Formations complémentaires
         </h3>
 
         <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-white dark:bg-gray-900 rounded-xl p-5 text-center shadow-md border border-gray-100 dark:border-gray-700">
-            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-3">
+          <div class="bg-gray-800 rounded-xl p-5 text-center shadow-md border border-gray-700">
+            <div class="w-12 h-12 bg-amber-900/30 rounded-full flex items-center justify-center mx-auto mb-3">
               <span class="text-xl">📜</span>
             </div>
             <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Certification Pix</h4>
             <p class="text-sm text-gray-600 dark:text-gray-400">Numérique - Niveau Expert</p>
           </div>
 
-          <div class="bg-white dark:bg-gray-900 rounded-xl p-5 text-center shadow-md border border-gray-100 dark:border-gray-700">
-            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-3">
+          <div class="bg-gray-800 rounded-xl p-5 text-center shadow-md border border-gray-700">
+            <div class="w-12 h-12 bg-orange-900/30 rounded-full flex items-center justify-center mx-auto mb-3">
               <span class="text-xl">📚</span>
             </div>
             <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Formation Git Avancé</h4>
             <p class="text-sm text-gray-600 dark:text-gray-400">Gestion de versions et workflows</p>
           </div>
 
-          <div class="bg-white dark:bg-gray-900 rounded-xl p-5 text-center shadow-md border border-gray-100 dark:border-gray-700">
-            <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-3">
+          <div class="bg-gray-800 rounded-xl p-5 text-center shadow-md border border-gray-700">
+            <div class="w-12 h-12 bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-3">
               <span class="text-xl">🌐</span>
             </div>
             <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Accessibilité Web</h4>

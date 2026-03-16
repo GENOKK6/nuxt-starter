@@ -130,7 +130,7 @@ onMounted(() => {
         <div class="space-y-4">
           <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
             <div class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-amber-500/20 flex items-center justify-center shrink-0">
                 <span class="text-2xl">🎯</span>
               </div>
               <div>
@@ -146,7 +146,7 @@ onMounted(() => {
 
           <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
             <div class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center shrink-0">
                 <span class="text-2xl">💻</span>
               </div>
               <div>
@@ -162,11 +162,11 @@ onMounted(() => {
 
           <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
             <div class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center shrink-0">
                 <span class="text-2xl">🔒</span>
               </div>
               <div>
-                <h3 class="font-semibold mb-2 text-green-400">Tests et sécurité</h3>
+                <h3 class="font-semibold mb-2 text-amber-400">Tests et sécurité</h3>
                 <p class="text-sm text-gray-400 leading-relaxed">
                   Mise en place de tests unitaires et d'intégration pour garantir la stabilité
                   des nouvelles fonctionnalités. Réalisation de tests de sécurité pour identifier
@@ -178,11 +178,11 @@ onMounted(() => {
 
           <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
             <div class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center shrink-0">
                 <span class="text-2xl">📦</span>
               </div>
               <div>
-                <h3 class="font-semibold mb-2 text-purple-400">Intégration et déploiement</h3>
+                <h3 class="font-semibold mb-2 text-amber-400">Intégration et déploiement</h3>
                 <p class="text-sm text-gray-400 leading-relaxed">
                   Configuration de l'environnement de développement, gestion des dépendances,
                   et préparation au déploiement sur les serveurs de production.
@@ -225,7 +225,7 @@ onMounted(() => {
           </div>
 
           <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
-            <h3 class="font-semibold mb-3 text-green-400">🛡️ L'importance de la sécurité</h3>
+            <h3 class="font-semibold mb-3 text-amber-400">🛡️ L'importance de la sécurité</h3>
             <p class="text-sm text-gray-400 leading-relaxed">
               Un projet qui cible des enfants doit être extrêmement sécurisé. J'ai appris
               à valider et sanitizer toutes les entrées, à protéger les API contre les
@@ -244,7 +244,7 @@ onMounted(() => {
           </div>
 
           <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
-            <h3 class="font-semibold mb-3 text-purple-400">🤖 L'IA en production</h3>
+            <h3 class="font-semibold mb-3 text-amber-400">🤖 L'IA en production</h3>
             <p class="text-sm text-gray-400 leading-relaxed">
               C'était ma première expérience concrète d'intégration d'une IA (LLM) dans
               une application réelle. J'ai compris les défis : latence, coûts d'API,
@@ -271,7 +271,7 @@ onMounted(() => {
           </div>
 
           <div class="bg-green-500/10 border border-green-500/30 p-6 rounded-2xl">
-            <h3 class="font-semibold mb-3 text-green-400">✅ Ma plus grande fierté</h3>
+            <h3 class="font-semibold mb-3 text-amber-400">✅ Ma plus grande fierté</h3>
             <p class="text-sm text-gray-400 leading-relaxed">
               Avoir réussi à <strong class="text-white">injecter une fonctionnalité complète d'interaction vocale</strong>
               qui fonctionne en temps réel. Voir la peluche répondre aux questions des enfants
@@ -286,7 +286,7 @@ onMounted(() => {
       <!-- Réflexion -->
       <div class="mb-16 reveal-up" style="animation-delay: 0.8s;">
         <h2 class="text-2xl font-semibold mb-6">Réflexion et outlook</h2>
-        <div class="bg-blue-500/10 border border-amber-500/30 p-8 rounded-2xl">
+        <div class="bg-amber-500/10 border border-amber-500/30 p-8 rounded-2xl">
           <p class="text-gray-400 leading-relaxed mb-6">
             Ce premier stage m'a confirmé que je voulais continuer dans le développement,
             mais surtout qu'<strong class="text-white">inclure l'IA dans des projets concrets</strong> était

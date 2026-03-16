@@ -97,7 +97,7 @@ const scrollToSection = (href) => {
           </p>
           <p class="text-gray-500 text-xs mt-1">
             Développé avec
-            <span class="text-red-500">♥</span>
+            <span class="text-amber-500">♥</span>
             en utilisant Nuxt 4, Vue 3 & Tailwind CSS
           </p>
         </div>

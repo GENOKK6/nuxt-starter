@@ -39,7 +39,7 @@ onMounted(() => {
       <div class="mb-16 reveal-up" style="animation-delay: 0.1s;">
         <div class="flex items-center gap-3 mb-4">
           <span class="badge">
-            <span class="w-2 h-2 rounded-full bg-red-500"></span>
+            <span class="w-2 h-2 rounded-full bg-amber-600"></span>
             .NET MAUI
           </span>
           <span class="text-gray-400 text-sm">2025</span>

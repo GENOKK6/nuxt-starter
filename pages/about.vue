@@ -149,7 +149,7 @@ onMounted(() => {
             </div>
 
             <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
-              <div class="w-12 h-12 bg-purple-900/30 rounded-2xl flex items-center justify-center mb-4">
+              <div class="w-12 h-12 bg-amber-900/30 rounded-2xl flex items-center justify-center mb-4">
                 <span class="text-xl">🚀</span>
               </div>
               <h3 class="font-semibold mb-2">Moyen terme</h3>
@@ -159,7 +159,7 @@ onMounted(() => {
             </div>
 
             <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
-              <div class="w-12 h-12 bg-green-900/30 rounded-2xl flex items-center justify-center mb-4">
+              <div class="w-12 h-12 bg-amber-900/30 rounded-2xl flex items-center justify-center mb-4">
                 <span class="text-xl">🌟</span>
               </div>
               <h3 class="font-semibold mb-2">Long terme</h3>
@@ -173,7 +173,7 @@ onMounted(() => {
 
       <!-- CV Link Section -->
       <div class="mt-20 reveal-up" style="animation-delay: 0.3s;">
-        <div class="bg-linear-to-r from-amber-900/20 to-red-900/20 p-10 rounded-3xl border border-white/10 text-center">
+        <div class="bg-linear-to-r from-amber-900/10 to-amber-900/20 p-10 rounded-3xl border border-white/10 text-center">
           <h2 class="text-2xl font-semibold mb-4 text-white">Consulter mon CV</h2>
           <p class="text-gray-400 mb-8 max-w-xl mx-auto">
             Pour une vue d'ensemble de mes compétences, de mon parcours académique 

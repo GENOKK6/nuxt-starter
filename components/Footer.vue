@@ -60,7 +60,7 @@ const footerLinks = [
               <NuxtLink
                 v-if="!link.external"
                 :to="link.path"
-                class="text-gray-400 hover:text-blue-400 transition-colors text-sm flex items-center gap-2 group"
+                class="text-gray-400 hover:text-amber-500 transition-colors text-sm flex items-center gap-2 group"
               >
                 <span class="group-hover:translate-x-1 transition-transform">→</span>
                 {{ link.name }}
@@ -70,7 +70,7 @@ const footerLinks = [
                 :href="link.href"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-gray-400 hover:text-blue-400 transition-colors text-sm flex items-center gap-2 group"
+                class="text-gray-400 hover:text-amber-500 transition-colors text-sm flex items-center gap-2 group"
               >
                 <span class="group-hover:translate-x-1 transition-transform">→</span>
                 {{ link.name }}
@@ -88,7 +88,7 @@ const footerLinks = [
 
       <!-- Bottom section -->
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <div style="text-align: center; md:text-left;">
+        <div class="text-center md:text-left">
           <p style="color: #9ca3af; font-size: 0.875rem;">
             © {{ currentYear }} Kizamba Gospel. Tous droits réservés.
           </p>

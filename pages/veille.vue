@@ -21,7 +21,7 @@ const tools = [
     name: 'Padlet', 
     icon: 'i-heroicons-rectangle-group', 
     description: 'Mon mur final : c\'est là que je "pose" mes articles essentiels une fois validés par mes critères de qualité.',
-    color: 'text-pink-500' 
+    color: 'text-amber-500' 
   },
   { 
     name: 'Feedly', 
@@ -207,7 +207,7 @@ onMounted(() => {
             </div>
           </div>
           <div class="w-full md:w-1/3 p-8 bg-white/5 border border-white/10 rounded-3xl text-center shadow-2xl relative overflow-hidden group">
-            <div class="absolute inset-0 bg-linear-to-br from-blue-500/10 to-transparent"></div>
+            <div class="absolute inset-0 bg-linear-to-br from-amber-500/10 to-transparent"></div>
             <div class="text-5xl mb-4">🔍</div>
             <p class="text-sm italic text-white/60 font-medium">"Observer pour ne pas être dépassé."</p>
           </div>
@@ -229,11 +229,11 @@ onMounted(() => {
         </div>
 
         <!-- Pourquoi PAS ? -->
-        <div class="bg-red-500/5 border border-red-500/20 rounded-4xl p-10 md:p-16 mb-16 reveal-up">
+        <div class="bg-amber-600/5 border border-red-500/20 rounded-4xl p-10 md:p-16 mb-16 reveal-up">
           <h2 class="text-2xl font-bold text-white mb-8 apple-heading">Ce que j'ai écarté (et pourquoi)</h2>
           <div class="grid md:grid-cols-2 gap-12">
             <div class="space-y-4">
-              <h3 class="text-xl font-bold text-red-500 flex items-center gap-2">
+              <h3 class="text-xl font-bold text-amber-500 flex items-center gap-2">
                 <UIcon name="i-heroicons-x-circle" class="w-6 h-6" />
                 Réseaux & Newsletters
               </h3>
@@ -242,7 +242,7 @@ onMounted(() => {
               </p>
             </div>
             <div class="space-y-4">
-              <h3 class="text-xl font-bold text-red-500 flex items-center gap-2">
+              <h3 class="text-xl font-bold text-amber-500 flex items-center gap-2">
                 <UIcon name="i-heroicons-exclamation-triangle" class="w-6 h-6" />
                 Google Alerts
               </h3>
@@ -273,9 +273,9 @@ onMounted(() => {
           </div>
           <!-- Padlet -->
           <div class="reveal-up group">
-             <a href="https://padlet.com/gospel14es/les-arcticles-et-blogs-qui-m-ont-aid-a-realis-ma-veille-tech-bbiqgev6tg4uqlvn" target="_blank" class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-pink-500/50 transition-colors">
+             <a href="https://padlet.com/gospel14es/les-arcticles-et-blogs-qui-m-ont-aid-a-realis-ma-veille-tech-bbiqgev6tg4uqlvn" target="_blank" class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-amber-500/50 transition-colors">
                 <NuxtImg src="/images/padlet.png" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-opacity" />
-                <UIcon name="i-heroicons-rectangle-group" class="w-12 h-12 text-pink-500/20 mb-2 transition-transform group-hover:scale-110" />
+                <UIcon name="i-heroicons-rectangle-group" class="w-12 h-12 text-amber-500/20 mb-2 transition-transform group-hover:scale-110" />
                 <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black to-transparent">
                   <p class="text-[10px] font-bold uppercase tracking-widest text-white/40">Mur Mural (Padlet)</p>
                 </div>
@@ -295,7 +295,7 @@ onMounted(() => {
           <div class="reveal-up group">
              <a href="https://youtu.be/s4p4ecvLKZ4?si=t8to2o-wfmixXY_A" target="_blank" class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-red-500/50 transition-colors">
                 <NuxtImg src="/images/sans_permission.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-opacity" />
-                <UIcon name="i-heroicons-microphone" class="w-12 h-12 text-red-500/20 mb-2 transition-transform group-hover:scale-110" />
+                <UIcon name="i-heroicons-microphone" class="w-12 h-12 text-amber-500/20 mb-2 transition-transform group-hover:scale-110" />
                 <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black to-transparent">
                   <p class="text-[10px] font-bold uppercase tracking-widest text-white/40">Podcast (Sans Permission)</p>
                 </div>
@@ -329,7 +329,7 @@ onMounted(() => {
         </div>
         
         <!-- Timeline Line -->
-        <div class="absolute left-1/2 top-[180px] bottom-0 w-px bg-linear-to-b from-blue-500 via-purple-500 to-transparent -translate-x-1/2 hidden lg:block"></div>
+        <div class="absolute left-1/2 top-[180px] bottom-0 w-px bg-linear-to-b from-amber-500 via-orange-500 to-transparent -translate-x-1/2 hidden lg:block"></div>
 
         <div class="space-y-12 lg:space-y-24 relative">
           <div v-for="(article, index) in recentArticles" :key="article.title" :class="[
@@ -368,7 +368,7 @@ onMounted(() => {
 
             <!-- Central Point -->
             <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center justify-center">
-              <div class="w-4 h-4 rounded-full bg-apple-dark border-2 border-amber-500 group-hover:scale-150 group-hover:bg-blue-500 transition-all duration-300 z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
+              <div class="w-4 h-4 rounded-full bg-apple-dark border-2 border-amber-500 group-hover:scale-150 group-hover:bg-amber-500 transition-all duration-300 z-10 shadow-[0_0_15px_rgba(255,215,0,0.5)]"></div>
             </div>
 
             <!-- Spacer for the other side -->
@@ -379,7 +379,7 @@ onMounted(() => {
 
       <!-- Impact & Synthèse (Double Face) -->
       <section class="mb-32 reveal-up">
-        <div class="bg-linear-to-br from-blue-600 to-purple-800 rounded-[3rem] p-12 md:p-16 text-white shadow-2xl relative overflow-hidden">
+        <div class="bg-linear-to-br from-amber-600 to-orange-800 rounded-[3rem] p-12 md:p-16 text-white shadow-2xl relative overflow-hidden">
           <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[120px]"></div>
           <h2 class="text-3xl font-bold mb-12 apple-heading text-center">Vision Critique des Impacts</h2>
           
@@ -395,15 +395,15 @@ onMounted(() => {
               <div class="space-y-6">
                 <!-- Bénéfices -->
                 <div class="flex gap-4 p-5 rounded-2xl bg-green-500/10 border border-green-500/20">
-                  <UIcon name="i-heroicons-check-circle" class="w-6 h-6 text-green-400 shrink-0" />
+                  <UIcon name="i-heroicons-check-circle" class="w-6 h-6 text-amber-400 shrink-0" />
                   <div>
-                    <p class="text-[10px] font-bold uppercase tracking-widest text-green-400 mb-2">Opportunités</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-2">Opportunités</p>
                     <p class="text-white/80 text-[15px] leading-relaxed">{{ impact.benefits }}</p>
                   </div>
                 </div>
 
                 <!-- Risques -->
-                <div class="flex gap-4 p-5 rounded-2xl bg-red-500/10 border border-red-500/20">
+                <div class="flex gap-4 p-5 rounded-2xl bg-amber-600/10 border border-red-500/20">
                   <UIcon name="i-heroicons-exclamation-triangle" class="w-6 h-6 text-red-400 shrink-0" />
                   <div>
                     <p class="text-[10px] font-bold uppercase tracking-widest text-red-400 mb-2">Risques & Limites</p>
@@ -418,26 +418,26 @@ onMounted(() => {
 
       <!-- Conclusion Fin -->
       <section class="max-w-4xl mx-auto mb-32 reveal-up">
-        <div class="bg-white p-12 md:p-20 rounded-[3rem] text-black shadow-2xl relative overflow-hidden">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 blur-[50px]"></div>
+        <div class="bg-gray-900 p-12 md:p-20 rounded-[3rem] text-white shadow-2xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 blur-[50px]"></div>
           <h2 class="text-4xl font-bold mb-10 apple-heading tracking-tight">Le métier demain ?</h2>
-          <div class="apple-body text-xl space-y-8 text-black/80 font-normal">
+          <div class="apple-body text-xl space-y-8 text-white/80 font-normal">
             <p>
-              Je suis convaincu que l'ingénieur de 2026 sera avant tout un <strong class="text-black font-bold">chef d'orchestre</strong>. Mais pour bien diriger cet orchestre numérique, il est vital de ne pas oublier le solfège : l'algorithmie et la logique pure.
+              Je suis convaincu que l'ingénieur de 2026 sera avant tout un <strong class="text-white font-bold">chef d'orchestre</strong>. Mais pour bien diriger cet orchestre numérique, il est vital de ne pas oublier le solfège : l'algorithmie et la logique pure.
             </p>
             <p>
-              L'IA doit rester un <strong class="text-black font-bold">amplificateur</strong> et non une béquille. Ma veille m'a appris que ma valeur ajoutée humaine résidera dans cet esprit critique : savoir quand faire confiance à la machine et quand reprendre la main pour garantir la sécurité et la pérennité de notre code.
+              L'IA doit rester un <strong class="text-white font-bold">amplificateur</strong> et non une béquille. Ma veille m'a appris que ma valeur ajoutée humaine résidera dans cet esprit critique : savoir quand faire confiance à la machine et quand reprendre la main pour garantir la sécurité et la pérennité de notre code.
             </p>
           </div>
-          <div class="mt-16 pt-10 border-t border-black/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="mt-16 pt-10 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div class="flex items-center gap-4">
                <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold tracking-tighter">GK</div>
                <div>
                   <div class="text-sm font-bold uppercase tracking-widest">Gospel Kizamba</div>
-                  <div class="text-[10px] text-black/40 font-bold uppercase tracking-wider">Mise à jour : Mars 2026</div>
+                  <div class="text-[10px] text-white/40 font-bold uppercase tracking-wider">Mise à jour : Mars 2026</div>
                </div>
             </div>
-            <NuxtLink to="/contact" class="px-8 py-3 bg-black text-white font-bold rounded-xl hover:scale-105 transition-transform">Me contacter</NuxtLink>
+            <NuxtLink to="/contact" class="px-8 py-3 bg-linear-to-r from-amber-500 to-orange-600 text-white font-bold rounded-xl hover:scale-105 transition-transform">Me contacter</NuxtLink>
           </div>
         </div>
       </section>
@@ -461,11 +461,11 @@ onMounted(() => {
 .stat-card:hover {
   background: rgba(255, 255, 255, 0.06);
   transform: translateY(-8px);
-  border-color: rgba(0, 122, 255, 0.3);
+  border-color: rgba(255, 215, 0, 0.3);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #FFD700 0%, #A259FF 100%);
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

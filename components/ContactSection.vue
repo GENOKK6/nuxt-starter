@@ -11,7 +11,7 @@ const socialLinks = [
     name: 'LinkedIn',
     url: 'https://linkedin.com/in/ton-profil',
     icon: 'linkedin',
-    color: 'bg-blue-600'
+    color: 'bg-amber-600'
   },
   {
     name: 'GitHub',
@@ -23,7 +23,7 @@ const socialLinks = [
     name: 'Twitter',
     url: 'https://twitter.com/ton-profil',
     icon: 'twitter',
-    color: 'bg-sky-500'
+    color: 'bg-orange-500'
   }
 ]
 
@@ -84,7 +84,7 @@ const getSocialIcon = (iconName) => {
 </script>
 
 <template>
-  <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+  <section id="contact" class="py-20 bg-black transition-colors duration-300">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -93,50 +93,50 @@ const getSocialIcon = (iconName) => {
         <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           Vous avez un projet ? Une opportunité d'alternance ? N'hésitez pas à me contacter !
         </p>
-        <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-4"></div>
+        <div class="w-20 h-1 bg-linear-to-r from-amber-500 to-orange-600 mx-auto mt-4"></div>
       </div>
 
       <div class="grid lg:grid-cols-3 gap-12">
         <!-- Colonne gauche : Infos de contact -->
         <div class="lg:col-span-1 space-y-6">
-          <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700">
+          <div class="bg-gray-900 rounded-2xl p-6 shadow-lg border border-gray-800">
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-              <span class="text-blue-600 dark:text-blue-400">📋</span>
+              <span class="text-amber-500">📋</span>
               Mes coordonnées
             </h3>
 
             <div class="space-y-6">
               <div class="flex items-start gap-4">
-                <div class="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
-                  <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="p-3 bg-amber-900/20 rounded-lg">
+                  <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <div>
                   <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Email</p>
-                  <a :href="`mailto:${contactInfo.email}`" class="text-gray-900 dark:text-white font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  <a :href="`mailto:${contactInfo.email}`" class="text-white font-semibold hover:text-amber-500 transition-colors">
                     {{ contactInfo.email }}
                   </a>
                 </div>
               </div>
 
               <div class="flex items-start gap-4">
-                <div class="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
-                  <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="p-3 bg-orange-900/20 rounded-lg">
+                  <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm0-2a5 5 0 100 10 5 5 0 000-10z" />
                   </svg>
                 </div>
                 <div>
                   <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Téléphone</p>
-                  <a :href="`tel:${contactInfo.phone}`" class="text-gray-900 dark:text-white font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  <a :href="`tel:${contactInfo.phone}`" class="text-white font-semibold hover:text-amber-500 transition-colors">
                     {{ contactInfo.phone }}
                   </a>
                 </div>
               </div>
 
               <div class="flex items-start gap-4">
-                <div class="p-3 bg-green-100 dark:bg-green-900/30 rounded-lg">
-                  <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="p-3 bg-green-900/20 rounded-lg">
+                  <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
@@ -148,21 +148,21 @@ const getSocialIcon = (iconName) => {
               </div>
 
               <div class="flex items-start gap-4">
-                <div class="p-3 bg-orange-100 dark:bg-orange-900/30 rounded-lg">
-                  <svg class="w-6 h-6 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="p-3 bg-amber-900/40 rounded-lg">
+                  <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
                   <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Disponibilité</p>
-                  <p class="text-gray-900 dark:text-white font-semibold">{{ contactInfo.availability }}</p>
+                  <p class="text-white font-semibold">{{ contactInfo.availability }}</p>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Réseaux sociaux -->
-          <div class="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-900 rounded-2xl p-6 border border-blue-100 dark:border-gray-700">
+          <div class="bg-gray-900 rounded-2xl p-6 border border-gray-800">
             <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4 text-center">Réseaux professionnels</h3>
             <div class="flex justify-center gap-4">
               <a
@@ -183,9 +183,9 @@ const getSocialIcon = (iconName) => {
 
         <!-- Colonne droite : Formulaire -->
         <div class="lg:col-span-2">
-          <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700">
+          <div class="bg-gray-900 rounded-2xl p-8 shadow-lg border border-gray-800">
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-              <span class="text-purple-600 dark:text-purple-400">✉️</span>
+              <span class="text-orange-500">✉️</span>
               Envoyez-moi un message
             </h3>
 
@@ -193,7 +193,7 @@ const getSocialIcon = (iconName) => {
             <div v-if="submitMessage" :class="[
               'p-4 rounded-lg mb-6',
               submitStatus === 'success' ? 'bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-800 dark:text-green-200' :
-              'bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-800 dark:text-red-200'
+              'bg-red-900/20 border border-red-800 text-red-200'
             ]">
               <div class="flex items-center gap-2 mb-1 font-semibold">
                 <svg v-if="submitStatus === 'success'" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -210,58 +210,58 @@ const getSocialIcon = (iconName) => {
             <form @submit.prevent="submitForm" class="space-y-6">
               <div class="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label for="name" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Nom complet <span class="text-red-500">*</span>
+                  <label for="name" class="block text-sm font-semibold text-gray-400 mb-2">
+                    Nom complet <span class="text-amber-500">*</span>
                   </label>
                   <input
                     type="text"
                     id="name"
                     v-model="formData.name"
                     required
-                    class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 transition-all"
+                    class="w-full px-4 py-3 rounded-xl border border-gray-700 bg-gray-800 text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-900 transition-all"
                     placeholder="Votre nom"
                   />
                 </div>
 
                 <div>
-                  <label for="email" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Email <span class="text-red-500">*</span>
+                  <label for="email" class="block text-sm font-semibold text-gray-400 mb-2">
+                    Email <span class="text-amber-500">*</span>
                   </label>
                   <input
                     type="email"
                     id="email"
                     v-model="formData.email"
                     required
-                    class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 transition-all"
+                    class="w-full px-4 py-3 rounded-xl border border-gray-700 bg-gray-800 text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-900 transition-all"
                     placeholder="votre.email@example.com"
                   />
                 </div>
               </div>
 
               <div>
-                <label for="subject" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                  Sujet <span class="text-red-500">*</span>
+                <label for="subject" class="block text-sm font-semibold text-gray-400 mb-2">
+                  Sujet <span class="text-amber-500">*</span>
                 </label>
                 <input
                   type="text"
                   id="subject"
                   v-model="formData.subject"
                   required
-                  class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 transition-all"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-700 bg-gray-800 text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-900 transition-all"
                   placeholder="Objet de votre message"
                 />
               </div>
 
               <div>
-                <label for="message" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                  Message <span class="text-red-500">*</span>
+                <label for="message" class="block text-sm font-semibold text-gray-400 mb-2">
+                  Message <span class="text-amber-500">*</span>
                 </label>
                 <textarea
                   id="message"
                   v-model="formData.message"
                   required
                   rows="6"
-                  class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 transition-all resize-none"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-700 bg-gray-800 text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-900 transition-all resize-none"
                   placeholder="Décrivez votre projet, votre demande d'alternance, ou simplement une question..."
                 ></textarea>
               </div>
@@ -269,7 +269,7 @@ const getSocialIcon = (iconName) => {
               <button
                 type="submit"
                 :disabled="isSubmitting"
-                class="w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-lg"
+                class="w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-linear-to-r from-amber-500 to-orange-600 text-white font-bold rounded-xl hover:from-amber-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-lg"
               >
                 <svg v-if="isSubmitting" class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
                   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>

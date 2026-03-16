@@ -25,7 +25,7 @@ definePageMeta({
       </div>
 
       <!-- Avatar -->
-      <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #FFD700, #FF4500); border-radius: 50%; margin: 0 auto 2rem auto; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white; font-weight: 800; box-shadow: 0 0 0 6px rgba(255,255,255,0.1), 0 12px 40px rgba(255,215,0,0.3);">
+      <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #FFD700, #B8860B); border-radius: 50%; margin: 0 auto 2rem auto; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white; font-weight: 800; box-shadow: 0 0 0 6px rgba(255,255,255,0.1), 0 12px 40px rgba(255,215,0,0.3);">
         KG
       </div>
 
@@ -54,15 +54,15 @@ definePageMeta({
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <div class="grid md:grid-cols-4 gap-6">
         <div class="stat-card reveal-up">
-          <div style="font-size: 3rem; font-weight: 800; background: linear-gradient(180deg, #FFD700, #FF4500); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">2</div>
+          <div style="font-size: 3rem; font-weight: 800; background: linear-gradient(180deg, #FFD700, #B8860B); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">2</div>
           <div class="apple-body">Années de formation</div>
         </div>
         <div class="stat-card reveal-up" style="animation-delay: 0.1s;">
-          <div style="font-size: 3rem; font-weight: 800; color: #8b5cf6; margin-bottom: 0.5rem;">2</div>
+          <div style="font-size: 3rem; font-weight: 800; color: #FFD700; margin-bottom: 0.5rem;">2</div>
           <div class="apple-body">Stages réalisés</div>
         </div>
         <div class="stat-card reveal-up" style="animation-delay: 0.2s;">
-          <div style="font-size: 3rem; font-weight: 800; color: #10b981; margin-bottom: 0.5rem;">4+</div>
+          <div style="font-size: 3rem; font-weight: 800; color: #FFD700; margin-bottom: 0.5rem;">4+</div>
           <div class="apple-body">Projets réalisés</div>
         </div>
         <div class="stat-card reveal-up" style="animation-delay: 0.3s;">

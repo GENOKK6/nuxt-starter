@@ -54,19 +54,19 @@ const projects = [
 ]
 
 const getTypeColor = (type) => {
-  return type === 'PPE' ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200'
+  return type === 'PPE' ? 'bg-amber-900/20 text-amber-500' : 'bg-orange-900/20 text-orange-500'
 }
 
 const getTechColor = (index) => {
   const colors = [
-    'bg-blue-600 text-white',
-    'bg-green-600 text-white',
-    'bg-purple-600 text-white',
+    'bg-amber-600 text-white',
     'bg-orange-600 text-white',
-    'bg-pink-600 text-white',
-    'bg-teal-600 text-white',
-    'bg-indigo-600 text-white',
-    'bg-red-600 text-white'
+    'bg-yellow-600 text-white',
+    'bg-amber-700 text-white',
+    'bg-orange-700 text-white',
+    'bg-yellow-700 text-white',
+    'bg-amber-800 text-white',
+    'bg-orange-800 text-white'
   ]
   return colors[index % colors.length]
 }
@@ -77,7 +77,7 @@ const openGitHub = (url) => {
 </script>
 
 <template>
-  <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+  <section id="projects" class="py-20 bg-black transition-colors duration-300">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -86,7 +86,7 @@ const openGitHub = (url) => {
         <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           Réalisations effectuées dans le cadre de mes PPE (Paroles de l\'Expérience Professionnelle) et stages
         </p>
-        <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-4"></div>
+        <div class="w-20 h-1 bg-linear-to-r from-amber-500 to-orange-600 mx-auto mt-4"></div>
       </div>
 
       <!-- Filtres (optionnel - désactivé pour l'instant car seulement 3 projets) -->
@@ -103,10 +103,10 @@ const openGitHub = (url) => {
         <div
           v-for="project in projects"
           :key="project.id"
-          class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 flex flex-col"
+          class="bg-gray-900 rounded-2xl shadow-lg overflow-hidden border border-gray-800 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 flex flex-col"
         >
           <!-- Image placeholder / Header -->
-          <div class="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+          <div class="relative h-48 bg-linear-to-br from-amber-500 to-orange-600 flex items-center justify-center">
             <div v-if="!project.image" class="text-center text-white p-8">
               <svg class="w-16 h-16 mx-auto mb-2 opacity-80" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
@@ -137,7 +137,7 @@ const openGitHub = (url) => {
             </div>
 
             <!-- Description -->
-            <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-4 flex-1">
+            <p class="text-gray-300 text-sm leading-relaxed mb-4 flex-1">
               {{ project.description }}
             </p>
 
@@ -145,8 +145,8 @@ const openGitHub = (url) => {
             <div class="mb-4">
               <p class="text-xs font-semibold text-gray-600 dark:text-gray-400 mb-2">Fonctionnalités clés :</p>
               <ul class="space-y-1">
-                <li v-for="(highlight, idx) in project.highlights" :key="idx" class="text-xs text-gray-700 dark:text-gray-300 flex items-center gap-2">
-                  <svg class="w-3 h-3 text-green-600 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <li v-for="(highlight, idx) in project.highlights" :key="idx" class="text-xs text-gray-400 flex items-center gap-2">
+                  <svg class="w-3 h-3 text-amber-500 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                   </svg>
                   {{ highlight }}
@@ -171,7 +171,7 @@ const openGitHub = (url) => {
             <!-- Bouton CTA -->
             <button
               @click="openGitHub(project.githubUrl)"
-              class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 text-white dark:text-gray-900 font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 dark:hover:from-blue-500 dark:hover:to-purple-500 transition-all duration-300 shadow-md hover:shadow-lg"
+              class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-linear-to-r from-amber-500 to-orange-600 text-white font-semibold rounded-xl hover:from-amber-600 hover:to-orange-700 transition-all duration-300 shadow-md hover:shadow-lg"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -184,8 +184,8 @@ const openGitHub = (url) => {
 
       <!-- Message encouragement -->
       <div class="mt-12 text-center">
-        <div class="inline-block bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-800 rounded-xl p-6 border border-blue-100 dark:border-gray-700">
-          <p class="text-gray-700 dark:text-gray-300">
+        <div class="inline-block bg-gray-900 rounded-xl p-6 border border-gray-800">
+          <p class="text-gray-300">
             Ces projets représentent mes réalisations principales dans le cadre de ma formation.
             N'hésitez pas à consulter les dépôts GitHub pour voir le code source et les détails techniques.
           </p>

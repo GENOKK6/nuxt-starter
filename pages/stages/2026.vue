@@ -48,7 +48,7 @@ onMounted(() => {
       <div class="mb-16 reveal-up" style="animation-delay: 0.1s;">
         <div class="flex items-center gap-3 mb-4">
           <span class="badge">
-            <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
             Stage 2026
           </span>
           <span class="text-gray-400 text-sm">2ème année - Projet Défi</span>
@@ -83,7 +83,7 @@ onMounted(() => {
         </div>
 
         <div class="flex flex-wrap gap-4">
-          <a href="https://github.com/GENOKK6/Lookiz" target="_blank" class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-xl font-bold transition-all hover:scale-105 shadow-lg shadow-purple-500/20">
+          <a href="https://github.com/GENOKK6/Lookiz" target="_blank" class="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-xl font-bold transition-all hover:scale-105 shadow-lg shadow-amber-500/20">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             Voir le code (Dashboard Admin)
           </a>
@@ -92,8 +92,8 @@ onMounted(() => {
 
       <!-- Présentation Lookiz -->
       <div class="mb-16 reveal-up" style="animation-delay: 0.2s;">
-        <h2 class="text-2xl font-semibold mb-6 text-purple-400">L'entreprise : Lookiz</h2>
-        <div class="bg-linear-to-br from-purple-900/10 to-blue-900/10 p-8 rounded-3xl border border-purple-900/20">
+        <h2 class="text-2xl font-semibold mb-6 text-amber-400">L'entreprise : Lookiz</h2>
+        <div class="bg-linear-to-br from-amber-900/10 to-orange-900/10 p-8 rounded-3xl border border-amber-900/20">
           <div class="grid md:grid-cols-2 gap-8">
             <div>
               <p class="text-gray-400 leading-relaxed mb-4">
@@ -110,7 +110,7 @@ onMounted(() => {
               <p class="text-sm text-gray-400 mb-4">
                 Une peluche connectée dopée à l'IA vocale capable de répondre à 3500 sujets et d'inventer des histoires sur mesure.
               </p>
-              <div class="flex items-center gap-2 text-xs text-green-400">
+              <div class="flex items-center gap-2 text-xs text-amber-400">
                 <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
                 Levée de fonds réussie : 50k€ (Alice Lhabouz)
               </div>
@@ -130,7 +130,7 @@ onMounted(() => {
             </p>
             <div class="grid md:grid-cols-2 gap-4 text-sm">
               <div class="p-4 bg-white/5 rounded-xl border border-white/10">
-                <span class="block text-purple-400 font-bold mb-1">Python & JSON</span>
+                <span class="block text-amber-400 font-bold mb-1">Python & JSON</span>
                 Scripts de génération de jeux de données éducatifs structurés pour alimenter la base de connaissances d'Ary.
               </div>
               <div class="p-4 bg-white/5 rounded-xl border border-white/10">
@@ -158,12 +158,12 @@ onMounted(() => {
       <div class="mb-16 reveal-up" style="animation-delay: 0.4s;">
         <h2 class="text-2xl font-semibold mb-6">Réalisations</h2>
         <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-green-900/10 border border-green-900/30 p-6 rounded-2xl">
+          <div class="bg-amber-900/10 border border-amber-900/30 p-6 rounded-2xl">
             <div class="text-2xl mb-4">📜</div>
             <h4 class="font-semibold mb-2">Générateur JSON Éducatif</h4>
             <p class="text-sm text-gray-400 italic">"Génération de plus de 500 contenus thématiques (dinosaures, espace, histoire) via scripts Python."</p>
           </div>
-          <div class="bg-blue-900/10 border border-blue-900/30 p-6 rounded-2xl">
+          <div class="bg-amber-900/10 border border-amber-900/30 p-6 rounded-2xl">
             <div class="text-2xl mb-4">🔑</div>
             <h4 class="font-semibold mb-2">Gestion des Clés API</h4>
             <p class="text-sm text-gray-400 italic">"Implémentation d'un système robuste de gestion des tokens et rotation des clés d'API pour le déploiement."</p>
@@ -186,16 +186,16 @@ onMounted(() => {
 
       <!-- Extraits Techniques -->
       <div class="mb-16 reveal-up" style="animation-delay: 0.6s;">
-        <h2 class="text-2xl font-semibold mb-6 text-green-400">Extraits Techniques (Backend IA)</h2>
+        <h2 class="text-2xl font-semibold mb-6 text-amber-400">Extraits Techniques (Backend IA)</h2>
         <div class="grid md:grid-cols-2 gap-8">
           <!-- Python Logic -->
           <div class="space-y-4">
             <h4 class="text-sm font-semibold text-gray-400 flex items-center gap-2">
-              <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+              <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
               Logique de Contrôle (Python)
             </h4>
             <div class="bg-[#1e1e1e] rounded-xl border border-white/10 p-4 overflow-hidden shadow-2xl">
-              <pre class="text-[10px] md:text-xs text-blue-300 font-mono leading-relaxed"><code>def call_ai(self, messages, json_mode=False):
+              <pre class="text-[10px] md:text-xs text-amber-200 font-mono leading-relaxed"><code>def call_ai(self, messages, json_mode=False):
     """Appel IA avec fallback automatique."""
     for model in [PRIMARY_MODEL] + FALLBACK:
         try:

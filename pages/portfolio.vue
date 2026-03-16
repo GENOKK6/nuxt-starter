@@ -38,7 +38,7 @@ const projectsData = [
     technologies: ['Laravel', 'PHP', 'Blade', 'Eloquent ORM', 'MySQL'],
     githubUrl: 'https://github.com/KizambaGospel',
     detailUrl: '/project-1',
-    gradient: 'from-amber-600 to-red-700',
+    gradient: 'from-[#FFD700] to-[#8B6508]',
     statusColor: 'bg-green-500',
     highlights: [
       'Architecture MVC Laravel',
@@ -57,7 +57,7 @@ const projectsData = [
     technologies: ['Laravel', 'PHP', 'Vite', 'MySQL', 'Tailwind CSS'],
     githubUrl: 'https://github.com/KizambaGospel',
     detailUrl: '/project-2',
-    gradient: 'from-orange-500 to-red-600',
+    gradient: 'from-[#FFD700] to-[#DAA520]',
     statusColor: 'bg-green-500',
     highlights: [
       'Gestion CRUD des élèves',
@@ -76,7 +76,7 @@ const projectsData = [
     technologies: ['PHP', 'HTML5', 'CSS3', 'MySQL', 'Sessions'],
     githubUrl: 'https://github.com/KizambaGospel',
     detailUrl: '/project-3',
-    gradient: 'from-orange-500 to-red-600',
+    gradient: 'from-[#FFD700] to-[#DAA520]',
     statusColor: 'bg-amber-500',
     highlights: [
       'Catalogue dynamique',
@@ -95,7 +95,7 @@ const projectsData = [
     technologies: ['C#', 'WinForms', 'SQL Server', 'ADO.NET'],
     githubUrl: 'https://github.com/KizambaGospel',
     detailUrl: '/project-6',
-    gradient: 'from-amber-600 to-orange-800',
+    gradient: 'from-amber-600 to-[#8B6508]',
     statusColor: 'bg-amber-400',
     image: '/images/project-6.png',
     highlights: [
@@ -115,8 +115,8 @@ const projectsData = [
     technologies: ['C#', '.NET MAUI', 'XAML', 'SQLite'],
     githubUrl: 'https://github.com/KizambaGospel',
     detailUrl: '/project-7',
-    gradient: 'from-red-500 to-rose-800',
-    statusColor: 'bg-red-500',
+    gradient: 'from-[#FFD700] to-[#8B6508]',
+    statusColor: 'bg-amber-600',
     image: '/images/project-7.png',
     highlights: [
       'Interface Cross-platform',
@@ -135,7 +135,7 @@ const projectsData = [
     technologies: ['C#', '.NET Core', 'POO', 'Unit Testing'],
     githubUrl: 'https://github.com/KizambaGospel',
     detailUrl: '/project-8',
-    gradient: 'from-amber-600 to-orange-800',
+    gradient: 'from-amber-600 to-[#8B6508]',
     statusColor: 'bg-amber-600',
     image: '/images/project-8.png',
     highlights: [
@@ -174,8 +174,8 @@ const projectsData = [
     technologies: ['PHP 8.x', 'POO', 'MVC', 'Design Patterns'],
     githubUrl: 'https://github.com/KizambaGospel',
     detailUrl: '/project-5',
-    gradient: 'from-purple-600 to-pink-700',
-    statusColor: 'bg-purple-500',
+    gradient: 'from-amber-600 to-amber-800',
+    statusColor: 'bg-amber-500',
     highlights: [
       'Classes et Héritage',
       'Séparation des préoccupations',
@@ -257,7 +257,7 @@ const projects = ref(projectsData)
 
               <!-- Actions -->
               <div class="flex gap-4">
-                <NuxtLink :to="project.detailUrl" class="flex-1 py-3 bg-linear-to-r from-amber-600 to-red-600 hover:scale-[1.02] text-white text-center font-medium rounded-xl transition-all">
+                <NuxtLink :to="project.detailUrl" class="flex-1 py-3 bg-linear-to-r from-[#FFD700] to-[#B8860B] hover:scale-[1.02] text-white text-center font-medium rounded-xl transition-all">
                   Voir les détails
                 </NuxtLink>
                 <a :href="project.githubUrl" target="_blank" class="px-4 py-3 border border-gray-600 hover:border-amber-500 hover:text-amber-400 transition-colors rounded-xl">

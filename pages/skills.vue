@@ -72,7 +72,7 @@ onMounted(() => {
         <!-- Backend & Logic -->
         <div class="reveal-up" style="animation-delay: 0.2s;">
           <div class="flex items-center gap-4 mb-8">
-            <div class="icon-box bg-green-900/30">
+            <div class="icon-box bg-amber-900/30">
               <span>⚙️</span>
             </div>
             <div>
@@ -100,7 +100,7 @@ onMounted(() => {
         <!-- IA & Outils -->
         <div class="reveal-up" style="animation-delay: 0.3s;">
           <div class="flex items-center gap-4 mb-8">
-            <div class="icon-box bg-purple-900/30">
+            <div class="icon-box bg-amber-900/30">
               <span>🤖</span>
             </div>
             <div>
@@ -153,7 +153,7 @@ onMounted(() => {
 
       <!-- IA Strategy Banner -->
       <div class="mt-20 reveal-up" style="animation-delay: 0.5s;">
-        <div class="bg-linear-to-r from-amber-900/20 to-red-900/20 p-10 rounded-3xl border border-amber-900/30">
+        <div class="bg-linear-to-r from-amber-900/10 to-amber-900/20 p-10 rounded-3xl border border-amber-900/30">
           <div class="flex flex-col md:flex-row items-center gap-8">
             <div class="flex-1">
               <div class="inline-flex items-center gap-2 mb-4">
@@ -166,7 +166,7 @@ onMounted(() => {
               </p>
               <div class="flex flex-wrap gap-3">
                 <span class="px-4 py-2 bg-amber-900/20 border border-amber-900/30 rounded-lg text-sm">OpenAI & LLM</span>
-                <span class="px-4 py-2 bg-red-900/20 border border-red-900/30 rounded-lg text-sm">Automatisation</span>
+                <span class="px-4 py-2 bg-amber-900/20 border border-amber-900/30 rounded-lg text-sm">Automatisation</span>
                 <span class="px-4 py-2 bg-orange-900/20 border border-orange-900/30 rounded-lg text-sm">Productivité</span>
                 <span class="px-4 py-2 bg-yellow-900/20 border border-yellow-900/30 rounded-lg text-sm">Futurisme</span>
               </div>

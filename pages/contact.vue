@@ -173,7 +173,7 @@ onMounted(() => {
           </div>
 
           <!-- Info box -->
-          <div class="bg-blue-900/10 border border-blue-900/20 p-6 rounded-2xl">
+          <div class="bg-amber-900/10 border border-amber-900/20 p-6 rounded-2xl">
             <div class="flex items-start gap-3">
               <div class="text-2xl">💡</div>
               <div>
@@ -190,7 +190,7 @@ onMounted(() => {
 
         <!-- Contact form -->
         <div class="reveal-right" style="animation-delay: 0.2s;">
-          <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 h-full">
+          <div class="bg-white/5 p-8 rounded-2xl border border-gray-800 h-full">
             <h2 class="text-2xl font-semibold mb-6">Envoyez-moi un message</h2>
 
             <form 
@@ -252,7 +252,7 @@ onMounted(() => {
               <button
                 type="submit"
                 :disabled="isSubmitting"
-                class="btn-primary w-full bg-linear-to-r from-amber-500 to-red-600 text-white border-none cursor-pointer"
+                class="btn-primary w-full bg-linear-to-r from-[#FFD700] to-[#B8860B] text-white border-none cursor-pointer"
                 :class="{ 'opacity-50 cursor-not-allowed': isSubmitting }"
               >
                 {{ isSubmitting ? 'Envoi en cours...' : 'Envoyer le message' }}

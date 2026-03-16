@@ -47,11 +47,11 @@ onMounted(() => {
       <!-- Header -->
       <div class="mb-16 reveal-up text-center">
         <div class="mb-6">
-          <div class="w-32 h-32 mx-auto rounded-full bg-linear-to-br from-blue-600 to-purple-700 flex items-center justify-center text-5xl font-bold text-white mb-4">
+          <div class="w-32 h-32 mx-auto rounded-full bg-linear-to-br from-amber-500 to-orange-700 flex items-center justify-center text-5xl font-bold text-white mb-4">
             GK
           </div>
-          <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-amber-500/20 px-3 py-1 rounded-full text-xs text-amber-400 mb-4">
-            <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+          <div class="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full text-xs text-amber-400 mb-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
             Disponible immédiatement
           </div>
         </div>
@@ -157,14 +157,14 @@ onMounted(() => {
       <!-- Skills -->
       <div class="mb-12 reveal-up" style="animation-delay: 0.3s;">
         <h2 class="text-2xl font-semibold mb-6 flex items-center gap-2">
-          <span class="text-green-400">💻</span>
+          <span class="text-amber-400">💻</span>
           Compétences techniques
         </h2>
 
         <div class="grid md:grid-cols-2 gap-4">
           <div v-for="category in skills" :key="category.name" class="bg-apple-light-gray/30 p-5 rounded-2xl border border-gray-800 transition-all hover:border-amber-500/30">
             <h3 class="font-bold text-white mb-2 flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
               {{ category.name }}
             </h3>
             <p class="text-sm text-gray-400 leading-relaxed">{{ category.description }}</p>
@@ -175,7 +175,7 @@ onMounted(() => {
       <!-- Languages -->
       <div class="mb-12 reveal-up" style="animation-delay: 0.4s;">
         <h2 class="text-2xl font-semibold mb-6 flex items-center gap-2">
-          <span class="text-purple-400">🌐</span>
+          <span class="text-amber-400">🌐</span>
           Langues
         </h2>
 
@@ -298,7 +298,7 @@ onMounted(() => {
       <!-- Projects preview -->
       <div class="mb-12 reveal-up" style="animation-delay: 0.6s;">
         <h2 class="text-2xl font-semibold mb-6 flex items-center gap-2">
-          <span class="text-purple-400">🚀</span>
+          <span class="text-amber-400">🚀</span>
           Projets notables
         </h2>
 

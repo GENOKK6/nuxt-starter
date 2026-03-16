@@ -48,7 +48,7 @@ onMounted(() => {
       <div class="mb-16 reveal-up" style="animation-delay: 0.1s;">
         <div class="flex items-center gap-3 mb-4">
           <span class="badge">
-            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
             Stage 2025
           </span>
           <span class="text-gray-400 text-sm">1ère année</span>
@@ -96,25 +96,25 @@ onMounted(() => {
       <div class="mb-16 reveal-up" style="animation-delay: 0.3s;">
         <h2 class="text-2xl font-semibold mb-6">Activités principales</h2>
         <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-blue-900/10 border border-blue-900/30 p-6 rounded-2xl">
+          <div class="bg-amber-900/10 border border-amber-900/30 p-6 rounded-2xl">
             <h3 class="font-semibold mb-3">Acculturation IA</h3>
             <p class="text-sm text-gray-400">
               Formations individuelles et collectives sur l'utilisation de <strong>ChatGPT</strong> et <strong>Claude</strong> pour la rédaction de mails, le résumé de rapports techniques et l'assistance administrative.
             </p>
           </div>
-          <div class="bg-blue-900/10 border border-blue-900/30 p-6 rounded-2xl">
+          <div class="bg-amber-900/10 border border-amber-900/30 p-6 rounded-2xl">
             <h3 class="font-semibold mb-3">Conception de Solutions</h3>
             <p class="text-sm text-gray-400">
               Analyse des processus de l'entreprise pour identifier les tâches répétitives automatisables. Rédaction de cahiers des charges pour des futurs outils digitaux métier.
             </p>
           </div>
-          <div class="bg-blue-900/10 border border-blue-900/30 p-6 rounded-2xl">
+          <div class="bg-amber-900/10 border border-amber-900/30 p-6 rounded-2xl">
             <h3 class="font-semibold mb-3">Aide à la Décision</h3>
             <p class="text-sm text-gray-400">
               Accompagnement du gérant dans le choix d'outils numériques pour la gestion de ses chantiers et la dématérialisation des documents.
             </p>
           </div>
-          <div class="bg-blue-900/10 border border-blue-900/30 p-6 rounded-2xl">
+          <div class="bg-amber-900/10 border border-amber-900/30 p-6 rounded-2xl">
             <h3 class="font-semibold mb-3">Veille Technologique</h3>
             <p class="text-sm text-gray-400">
               Présentation des nouveaux outils IA spécifiques au secteur (génération d'images pour avant-projet, assistants de calcul de devis).
@@ -141,7 +141,7 @@ onMounted(() => {
         <NuxtLink to="/stages" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
           ← Retour à la liste
         </NuxtLink>
-        <NuxtLink to="/stages/2026" class="text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-2 font-semibold">
+        <NuxtLink to="/stages/2026" class="text-amber-400 hover:text-purple-300 transition-colors flex items-center gap-2 font-semibold">
           Stage 2026 (Lookiz) →
         </NuxtLink>
       </div>

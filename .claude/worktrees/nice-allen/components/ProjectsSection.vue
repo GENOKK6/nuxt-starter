@@ -66,7 +66,7 @@ const getTechColor = (index) => {
     'bg-pink-600 text-white',
     'bg-teal-600 text-white',
     'bg-indigo-600 text-white',
-    'bg-red-600 text-white'
+    'bg-amber-600 text-white'
   ]
   return colors[index % colors.length]
 }

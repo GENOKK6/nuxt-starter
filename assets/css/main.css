@@ -4,6 +4,10 @@
 @theme {
   --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
   --font-display: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  
+  --color-apple-dark: #000000;
+  --color-apple-text: #ffffff;
+  --color-apple-light-gray: #1c1c1e;
 }
 
 /* ============================================
@@ -11,8 +15,10 @@
    ============================================ */
 
 /* Smooth scroll pour les ancres HTML */
-html {
+html, body {
   scroll-behavior: smooth;
+  background-color: #000000 !important;
+  color: #ffffff;
 }
 
 /* Amélioration du scroll */
@@ -34,12 +40,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  background: linear-gradient(to bottom, #FFD700, #B8860B);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #2563eb, #7c3aed);
+  background: linear-gradient(to bottom, #DAA520, #8B6508);
 }
 
 /* ============================================
@@ -204,6 +210,7 @@ a, button {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -211,6 +218,7 @@ a, button {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  line-clamp: 3;
   overflow: hidden;
 }
 
@@ -219,13 +227,13 @@ a, button {
    ============================================ */
 
 /* Espacement supplémentaire pour mobile */
-@screen sm {
+@media (min-width: 640px) {
   .container {
     @apply px-4 sm:px-6;
   }
 }
 
-@screen md {
+@media (min-width: 768px) {
   .container {
     @apply px-4 md:px-8;
   }

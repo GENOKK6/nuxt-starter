@@ -154,7 +154,7 @@ onMounted(() => {
               </ul>
             </div>
             <div>
-              <h3 class="font-semibold mb-4 text-green-400">Base de données</h3>
+              <h3 class="font-semibold mb-4 text-amber-400">Base de données</h3>
               <ul class="space-y-2 text-sm text-gray-400">
                 <li>• Modélisation Merise (MCD/MLD)</li>
                 <li>• Optimisation des index</li>

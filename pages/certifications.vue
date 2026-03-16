@@ -31,7 +31,7 @@ const certifications = [
     description: 'Maîtrise du versioning avec Git et de la collaboration sur GitHub pour le développement logiciel.',
     link: '/images/gerer_le_code_avec_github.pdf',
     icon: '🐙',
-    color: '#4078c0',
+    color: '#FFD700',
     skills: ['Git', 'GitHub', 'Versioning', 'Open Source']
   }
 ]
@@ -127,9 +127,9 @@ onMounted(() => {
                   <p class="text-[10px] text-gray-500 mt-1 uppercase">Prévu pour Avril 2026</p>
                 </div>
                 
-                <div class="bg-red-900/20 border border-red-900/30 px-5 py-4 rounded-2xl flex-1 min-w-[200px]">
+                <div class="bg-amber-900/20 border border-amber-900/30 px-5 py-4 rounded-2xl flex-1 min-w-[200px]">
                   <div class="flex items-center gap-2 mb-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
                     <span class="text-xs font-bold text-red-400 uppercase tracking-widest">Plannifié</span>
                   </div>
                   <h4 class="font-semibold text-white">AWS Cloud Practitioner</h4>
@@ -158,7 +158,7 @@ onMounted(() => {
 
 .cert-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 122, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(255, 215, 0, 0.1);
 }
 
 .skill-tag {

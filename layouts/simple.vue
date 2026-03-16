@@ -135,27 +135,28 @@ const mobileMenuOpen = ref(false)
 }
 
 .gradient-text {
-  background: linear-gradient(180deg, #FFD700 0%, #FF4500 100%);
+  background: linear-gradient(180deg, #FFD700 0%, #DAA520 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .btn-primary {
-  background: #ffffff;
+  background: linear-gradient(135deg, #FFD700 0%, #DAA520 100%);
   color: #000000;
   padding: 14px 32px;
   border-radius: 980px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 17px;
   transition: all 0.3s;
   display: inline-block;
   text-decoration: none;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
 }
 
 .btn-primary:hover {
-  background: #e5e5e5;
-  transform: scale(1.02);
+  transform: scale(1.02) translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
 }
 
 .btn-secondary {
