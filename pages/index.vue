@@ -25,7 +25,7 @@ definePageMeta({
       </div>
 
       <!-- Avatar -->
-      <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #007AFF, #5856D6); border-radius: 50%; margin: 0 auto 2rem auto; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white; font-weight: 800; box-shadow: 0 0 0 6px rgba(255,255,255,0.1), 0 12px 40px rgba(0,122,255,0.3);">
+      <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #FFD700, #FF4500); border-radius: 50%; margin: 0 auto 2rem auto; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white; font-weight: 800; box-shadow: 0 0 0 6px rgba(255,255,255,0.1), 0 12px 40px rgba(255,215,0,0.3);">
         KG
       </div>
 
@@ -37,7 +37,7 @@ definePageMeta({
 
       <p class="apple-body mb-10" style="max-width: 620px; margin: 0 auto; font-size: 1.1rem;">
         Je crée des applications modernes en intégrant les meilleurs outils IA.
-        Mon objectif : devenir un <strong style="color: #93c5fd;">développeur augmenté</strong>, capable d'utiliser l'IA comme levier pour coder mieux et plus vite.
+        Mon objectif : devenir un <strong style="color: #FFD700;">développeur augmenté</strong>, capable d'utiliser l'IA comme levier pour coder mieux et plus vite.
       </p>
 
       <!-- CTA Buttons -->
@@ -54,7 +54,7 @@ definePageMeta({
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <div class="grid md:grid-cols-4 gap-6">
         <div class="stat-card reveal-up">
-          <div style="font-size: 3rem; font-weight: 800; background: linear-gradient(180deg, #007AFF, #5856D6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">2</div>
+          <div style="font-size: 3rem; font-weight: 800; background: linear-gradient(180deg, #FFD700, #FF4500); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">2</div>
           <div class="apple-body">Années de formation</div>
         </div>
         <div class="stat-card reveal-up" style="animation-delay: 0.1s;">

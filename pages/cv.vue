@@ -50,7 +50,7 @@ onMounted(() => {
           <div class="w-32 h-32 mx-auto rounded-full bg-linear-to-br from-blue-600 to-purple-700 flex items-center justify-center text-5xl font-bold text-white mb-4">
             GK
           </div>
-          <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full text-xs text-blue-400 mb-4">
+          <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-amber-500/20 px-3 py-1 rounded-full text-xs text-amber-400 mb-4">
             <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
             Disponible immédiatement
           </div>
@@ -65,7 +65,7 @@ onMounted(() => {
         </p>
 
         <div class="flex justify-center gap-4 mb-8 text-sm text-gray-400">
-          <a href="mailto:gospel14@gmail.com" class="text-blue-400 hover:underline">
+          <a href="mailto:gospel14@gmail.com" class="text-amber-400 hover:underline">
             gospel14@gmail.com
           </a>
           <span class="text-gray-600">|</span>
@@ -106,7 +106,7 @@ onMounted(() => {
       <!-- Education -->
       <div class="mb-12 reveal-up" style="animation-delay: 0.2s;">
         <h2 class="text-2xl font-semibold mb-6 flex items-center gap-2">
-          <span class="text-blue-400">🎓</span>
+          <span class="text-amber-400">🎓</span>
           Formation
         </h2>
 
@@ -119,7 +119,7 @@ onMounted(() => {
                 <h3 class="text-lg font-semibold">BTS Services informatiques aux organisations</h3>
                 <span class="text-sm text-gray-400">2024 - 2026</span>
               </div>
-              <p class="text-blue-400 font-medium text-sm mb-3">Lycée de Cachan</p>
+              <p class="text-amber-400 font-medium text-sm mb-3">Lycée de Cachan</p>
               <div class="text-gray-400 text-sm leading-relaxed space-y-2">
                 <p>Option SLAM (Solutions Logicielles et Applications Métiers)</p>
                 <ul class="list-disc list-inside ml-2">
@@ -145,7 +145,7 @@ onMounted(() => {
                 <h3 class="text-lg font-semibold">Baccalauréat pro (Organisation et Gros Œuvre)</h3>
                 <span class="text-sm text-gray-400">2021 - 2024</span>
               </div>
-              <p class="text-blue-400 font-medium text-sm mb-3">Lycée polyvalent Adolphe Cherioux</p>
+              <p class="text-amber-400 font-medium text-sm mb-3">Lycée polyvalent Adolphe Cherioux</p>
               <p class="text-gray-400 text-sm leading-relaxed">
                 Analyse de plans techniques, planification et respect des normes.
               </p>
@@ -162,7 +162,7 @@ onMounted(() => {
         </h2>
 
         <div class="grid md:grid-cols-2 gap-4">
-          <div v-for="category in skills" :key="category.name" class="bg-apple-light-gray/30 p-5 rounded-2xl border border-gray-800 transition-all hover:border-blue-500/30">
+          <div v-for="category in skills" :key="category.name" class="bg-apple-light-gray/30 p-5 rounded-2xl border border-gray-800 transition-all hover:border-amber-500/30">
             <h3 class="font-bold text-white mb-2 flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
               {{ category.name }}
@@ -179,27 +179,19 @@ onMounted(() => {
           Langues
         </h2>
 
-        <div class="space-y-4">
-          <div class="language-bar">
-            <span class="language-name">Français</span>
-            <div class="flex-1 progress-bar">
-              <div class="progress-fill" style="width: 100%"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div v-for="lang in [
+            { name: 'Français', level: 'Langue maternelle', icon: '🇫🇷' },
+            { name: 'Anglais', level: 'Niveau B1/B2', icon: '🇬🇧' },
+            { name: 'Espagnol', level: 'Niveau B2/C1', icon: '🇪🇸' }
+          ]" :key="lang.name" class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800 hover:border-amber-500/30 transition-colors group">
+            <div class="flex items-center gap-4">
+              <span class="text-2xl">{{ lang.icon }}</span>
+              <div>
+                <h4 class="font-semibold text-white group-hover:text-amber-400 transition-colors">{{ lang.name }}</h4>
+                <p class="text-xs text-gray-400">{{ lang.level }}</p>
+              </div>
             </div>
-            <span class="language-level">Langue maternelle</span>
-          </div>
-          <div class="language-bar">
-            <span class="language-name">Anglais</span>
-            <div class="flex-1 progress-bar">
-              <div class="progress-fill" style="width: 75%"></div>
-            </div>
-            <span class="language-level">B1/B2</span>
-          </div>
-          <div class="language-bar">
-            <span class="language-name">Espagnol</span>
-            <div class="flex-1 progress-bar">
-              <div class="progress-fill" style="width: 85%"></div>
-            </div>
-            <span class="language-level">B2/C1</span>
           </div>
         </div>
       </div>
@@ -240,23 +232,23 @@ onMounted(() => {
           <!-- Experience Lookiz -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
-            <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 transition-all hover:border-blue-500/30">
+            <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 transition-all hover:border-amber-500/30">
               <div class="flex justify-between items-start mb-3">
                 <h3 class="text-xl font-bold text-white">Stage - Développeur Backend IA</h3>
                 <span class="text-sm font-bold text-gray-400">2026</span>
               </div>
-              <p class="text-blue-400 font-bold text-sm mb-4">Lookiz · Paris (75)</p>
+              <p class="text-amber-400 font-bold text-sm mb-4">Lookiz · Paris (75)</p>
               <ul class="space-y-3 text-gray-400 text-sm leading-relaxed">
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-500 mt-1">•</span>
+                  <span class="text-amber-500 mt-1">•</span>
                   <span>Intégration des APIs OpenAI et Anthropic (Claude) pour l'interaction vocale en temps réel.</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-500 mt-1">•</span>
+                  <span class="text-amber-500 mt-1">•</span>
                   <span>Génération automatisée de 500+ ressources pédagogiques structurées (JSON).</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-500 mt-1">•</span>
+                  <span class="text-amber-500 mt-1">•</span>
                   <span>Sécurisation (Red Teaming) et filtres éthiques pour contenus adaptés aux enfants.</span>
                 </li>
               </ul>
@@ -272,23 +264,23 @@ onMounted(() => {
           <!-- Experience EID -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
-            <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 transition-all hover:border-blue-500/30">
+            <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 transition-all hover:border-amber-500/30">
               <div class="flex justify-between items-start mb-3">
                 <h3 class="text-xl font-bold text-white">Stage - Initiation & Accompagnement IA</h3>
                 <span class="text-sm font-bold text-gray-400">2023 - 2024</span>
               </div>
-              <p class="text-blue-400 font-bold text-sm mb-4">EID BATIMENT · Paris (75)</p>
+              <p class="text-amber-400 font-bold text-sm mb-4">EID BATIMENT · Paris (75)</p>
               <ul class="space-y-3 text-gray-400 text-sm leading-relaxed">
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-500 mt-1">•</span>
+                  <span class="text-amber-500 mt-1">•</span>
                   <span>Accompagnement d'une entreprise BTP dans sa transformation numérique via l'IA.</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-500 mt-1">•</span>
+                  <span class="text-amber-500 mt-1">•</span>
                   <span>Automatisation des devis et tâches administratives via ChatGPT et Claude.</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-500 mt-1">•</span>
+                  <span class="text-amber-500 mt-1">•</span>
                   <span>Mise en place d'une veille technologique sectorielle pour l'aide à la décision.</span>
                 </li>
               </ul>
@@ -369,36 +361,7 @@ onMounted(() => {
   font-weight: 600;
 }
 
-.progress-bar {
-  height: 6px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-  overflow: hidden;
-}
 
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #007AFF, #5856D6);
-  border-radius: 3px;
-  transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.language-bar {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.language-name {
-  min-width: 100px;
-  font-size: 14px;
-}
-
-.language-level {
-  font-size: 12px;
-  color: #8e8e93;
-}
 
 .skill-tag {
   display: inline-block;

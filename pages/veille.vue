@@ -15,7 +15,7 @@ const tools = [
     name: 'Gemini Pro + Deep Search', 
     icon: 'i-heroicons-sparkles', 
     description: 'Mon "assistant de tri". Il m\'aide à séparer le bruit technique des vrais signaux grâce à ses capacités d\'analyse approfondie.',
-    color: 'text-blue-500' 
+    color: 'text-amber-500' 
   },
   { 
     name: 'Padlet', 
@@ -181,8 +181,9 @@ onMounted(() => {
       </div>
       
       <div class="max-w-4xl relative z-10 mx-auto text-center">
-        <h1 class="text-hero apple-heading mb-8 animate-fade-in">
-          Comprendre <span class="gradient-text">ma veille</span>
+            <span class="text-sm font-semibold text-amber-500 tracking-widest uppercase">Veille Technologique</span>
+        <h1 class="text-section apple-heading mt-4 mb-6">
+          L'impact de l'<span class="gradient-text">IA Générative</span>
         </h1>
         <p class="apple-body text-xl max-w-2xl mx-auto animate-fade-in" style="color: rgba(255,255,255,0.85);">
           Comment je reste à jour dans un monde où l'IA redéfinit le code chaque semaine.
@@ -263,55 +264,56 @@ onMounted(() => {
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Gemini -->
           <div class="reveal-up group">
-             <div class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-blue-500/50 transition-colors">
-                <UIcon name="i-heroicons-sparkles" class="w-12 h-12 text-blue-500/20 mb-2 transition-transform group-hover:scale-110" />
+             <a href="https://gemini.google.com" target="_blank" class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-amber-500/50 transition-colors">
+                <UIcon name="i-heroicons-sparkles" class="w-12 h-12 text-amber-500/20 mb-2 transition-transform group-hover:scale-110" />
                 <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black to-transparent">
-                  <p class="text-[10px] font-bold uppercase tracking-widest text-white/40">Tri Intelligent (Gemini)</p>
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-white/40">Tri Intelligent (Gemini Pro)</p>
                 </div>
-             </div>
+             </a>
           </div>
           <!-- Padlet -->
           <div class="reveal-up group">
-             <div class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-pink-500/50 transition-colors">
+             <a href="https://padlet.com/gospel14es/les-arcticles-et-blogs-qui-m-ont-aid-a-realis-ma-veille-tech-bbiqgev6tg4uqlvn" target="_blank" class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-pink-500/50 transition-colors">
+                <NuxtImg src="/images/padlet.png" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-opacity" />
                 <UIcon name="i-heroicons-rectangle-group" class="w-12 h-12 text-pink-500/20 mb-2 transition-transform group-hover:scale-110" />
                 <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black to-transparent">
                   <p class="text-[10px] font-bold uppercase tracking-widest text-white/40">Mur Mural (Padlet)</p>
                 </div>
-             </div>
+             </a>
           </div>
           <!-- Feedly 1 -->
           <div class="reveal-up group">
-             <div class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-orange-500/50 transition-colors">
-                <NuxtImg src="/veille_feedly_placeholder_1773605979200.png" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity" />
+             <a href="https://feedly.com/i/collection/content/user/58ffdcea-f8a4-4a71-bb62-3e4ed3dad497/category/global.all" target="_blank" class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-orange-500/50 transition-colors">
+                <NuxtImg src="/images/feedly.png" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-opacity" />
                 <UIcon name="i-heroicons-rss" class="w-12 h-12 text-orange-500/20 mb-2 transition-transform group-hover:scale-110" />
                 <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black to-transparent">
-                  <p class="text-[10px] font-bold uppercase tracking-widest text-white/40">Flux Flux RSS (Feedly 1/2)</p>
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-white/40">Flux RSS (Feedly 1/2)</p>
                 </div>
-             </div>
+             </a>
           </div>
-          <!-- Feedly 2 -->
+          <!-- Sans Permission (ex-Feedly 2) -->
           <div class="reveal-up group">
-             <div class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-orange-500/50 transition-colors">
-                <NuxtImg src="/veille_feedly_placeholder_1773605979200.png" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity" />
-                <UIcon name="i-heroicons-list-bullet" class="w-12 h-12 text-orange-500/20 mb-2 transition-transform group-hover:scale-110" />
+             <a href="https://youtu.be/s4p4ecvLKZ4?si=t8to2o-wfmixXY_A" target="_blank" class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-red-500/50 transition-colors">
+                <NuxtImg src="/images/sans_permission.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-opacity" />
+                <UIcon name="i-heroicons-microphone" class="w-12 h-12 text-red-500/20 mb-2 transition-transform group-hover:scale-110" />
                 <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black to-transparent">
-                  <p class="text-[10px] font-bold uppercase tracking-widest text-white/40">Organisation Hebdo (Feedly 2/2)</p>
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-white/40">Podcast (Sans Permission)</p>
                 </div>
-             </div>
+             </a>
           </div>
-          <!-- Podcast Thumbnail -->
+          <!-- Podcast Thumbnail (Diary of a CEO) -->
           <div class="reveal-up group">
-             <div class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-blue-400/50 transition-colors">
-                <NuxtImg src="/veille_podcast_placeholder_1773605995255.png" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity" />
-                <UIcon name="i-heroicons-microphone" class="w-12 h-12 text-blue-400/20 mb-2 transition-transform group-hover:scale-110" />
+             <a href="https://youtu.be/UclrVWafRAI?si=wkRfHD4DsXn3HQuc" target="_blank" class="aspect-video bg-black/40 border border-white/10 rounded-3xl flex items-center justify-center overflow-hidden relative shadow-2xl group-hover:border-amber-400/50 transition-colors">
+                <NuxtImg src="/images/The_Diary_Of_Ceo.avif" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-opacity" />
+                <UIcon name="i-heroicons-microphone" class="w-12 h-12 text-amber-400/20 mb-2 transition-transform group-hover:scale-110" />
                 <div class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black to-transparent">
                   <p class="text-[10px] font-bold uppercase tracking-widest text-white/40">Podcast (Diary of a CEO)</p>
                 </div>
-             </div>
+             </a>
           </div>
           <!-- CTA Padlet -->
           <div class="reveal-up">
-            <a href="https://padlet.com/gospelkizamba/veille-ia-bts-sio-2026" target="_blank" class="w-full h-full flex flex-col items-center justify-center p-8 bg-white/5 border border-white/10 rounded-3xl hover:bg-white/10 transition-colors group">
+            <a href="https://padlet.com/gospel14es/les-arcticles-et-blogs-qui-m-ont-aid-a-realis-ma-veille-tech-bbiqgev6tg4uqlvn" target="_blank" class="w-full h-full flex flex-col items-center justify-center p-8 bg-white/5 border border-white/10 rounded-3xl hover:bg-white/10 transition-colors group">
               <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-10 h-10 text-white mb-4 transition-transform group-hover:scale-110 group-hover:rotate-12" />
               <p class="text-sm font-bold text-white text-center">Accéder au Padlet complet</p>
             </a>
@@ -337,16 +339,16 @@ onMounted(() => {
             <!-- Content Card -->
             <div class="w-full lg:w-[45%]">
               <div :class="[
-                'stat-card p-8 group-hover:border-blue-500/30 transition-all duration-500 reveal-up',
+                'stat-card p-8 group-hover:border-amber-500/30 transition-all duration-500 reveal-up',
                 index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'
               ]">
-                <div :class="['flex items-center gap-2 mb-4 text-[10px] font-bold uppercase tracking-widest text-blue-400', index % 2 === 0 ? 'lg:justify-end' : 'justify-start']">
+                <div :class="['flex items-center gap-2 mb-4 text-[10px] font-bold uppercase tracking-widest text-amber-400', index % 2 === 0 ? 'lg:justify-end' : 'justify-start']">
                   <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full">{{ article.date }}</span>
                   <span class="text-white/30">•</span>
                   <span class="italic text-white/40">{{ article.source }}</span>
                 </div>
                 
-                <h3 class="text-xl font-bold text-white mb-4 leading-tight group-hover:text-blue-400 transition-colors">{{ article.title }}</h3>
+                <h3 class="text-xl font-bold text-white mb-4 leading-tight group-hover:text-amber-400 transition-colors">{{ article.title }}</h3>
                 <p class="text-sm text-white/50 mb-6 leading-relaxed">{{ article.summary }}</p>
                 
                 <div :class="['flex flex-wrap gap-2 mb-8', index % 2 === 0 ? 'lg:justify-end' : 'justify-start']">
@@ -356,7 +358,7 @@ onMounted(() => {
                 </div>
 
                 <div :class="['flex', index % 2 === 0 ? 'lg:justify-end' : 'justify-start']">
-                  <a :href="article.link" target="_blank" class="flex items-center gap-2 text-[10px] font-bold tracking-widest uppercase text-white hover:text-blue-400 transition-colors group/link">
+                  <a :href="article.link" target="_blank" class="flex items-center gap-2 text-[10px] font-bold tracking-widest uppercase text-white hover:text-amber-400 transition-colors group/link">
                     Lire l'article
                     <UIcon name="i-heroicons-arrow-up-right" class="w-4 h-4 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1" />
                   </a>
@@ -366,7 +368,7 @@ onMounted(() => {
 
             <!-- Central Point -->
             <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center justify-center">
-              <div class="w-4 h-4 rounded-full bg-apple-dark border-2 border-blue-500 group-hover:scale-150 group-hover:bg-blue-500 transition-all duration-300 z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
+              <div class="w-4 h-4 rounded-full bg-apple-dark border-2 border-amber-500 group-hover:scale-150 group-hover:bg-blue-500 transition-all duration-300 z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
             </div>
 
             <!-- Spacer for the other side -->
@@ -463,7 +465,7 @@ onMounted(() => {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #007AFF 0%, #A259FF 100%);
+  background: linear-gradient(135deg, #FFD700 0%, #A259FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

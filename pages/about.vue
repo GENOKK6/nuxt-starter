@@ -30,7 +30,7 @@ onMounted(() => {
   <section class="section pt-32" style="text-align: center;">
     <div class="max-w-4xl mx-auto px-6 lg:px-8">
       <div class="mb-12 reveal-up">
-        <span class="text-sm font-semibold text-blue-600 tracking-widest uppercase">À propos</span>
+        <span class="text-sm font-semibold text-amber-500 tracking-widest uppercase">À propos</span>
         <h1 class="text-section apple-heading mt-4 mb-6">
           Mon <span class="gradient-text">parcours</span>
         </h1>
@@ -73,7 +73,7 @@ onMounted(() => {
                   Développement du moteur conversationnel de la peluche intelligente Ary.
                   Génération de 500+ contenus pédagogiques structurés via Python.
                 </p>
-                <NuxtLink to="/stages" class="text-blue-600 hover:underline text-sm">Voir les détails →</NuxtLink>
+                <NuxtLink to="/stages" class="text-amber-500 hover:underline text-sm">Voir les détails →</NuxtLink>
               </div>
             </div>
 
@@ -88,7 +88,7 @@ onMounted(() => {
                   Spécialisation en solutions logicielles, architecture MVC et intégration d'IA.
                   Approfondissement des concepts de programmation objet et de gestion de projet.
                 </p>
-                <NuxtLink to="/skills" class="text-blue-600 hover:underline text-sm">Voir mes compétences →</NuxtLink>
+                <NuxtLink to="/skills" class="text-amber-500 hover:underline text-sm">Voir mes compétences →</NuxtLink>
               </div>
             </div>
 
@@ -139,7 +139,7 @@ onMounted(() => {
           <h2 class="text-2xl font-semibold mb-6">Mes <span class="gradient-text">objectifs</span></h2>
           <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
-              <div class="w-12 h-12 bg-blue-900/30 rounded-2xl flex items-center justify-center mb-4">
+              <div class="w-12 h-12 bg-amber-900/30 rounded-2xl flex items-center justify-center mb-4">
                 <span class="text-xl">🎯</span>
               </div>
               <h3 class="font-semibold mb-2">Court terme</h3>
@@ -173,7 +173,7 @@ onMounted(() => {
 
       <!-- CV Link Section -->
       <div class="mt-20 reveal-up" style="animation-delay: 0.3s;">
-        <div class="bg-linear-to-r from-blue-900/20 to-purple-900/20 p-10 rounded-3xl border border-white/10 text-center">
+        <div class="bg-linear-to-r from-amber-900/20 to-red-900/20 p-10 rounded-3xl border border-white/10 text-center">
           <h2 class="text-2xl font-semibold mb-4 text-white">Consulter mon CV</h2>
           <p class="text-gray-400 mb-8 max-w-xl mx-auto">
             Pour une vue d'ensemble de mes compétences, de mon parcours académique 

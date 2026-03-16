@@ -32,7 +32,7 @@ onMounted(() => {
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <!-- Header -->
       <div class="mb-16 reveal-up">
-        <span class="text-sm font-semibold text-blue-600 tracking-widest uppercase">Compétences</span>
+        <span class="text-sm font-semibold text-amber-500 tracking-widest uppercase">Compétences</span>
         <h1 class="text-section apple-heading mt-4 mb-6">
           Expertise <span class="gradient-text">technique</span>
         </h1>
@@ -47,7 +47,7 @@ onMounted(() => {
         <!-- Frontend -->
         <div class="reveal-up" style="animation-delay: 0.1s;">
           <div class="flex items-center gap-4 mb-8">
-            <div class="icon-box bg-blue-900/30">
+            <div class="icon-box bg-amber-900/30">
               <span>🎨</span>
             </div>
             <div>
@@ -84,7 +84,8 @@ onMounted(() => {
           <div class="grid md:grid-cols-2 gap-6">
             <div v-for="skill in [
               { name: 'PHP / Laravel', category: 'Langage & Framework', description: 'Apprentissage en BTS SIO (MVC, ORM Eloquent). Création d\'applications web avec gestion de données.' },
-              { name: 'Python / C#', category: 'Langages de Programmation', description: 'Bases solides en programmation orientée objet, essentielles pour le développement d\'applications métiers.' },
+              { name: 'C# / .NET', category: 'Langages & Frameworks', description: 'Maîtrise de l\'écosystème .NET : développement d\'applications Desktop (WinForms) et mobiles multi-plateformes (.NET MAUI) avec une forte base en POO.' },
+              { name: 'Python', category: 'Langage de Programmation', description: 'Bases solides en programmation impérative et POO, utilisé pour des scripts d\'automatisation et l\'analyse de données.' },
               { name: 'MySQL', category: 'Base de données SQL', description: 'Modélisation de données (MCD/MLD) et manipulation via requêtes SQL complexes.' }
             ]" :key="skill.name" class="skill-card p-6 rounded-2xl">
               <div class="mb-4">
@@ -152,29 +153,29 @@ onMounted(() => {
 
       <!-- IA Strategy Banner -->
       <div class="mt-20 reveal-up" style="animation-delay: 0.5s;">
-        <div class="bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-10 rounded-3xl border border-blue-900/30">
+        <div class="bg-linear-to-r from-amber-900/20 to-red-900/20 p-10 rounded-3xl border border-amber-900/30">
           <div class="flex flex-col md:flex-row items-center gap-8">
             <div class="flex-1">
               <div class="inline-flex items-center gap-2 mb-4">
                 <span class="badge">VISION</span>
-                <span class="text-blue-400 font-semibold">IA NATIVE</span>
+                <span class="text-amber-500 font-semibold">IA NATIVE</span>
               </div>
               <h3 class="text-2xl font-semibold mb-4">Un développement propulsé par l'IA</h3>
               <p class="text-gray-400 mb-6 leading-relaxed">
                 J'intègre l'IA au cœur de chaque étape de mon cycle de développement. De l'architecture initiale à la mise en production, j'utilise les outils les plus avancés (Cursor, Copilot, Perplexity) pour garantir une rapidité d'exécution et une qualité de code optimale.
               </p>
               <div class="flex flex-wrap gap-3">
-                <span class="px-4 py-2 bg-blue-900/20 border border-blue-900/30 rounded-lg text-sm">OpenAI & LLM</span>
-                <span class="px-4 py-2 bg-purple-900/20 border border-purple-900/30 rounded-lg text-sm">Automatisation</span>
-                <span class="px-4 py-2 bg-green-900/20 border border-green-900/30 rounded-lg text-sm">Productivité</span>
-                <span class="px-4 py-2 bg-orange-900/20 border border-orange-900/30 rounded-lg text-sm">Futurisme</span>
+                <span class="px-4 py-2 bg-amber-900/20 border border-amber-900/30 rounded-lg text-sm">OpenAI & LLM</span>
+                <span class="px-4 py-2 bg-red-900/20 border border-red-900/30 rounded-lg text-sm">Automatisation</span>
+                <span class="px-4 py-2 bg-orange-900/20 border border-orange-900/30 rounded-lg text-sm">Productivité</span>
+                <span class="px-4 py-2 bg-yellow-900/20 border border-yellow-900/30 rounded-lg text-sm">Futurisme</span>
               </div>
             </div>
-            <div class="flex-shrink-0">
+            <div class="shrink-0">
               <div class="text-center">
-                <div class="inline-block p-10 border-2 border-blue-500/30 rounded-full bg-blue-900/10 relative">
+                <div class="inline-block p-10 border-2 border-amber-500/30 rounded-full bg-amber-900/10 relative">
                   <div class="text-4xl">🚀</div>
-                  <div class="absolute inset-0 border-2 border-blue-500/20 rounded-full animate-pulse"></div>
+                  <div class="absolute inset-0 border-2 border-amber-500/20 rounded-full animate-pulse"></div>
                 </div>
                 <div class="mt-4 text-gray-400 text-sm italic">"Build faster, better"</div>
               </div>

@@ -39,7 +39,7 @@ onMounted(() => {
       <div class="mb-16 reveal-up" style="animation-delay: 0.1s;">
         <div class="flex items-center gap-3 mb-4">
           <span class="badge">
-            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
             Laravel
           </span>
           <span class="text-gray-400 text-sm">2024-25</span>
@@ -145,7 +145,7 @@ onMounted(() => {
         <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800">
           <div class="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 class="font-semibold mb-4 text-blue-400">Laravel & Backend</h3>
+              <h3 class="font-semibold mb-4 text-amber-400">Laravel & Backend</h3>
               <ul class="space-y-2 text-sm text-gray-400">
                 <li>• Modèles Eloquent et relations (1:n, n:m)</li>
                 <li>• Migrations de base de données SQL</li>

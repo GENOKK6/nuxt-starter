@@ -51,7 +51,7 @@ onMounted(() => {
       <!-- Content -->
       <div class="space-y-8">
         <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 reveal-up" style="animation-delay: 0.2s;">
-          <h2 class="text-2xl font-semibold mb-4 text-blue-400">1. Édition du site</h2>
+          <h2 class="text-2xl font-semibold mb-4 text-amber-400">1. Édition du site</h2>
           <div class="text-gray-400 space-y-2">
             <p><strong class="text-white">Propriétaire :</strong> Kizamba Gospel</p>
             <p><strong class="text-white">Adresse :</strong> Paris, France</p>
@@ -61,16 +61,16 @@ onMounted(() => {
         </div>
 
         <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 reveal-up" style="animation-delay: 0.3s;">
-          <h2 class="text-2xl font-semibold mb-4 text-blue-400">2. Hébergement</h2>
+          <h2 class="text-2xl font-semibold mb-4 text-amber-400">2. Hébergement</h2>
           <div class="text-gray-400 space-y-2">
             <p><strong class="text-white">Hébergeur :</strong> Vercel Inc.</p>
             <p><strong class="text-white">Adresse :</strong> 340 S Lemon Ave #4139, Walnut, CA 91789, USA</p>
-            <p><strong class="text-white">Site web :</strong> <a href="https://vercel.com" target="_blank" class="text-blue-400 hover:underline">vercel.com</a></p>
+            <p><strong class="text-white">Site web :</strong> <a href="https://vercel.com" target="_blank" class="text-amber-400 hover:underline">vercel.com</a></p>
           </div>
         </div>
 
         <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 reveal-up" style="animation-delay: 0.4s;">
-          <h2 class="text-2xl font-semibold mb-4 text-blue-400">3. Propriété intellectuelle</h2>
+          <h2 class="text-2xl font-semibold mb-4 text-amber-400">3. Propriété intellectuelle</h2>
           <p class="text-gray-400 leading-relaxed mb-4">
             L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur
             et la propriété intellectuelle. Tous les droits de reproduction, de représentation et de
@@ -84,7 +84,7 @@ onMounted(() => {
         </div>
 
         <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 reveal-up" style="animation-delay: 0.5s;">
-          <h2 class="text-2xl font-semibold mb-4 text-blue-400">4. Données personnelles</h2>
+          <h2 class="text-2xl font-semibold mb-4 text-amber-400">4. Données personnelles</h2>
           <p class="text-gray-400 leading-relaxed mb-4">
             Ce site ne collecte aucune donnée personnelle de ses visiteurs. Aucun cookie de tracking
             n'est utilisé. Les seules données potentiellement collectées le sont via le formulaire de contact,
@@ -98,7 +98,7 @@ onMounted(() => {
         </div>
 
         <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 reveal-up" style="animation-delay: 0.6s;">
-          <h2 class="text-2xl font-semibold mb-4 text-blue-400">5. Responsabilité</h2>
+          <h2 class="text-2xl font-semibold mb-4 text-amber-400">5. Responsabilité</h2>
           <p class="text-gray-400 leading-relaxed">
             Le propriétaire de ce site s'efforce de fournir des informations aussi précises que possible.
             Cependant, il ne pourra être tenu responsable des omissions, des inexactitudes et des
@@ -108,7 +108,7 @@ onMounted(() => {
         </div>
 
         <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 reveal-up" style="animation-delay: 0.7s;">
-          <h2 class="text-2xl font-semibold mb-4 text-blue-400">6. Liens externes</h2>
+          <h2 class="text-2xl font-semibold mb-4 text-amber-400">6. Liens externes</h2>
           <p class="text-gray-400 leading-relaxed">
             Ce site peut contenir des liens vers des sites externes. Le propriétaire n'exerce aucun
             contrôle sur ces sites et décline toute responsabilité quant à leur contenu, leurs pratiques
@@ -118,7 +118,7 @@ onMounted(() => {
         </div>
 
         <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 reveal-up" style="animation-delay: 0.8s;">
-          <h2 class="text-2xl font-semibold mb-4 text-blue-400">7. Droit applicable</h2>
+          <h2 class="text-2xl font-semibold mb-4 text-amber-400">7. Droit applicable</h2>
           <p class="text-gray-400 leading-relaxed">
             Les présentes mentions légales sont soumises au droit français. En cas de litige relatif
             à l'utilisation du présent site, les tribunaux français seuls seront compétents.

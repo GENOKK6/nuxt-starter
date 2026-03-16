@@ -101,7 +101,7 @@ onMounted(() => {
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <!-- Header -->
       <div class="mb-16 reveal-up text-center">
-        <span class="text-sm font-semibold text-blue-600 tracking-widest uppercase">Contact</span>
+        <span class="text-sm font-semibold text-amber-500 tracking-widest uppercase">Contact</span>
         <h1 class="text-section apple-heading mt-4 mb-6">
           Parlons de votre <span class="gradient-text">projet</span>
         </h1>
@@ -124,7 +124,7 @@ onMounted(() => {
               <div>
                 <h4 class="font-semibold mb-1">Email</h4>
                 <p class="text-gray-400 text-sm mb-1">Adresse principale</p>
-                <a href="mailto:gospel14@gmail.com" class="text-blue-400 hover:underline">gospel14@gmail.com</a>
+                <a href="mailto:gospel14@gmail.com" class="text-amber-500 hover:underline">gospel14@gmail.com</a>
               </div>
             </div>
 
@@ -181,7 +181,7 @@ onMounted(() => {
                 <p class="text-gray-400 text-sm leading-relaxed">
                   Je réponds à toutes les demandes, mais pour optimiser nos échanges,
                   merci de préciser: le type de projet, votre budget, et vos délais.
-                  Je privilégie les projets avec une_stack moderne et une composante IA.
+                  Je privilégie les projets avec une stack moderne et une composante IA.
                 </p>
               </div>
             </div>
@@ -252,7 +252,7 @@ onMounted(() => {
               <button
                 type="submit"
                 :disabled="isSubmitting"
-                class="btn-primary w-full"
+                class="btn-primary w-full bg-linear-to-r from-amber-500 to-red-600 text-white border-none cursor-pointer"
                 :class="{ 'opacity-50 cursor-not-allowed': isSubmitting }"
               >
                 {{ isSubmitting ? 'Envoi en cours...' : 'Envoyer le message' }}

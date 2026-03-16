@@ -134,7 +134,7 @@ onMounted(() => {
                 <span class="text-2xl">🎯</span>
               </div>
               <div>
-                <h3 class="font-semibold mb-2 text-blue-400">Analyse des besoins</h3>
+                <h3 class="font-semibold mb-2 text-amber-400">Analyse des besoins</h3>
                 <p class="text-sm text-gray-400 leading-relaxed">
                   Comprendre les fonctionnalités demandées par le client, analyser
                   les exigences techniques et fonctionnelles, et estimer la faisabilité
@@ -215,7 +215,7 @@ onMounted(() => {
         <h2 class="text-2xl font-semibold mb-6">Ce que j'ai appris</h2>
         <div class="space-y-4">
           <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
-            <h3 class="font-semibold mb-3 text-blue-400">🔗 L'interconnexion des technologies</h3>
+            <h3 class="font-semibold mb-3 text-amber-400">🔗 L'interconnexion des technologies</h3>
             <p class="text-sm text-gray-400 leading-relaxed">
               J'ai vu concrètement comment une peluche physique peut être connectée à une
               IA conversationnelle via une architecture client-serveur. Le traitement audio,
@@ -286,7 +286,7 @@ onMounted(() => {
       <!-- Réflexion -->
       <div class="mb-16 reveal-up" style="animation-delay: 0.8s;">
         <h2 class="text-2xl font-semibold mb-6">Réflexion et outlook</h2>
-        <div class="bg-blue-500/10 border border-blue-500/30 p-8 rounded-2xl">
+        <div class="bg-blue-500/10 border border-amber-500/30 p-8 rounded-2xl">
           <p class="text-gray-400 leading-relaxed mb-6">
             Ce premier stage m'a confirmé que je voulais continuer dans le développement,
             mais surtout qu'<strong class="text-white">inclure l'IA dans des projets concrets</strong> était

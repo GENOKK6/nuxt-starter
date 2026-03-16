@@ -38,7 +38,7 @@ const projectsData = [
     technologies: ['Laravel', 'PHP', 'Blade', 'Eloquent ORM', 'MySQL'],
     githubUrl: 'https://github.com/KizambaGospel',
     detailUrl: '/project-1',
-    gradient: 'from-blue-600 to-indigo-700',
+    gradient: 'from-amber-600 to-red-700',
     statusColor: 'bg-green-500',
     highlights: [
       'Architecture MVC Laravel',
@@ -57,7 +57,7 @@ const projectsData = [
     technologies: ['Laravel', 'PHP', 'Vite', 'MySQL', 'Tailwind CSS'],
     githubUrl: 'https://github.com/KizambaGospel',
     detailUrl: '/project-2',
-    gradient: 'from-emerald-500 to-teal-600',
+    gradient: 'from-orange-500 to-red-600',
     statusColor: 'bg-green-500',
     highlights: [
       'Gestion CRUD des élèves',
@@ -86,6 +86,66 @@ const projectsData = [
     ]
   },
   {
+    id: 6,
+    title: 'SicilyLines Desktop',
+    type: 'Application C# / WinForms',
+    context: 'Gestion administrative - BTS SIO',
+    year: '2024',
+    description: 'Interface d\'administration de bureau permettant la gestion des paramètres système, des tarifs et des liaisons maritimes avec connexion SQL.',
+    technologies: ['C#', 'WinForms', 'SQL Server', 'ADO.NET'],
+    githubUrl: 'https://github.com/KizambaGospel',
+    detailUrl: '/project-6',
+    gradient: 'from-amber-600 to-orange-800',
+    statusColor: 'bg-amber-400',
+    image: '/images/project-6.png',
+    highlights: [
+      'Architecture N-Tier',
+      'CRUD Secteurs et Liaisons',
+      'Gestion des erreurs avancée',
+      'Intégration base de données'
+    ]
+  },
+  {
+    id: 7,
+    title: 'Gestion de Bibliothèque',
+    type: 'Application .NET MAUI',
+    context: 'Projet Mobile Multi-plateforme',
+    year: '2025',
+    description: 'Application moderne pour la gestion d\'un catalogue de livres, permettant le suivi des stocks et des emprunts sur mobile et desktop.',
+    technologies: ['C#', '.NET MAUI', 'XAML', 'SQLite'],
+    githubUrl: 'https://github.com/KizambaGospel',
+    detailUrl: '/project-7',
+    gradient: 'from-red-500 to-rose-800',
+    statusColor: 'bg-red-500',
+    image: '/images/project-7.png',
+    highlights: [
+      'Interface Cross-platform',
+      'Navigation Shell MAUI',
+      'Persistance SQLite locale',
+      'Architecture MVVM'
+    ]
+  },
+  {
+    id: 8,
+    title: 'Système Bancaire POO',
+    type: 'Application C# Console/IHM',
+    context: 'Perfectionnement Algorithmique',
+    year: '2024',
+    description: 'Mise en œuvre approfondie des concepts de programmation orientée objet à travers une simulation de services bancaires complexes.',
+    technologies: ['C#', '.NET Core', 'POO', 'Unit Testing'],
+    githubUrl: 'https://github.com/KizambaGospel',
+    detailUrl: '/project-8',
+    gradient: 'from-amber-600 to-orange-800',
+    statusColor: 'bg-amber-600',
+    image: '/images/project-8.png',
+    highlights: [
+      'Héritage et Polymorphisme',
+      'Gestion des transactions',
+      'Sécurité des comptes',
+      'Algorithmique avancée'
+    ]
+  },
+  {
     id: 4,
     title: 'Projets Bureau d\'études',
     type: 'PHP / Gestion métier',
@@ -96,7 +156,7 @@ const projectsData = [
     githubUrl: 'https://github.com/KizambaGospel',
     detailUrl: '/project-4',
     gradient: 'from-gray-700 to-gray-900',
-    statusColor: 'bg-blue-500',
+    statusColor: 'bg-amber-500',
     highlights: [
       'Gestion de formulaires complexes',
       'Validation de données',
@@ -133,7 +193,7 @@ const projects = ref(projectsData)
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <!-- Header -->
       <div class="mb-16 reveal-up">
-        <span class="text-sm font-semibold text-purple-600 tracking-widest uppercase">Portfolio</span>
+        <span class="text-sm font-semibold text-amber-500 tracking-widest uppercase">Portfolio</span>
         <h1 class="text-section apple-heading mt-4 mb-6">
           Mes <span class="gradient-text">projets</span>
         </h1>
@@ -148,8 +208,9 @@ const projects = ref(projectsData)
         <div v-for="project in projects" :key="project.id" class="reveal-up" :style="{ animationDelay: project.id * 0.1 + 's' }">
           <div class="project-card">
             <!-- Project image -->
-            <div class="project-image aspect-16/10">
-              <div class="w-full h-full bg-linear-to-br" :class="project.gradient"></div>
+            <div class="project-image aspect-video">
+              <img v-if="project.image" :src="project.image" :alt="project.title" class="w-full h-full object-cover">
+              <div v-else class="w-full h-full bg-linear-to-br" :class="project.gradient"></div>
               <div class="project-image-content">
                 <div class="mb-3">
                   <span class="badge">
@@ -170,7 +231,7 @@ const projects = ref(projectsData)
                 </div>
               </div>
 
-              <h3 class="text-2xl font-semibold mb-4 group-hover:text-blue-400 transition-colors">{{ project.title }}</h3>
+              <h3 class="text-2xl font-semibold mb-4 group-hover:text-amber-500 transition-colors">{{ project.title }}</h3>
 
               <p class="text-gray-400 mb-6 leading-relaxed">{{ project.description }}</p>
 
@@ -179,7 +240,7 @@ const projects = ref(projectsData)
                 <h4 class="text-sm font-semibold mb-3 text-gray-300">Fonctionnalités clés</h4>
                 <ul class="space-y-2">
                   <li v-for="highlight in project.highlights" :key="highlight" class="flex items-center gap-2 text-sm text-gray-400">
-                    <svg class="w-4 h-4 text-green-500 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-4 h-4 text-amber-500 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
                     </svg>
                     <span>{{ highlight }}</span>
@@ -196,10 +257,10 @@ const projects = ref(projectsData)
 
               <!-- Actions -->
               <div class="flex gap-4">
-                <NuxtLink :to="project.detailUrl" class="flex-1 py-3 bg-blue-600 hover:bg-blue-700 text-white text-center font-medium rounded-xl transition-colors">
+                <NuxtLink :to="project.detailUrl" class="flex-1 py-3 bg-linear-to-r from-amber-600 to-red-600 hover:scale-[1.02] text-white text-center font-medium rounded-xl transition-all">
                   Voir les détails
                 </NuxtLink>
-                <a :href="project.githubUrl" target="_blank" class="px-4 py-3 border border-gray-600 hover:border-blue-500 hover:text-blue-400 transition-colors rounded-xl">
+                <a :href="project.githubUrl" target="_blank" class="px-4 py-3 border border-gray-600 hover:border-amber-500 hover:text-amber-400 transition-colors rounded-xl">
                   <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
                   </svg>
@@ -224,8 +285,8 @@ const projects = ref(projectsData)
 
 .project-card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 30px 60px rgba(0, 122, 255, 0.12);
-  border-color: rgba(0, 122, 255, 0.4);
+  box-shadow: 0 30px 60px rgba(255, 215, 0, 0.12);
+  border-color: rgba(255, 215, 0, 0.4);
 }
 
 .project-image {
@@ -263,8 +324,8 @@ const projects = ref(projectsData)
 }
 
 .tech-tag:hover {
-  background: rgba(0, 122, 255, 0.2);
-  color: #007AFF;
+  background: rgba(255, 215, 0, 0.2);
+  color: #FFD700;
 }
 
 .badge {

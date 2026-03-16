@@ -15,6 +15,7 @@ const mobileMenuOpen = ref(false)
             <NuxtLink to="/skills" class="nav-link text-sm font-medium" :class="{ 'active': $route.path === '/skills' }">Compétences</NuxtLink>
             <NuxtLink to="/portfolio" class="nav-link text-sm font-medium" :class="{ 'active': $route.path === '/portfolio' }">Projets</NuxtLink>
             <NuxtLink to="/stages" class="nav-link text-sm font-medium" :class="{ 'active': $route.path === '/stages' }">Stages</NuxtLink>
+            <NuxtLink to="/certifications" class="nav-link text-sm font-medium" :class="{ 'active': $route.path === '/certifications' }">Certifs</NuxtLink>
             <NuxtLink to="/veille" class="nav-link text-sm font-medium" :class="{ 'active': $route.path === '/veille' }">Veille</NuxtLink>
             <NuxtLink to="/contact" class="nav-link text-sm font-medium" :class="{ 'active': $route.path === '/contact' }">Contact</NuxtLink>
           </div>
@@ -37,6 +38,7 @@ const mobileMenuOpen = ref(false)
           <NuxtLink to="/skills" @click="mobileMenuOpen = false" class="block text-base font-medium" :class=" $route.path === '/skills' ? 'text-white' : 'text-gray-400 hover:text-white' ">Compétences</NuxtLink>
           <NuxtLink to="/portfolio" @click="mobileMenuOpen = false" class="block text-base font-medium" :class=" $route.path === '/portfolio' ? 'text-white' : 'text-gray-400 hover:text-white' ">Projets</NuxtLink>
           <NuxtLink to="/stages" @click="mobileMenuOpen = false" class="block text-base font-medium" :class=" $route.path === '/stages' ? 'text-white' : 'text-gray-400 hover:text-white' ">Stages</NuxtLink>
+          <NuxtLink to="/certifications" @click="mobileMenuOpen = false" class="block text-base font-medium" :class=" $route.path === '/certifications' ? 'text-white' : 'text-gray-400 hover:text-white' ">Certifications</NuxtLink>
           <NuxtLink to="/veille" @click="mobileMenuOpen = false" class="block text-base font-medium" :class=" $route.path === '/veille' ? 'text-white' : 'text-gray-400 hover:text-white' ">Veille</NuxtLink>
           <NuxtLink to="/contact" @click="mobileMenuOpen = false" class="block text-base font-medium" :class=" $route.path === '/contact' ? 'text-white' : 'text-gray-400 hover:text-white' ">Contact</NuxtLink>
         </div>
@@ -51,6 +53,7 @@ const mobileMenuOpen = ref(false)
     <!-- Footer -->
     <footer class="border-t border-gray-800 py-12 mt-20">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
         <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-500">
           <div>© 2025 <span class="text-white">Gospel Kizamba</span></div>
           <div class="flex gap-6 flex-wrap justify-center">
@@ -59,6 +62,7 @@ const mobileMenuOpen = ref(false)
             <NuxtLink to="/skills" class="hover:text-white">Compétences</NuxtLink>
             <NuxtLink to="/portfolio" class="hover:text-white">Projets</NuxtLink>
             <NuxtLink to="/stages" class="hover:text-white">Stages</NuxtLink>
+            <NuxtLink to="/certifications" class="hover:text-white">Certificats</NuxtLink>
             <NuxtLink to="/veille" class="hover:text-white">Veille</NuxtLink>
             <NuxtLink to="/contact" class="hover:text-white">Contact</NuxtLink>
           </div>
@@ -68,8 +72,8 @@ const mobileMenuOpen = ref(false)
   </div>
 </template>
 
-<style scoped>
-/* Styles Apple-style */
+<style>
+/* Styles Apple-style globaux pour le layout simple */
 :global(html) {
   scroll-behavior: smooth;
 }
@@ -104,7 +108,7 @@ const mobileMenuOpen = ref(false)
   left: 0;
   width: 0;
   height: 1px;
-  background: #007AFF;
+  background: #FFD700;
   transition: width 0.3s;
 }
 
@@ -131,7 +135,7 @@ const mobileMenuOpen = ref(false)
 }
 
 .gradient-text {
-  background: linear-gradient(180deg, #007AFF 0%, #5856D6 100%);
+  background: linear-gradient(180deg, #FFD700 0%, #FF4500 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -168,8 +172,8 @@ const mobileMenuOpen = ref(false)
 }
 
 .btn-secondary:hover {
-  border-color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
+  border-color: #FFD700;
+  background: rgba(255, 215, 0, 0.1);
 }
 
 .btn-outline {
@@ -179,15 +183,15 @@ const mobileMenuOpen = ref(false)
   border-radius: 980px;
   font-weight: 500;
   font-size: 17px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 215, 0, 0.5);
   display: inline-block;
   text-decoration: none;
   transition: all 0.3s;
 }
 
 .btn-outline:hover {
-  border-color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
+  border-color: #FFD700;
+  background: rgba(255, 215, 0, 0.1);
 }
 
 .reveal-up {
@@ -223,7 +227,7 @@ const mobileMenuOpen = ref(false)
 
 .decorative-circle {
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(0, 122, 255, 0.1), rgba(88, 86, 214, 0.1));
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 69, 0, 0.1));
   filter: blur(40px);
 }
 
@@ -249,7 +253,7 @@ const mobileMenuOpen = ref(false)
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #007AFF;
+  background: #FFD700;
   border: 3px solid #000;
 }
 

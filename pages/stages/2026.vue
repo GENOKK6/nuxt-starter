@@ -121,7 +121,7 @@ onMounted(() => {
 
       <!-- Missions Techniques -->
       <div class="mb-16 reveal-up" style="animation-delay: 0.3s;">
-        <h2 class="text-2xl font-semibold mb-6 text-blue-400">Missions & Contributions</h2>
+        <h2 class="text-2xl font-semibold mb-6 text-amber-400">Missions & Contributions</h2>
         <div class="space-y-6">
           <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800">
             <h3 class="font-semibold mb-4 text-white">⚙️ Développement Backend IA</h3>
@@ -134,7 +134,7 @@ onMounted(() => {
                 Scripts de génération de jeux de données éducatifs structurés pour alimenter la base de connaissances d'Ary.
               </div>
               <div class="p-4 bg-white/5 rounded-xl border border-white/10">
-                <span class="block text-blue-400 font-bold mb-1">Intégration API</span>
+                <span class="block text-amber-400 font-bold mb-1">Intégration API</span>
                 Maintenance et optimisation des liaisons avec les APIs OpenAI et Anthropic (Claude) pour la conversation temps réel.
               </div>
             </div>
