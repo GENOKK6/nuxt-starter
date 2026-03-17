@@ -154,19 +154,65 @@ onMounted(() => {
         </div>
       </div>
 
-      <!-- Réalisations Concrètes -->
+      <!-- Projets réalisés pendant le stage -->
       <div class="mb-16 reveal-up" style="animation-delay: 0.4s;">
-        <h2 class="text-2xl font-semibold mb-6">Réalisations</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-amber-900/10 border border-amber-900/30 p-6 rounded-2xl">
-            <div class="text-2xl mb-4">📜</div>
-            <h4 class="font-semibold mb-2">Générateur JSON Éducatif</h4>
-            <p class="text-sm text-gray-400 italic">"Génération de plus de 500 contenus thématiques (dinosaures, espace, histoire) via scripts Python."</p>
+        <h2 class="text-2xl font-semibold mb-6 text-amber-400">Projets & Réalisations</h2>
+        <div class="grid gap-6">
+          <!-- Projet 1: OpenRout -->
+          <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 hover:border-amber-500/30 transition-all group">
+            <div class="flex flex-col md:flex-row justify-between gap-4 mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">OpenRout (v2.0)</h3>
+                <p class="text-sm text-amber-500/80 font-medium tracking-wide border-b border-amber-500/20 inline-block">Plateforme Éducative Fullstack</p>
+              </div>
+              <div class="flex gap-2">
+                <span v-for="tech in ['React 18', 'PHP', 'MySQL', 'Tailwind']" :key="tech" class="px-3 py-1 bg-white/5 rounded-lg text-[10px] text-gray-400 uppercase tracking-tighter">{{ tech }}</span>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+              Refonte complète du Dashboard d'apprentissage. Interface moderne permettant la gestion des cours d'Anglais, Français et CEJM avec un système de progression en temps réel pour l'élève.
+            </p>
+            <a href="https://github.com/GENOKK6/Lookiz" target="_blank" class="text-xs text-amber-500 hover:underline flex items-center gap-1">
+              Voir le dépôt GitHub →
+            </a>
           </div>
-          <div class="bg-amber-900/10 border border-amber-900/30 p-6 rounded-2xl">
-            <div class="text-2xl mb-4">🔑</div>
-            <h4 class="font-semibold mb-2">Gestion des Clés API</h4>
-            <p class="text-sm text-gray-400 italic">"Implémentation d'un système robuste de gestion des tokens et rotation des clés d'API pour le déploiement."</p>
+
+          <!-- Projet 2: Content Designer -->
+          <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 hover:border-amber-500/30 transition-all group">
+            <div class="flex flex-col md:flex-row justify-between gap-4 mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Lookiz Content Designer</h3>
+                <p class="text-sm text-amber-500/80 font-medium tracking-wide border-b border-amber-500/20 inline-block">Solution de Génération IA</p>
+              </div>
+              <div class="flex gap-2">
+                <span v-for="tech in ['Python', 'OpenRouter', 'Gemini']" :key="tech" class="px-3 py-1 bg-white/5 rounded-lg text-[10px] text-gray-400 uppercase tracking-tighter">{{ tech }}</span>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+              Développement d'un pipeline automatisé créant plus de 500 modules pédagogiques structurés. Utilisation massive du prompting zero-shot pour garantir la qualité éducative sur des thèmes comme les Dinosaures ou l'Espace.
+            </p>
+            <a href="https://github.com/GENOKK6/Lookiz" target="_blank" class="text-xs text-amber-500 hover:underline flex items-center gap-1">
+              Voir le dépôt GitHub →
+            </a>
+          </div>
+
+          <!-- Projet 3: Voice Engine -->
+          <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800 hover:border-amber-500/30 transition-all group">
+            <div class="flex flex-col md:flex-row justify-between gap-4 mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Moteur d'Interaction Vocale</h3>
+                <p class="text-sm text-amber-500/80 font-medium tracking-wide border-b border-amber-500/20 inline-block">Système IA Conversationnel</p>
+              </div>
+              <div class="flex gap-2">
+                <span v-for="tech in ['Python', 'NLP', 'Audio Processing']" :key="tech" class="px-3 py-1 bg-white/5 rounded-lg text-[10px] text-gray-400 uppercase tracking-tighter">{{ tech }}</span>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+              Optimisation de la logique conversationnelle pour la peluche Ary. Gestion des dialogues fluides, des quiz interactifs et sécurisation des interactions pour un public jeune enfant.
+            </p>
+            <a href="https://github.com/GENOKK6/Lookiz" target="_blank" class="text-xs text-amber-500 hover:underline flex items-center gap-1">
+              Voir le dépôt GitHub →
+            </a>
           </div>
         </div>
       </div>
@@ -222,14 +268,12 @@ onMounted(() => {
             </h4>
             <div class="bg-[#1e1e1e] rounded-xl border border-white/10 p-4 overflow-hidden shadow-2xl">
               <pre class="text-[10px] md:text-xs text-amber-200 font-mono leading-relaxed"><code>{
-  "sound": "sparkle",
-  "content": "Sais-tu que les volcans rejettent de la lave chaude ?",
-  "action": "current",
-  "quiz": {
-    "question": "Quel liquide sort d'un volcan ?",
-    "keyword": "lave",
-    "attempts": 2
-  }
+  "sujet": "Les étoiles",
+  "niveau": "Découverte",
+  "content": [
+    "Une étoile est une énorme boule de gaz très chaud.",
+    "Le Soleil est l'étoile la plus proche de la Terre."
+  ]
 }</code></pre>
             </div>
           </div>
@@ -237,6 +281,101 @@ onMounted(() => {
         <p class="mt-6 text-sm text-gray-500 italic text-center">
           "Le back-end assure la fluidité entre la voix de l'enfant et l'intelligence d'Ary."
         </p>
+      </div>
+
+      <!-- Artefacts & Galerie de Contenus -->
+      <div class="mb-16 reveal-up" style="animation-delay: 0.7s;">
+        <h2 class="text-2xl font-semibold mb-6 text-amber-400">Bibliothèque de Contenus IA</h2>
+        <p class="text-gray-400 mb-8 leading-relaxed">
+          Plus de <strong>500+ modules interactifs</strong> ont été générés et validés. Voici un aperçu des thématiques structurées pour l'IA d'Ary :
+        </p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          <div v-for="topic in [
+            { id: 1, name: 'Dinosaures', icon: '🦖', count: 45 },
+            { id: 2, name: 'Astronomie', icon: '🪐', count: 62 },
+            { id: 3, name: 'Le Corps Humain', icon: '🧠', count: 38 },
+            { id: 4, name: 'Mythologie', icon: '⚡', count: 54 },
+            { id: 5, name: 'Géographie', icon: '🌍', count: 41 },
+            { id: 6, name: 'Anglais', icon: '🇬🇧', count: 85 },
+            { id: 7, name: 'Fables', icon: '🦊', count: 30 },
+            { id: 8, name: 'Physique', icon: '🔬', count: 25 }
+          ]" :key="topic.id" class="p-4 bg-white/5 border border-white/10 rounded-2xl text-center hover:border-amber-500/50 transition-colors">
+            <div class="text-3xl mb-2">{{ topic.icon }}</div>
+            <div class="text-sm font-semibold text-white mb-1">{{ topic.name }}</div>
+            <div class="text-[10px] text-amber-500 uppercase tracking-widest font-bold">{{ topic.count }} modules</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terminal Output Simulations -->
+      <div class="mb-16 reveal-up" style="animation-delay: 0.7s;">
+        <h2 class="text-2xl font-semibold mb-8 text-amber-400">Simulations des Systèmes Python</h2>
+        
+        <div class="grid lg:grid-cols-2 gap-8">
+          <!-- Simulation 1: Generation Pipeline -->
+          <div>
+            <h3 class="text-sm font-semibold mb-4 text-gray-400 flex items-center gap-2">
+              <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+              Génération de Contenus (gen.py)
+            </h3>
+            <div class="bg-black border border-gray-800 rounded-2xl p-1 shadow-2xl overflow-hidden h-[400px]">
+              <div class="flex items-center gap-2 px-4 py-3 border-b border-gray-800 bg-gray-900/50">
+                <div class="flex gap-1">
+                  <div class="w-2 h-2 rounded-full bg-red-500/50"></div>
+                  <div class="w-2 h-2 rounded-full bg-amber-500/50"></div>
+                  <div class="w-2 h-2 rounded-full bg-green-500/50"></div>
+                </div>
+                <span class="text-[10px] text-gray-500 font-mono ml-2 italic">generator_pipeline.py</span>
+              </div>
+              <div class="p-6 font-mono text-[11px] leading-relaxed overflow-y-auto custom-scrollbar h-full">
+                <p class="text-gray-500 mb-2"># Connexion OpenRouter (Gemini 2.0 Flash)...</p>
+                <p class="text-gray-300">$ python gen.py</p>
+                <div class="mt-4 space-y-1">
+                  <p class="text-blue-400">   Generating : <span class="text-white">Les dinosaures [Découverte]</span>...</p>
+                  <p class="text-green-500">      ✅ OK : 18 éléments JSON sauvegardés.</p>
+                  <p class="text-blue-400">   Generating : <span class="text-white">Le système solaire [Expert]</span>...</p>
+                  <p class="text-green-500">      ✅ OK : 29 éléments JSON sauvegardés.</p>
+                  <p class="text-blue-400">   Generating : <span class="text-white">L'alphabet anglais [Découverte]</span>...</p>
+                  <p class="text-green-500">      ✅ OK : 26 éléments JSON sauvegardés.</p>
+                  <p class="text-blue-400">   Generating : <span class="text-white">Les volcans [Amateur]</span>...</p>
+                  <p class="text-green-500">      ✅ OK : 22 éléments JSON sauvegardés.</p>
+                  <p class="text-amber-500 mt-4 font-bold">🚀 Mission accomplie : 500+ fichiers générés.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simulation 2: Interactive Engine -->
+          <div>
+            <h3 class="text-sm font-semibold mb-4 text-gray-400 flex items-center gap-2">
+              <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+              Moteur de Dialogue (edupro.py)
+            </h3>
+            <div class="bg-black border border-gray-800 rounded-2xl p-1 shadow-2xl overflow-hidden h-[400px]">
+              <div class="flex items-center gap-2 px-4 py-3 border-b border-gray-800 bg-gray-900/50">
+                <div class="flex gap-1">
+                  <div class="w-2 h-2 rounded-full bg-red-500/50"></div>
+                  <div class="w-2 h-2 rounded-full bg-amber-500/50"></div>
+                  <div class="w-2 h-2 rounded-full bg-green-500/50"></div>
+                </div>
+                <span class="text-[10px] text-gray-500 font-mono ml-2 italic">interaction_engine.py</span>
+              </div>
+              <div class="p-6 font-mono text-[11px] leading-relaxed overflow-y-auto custom-scrollbar h-full text-gray-300">
+                <p class="text-gray-500 mb-2"># Initialisation d'interaction avec Hugo (7 ans)...</p>
+                <p class="text-gray-300">$ python edupro.py --voice=on</p>
+                <div class="mt-4 space-y-3">
+                  <p><span class="text-amber-500">Ary &gt;</span> "Bonjour Hugo ! Quel thème choisit-on ?"</p>
+                  <p><span class="text-cyan-400">Hugo ➜</span> "L'espace !"</p>
+                  <p><span class="text-amber-500">Ary &gt;</span> "Super ! Sais-tu que le Soleil est une étoile ?"</p>
+                  <p><span class="text-gray-500 italic">[SYSTEM] Wait for keyword: 'étoile'</span></p>
+                  <p><span class="text-cyan-400">Hugo ➜</span> "Oui, il est très chaud !"</p>
+                  <p><span class="text-green-500">Ary &gt;</span> "✨ Bravo ! C'est exactement ça !"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Next/Prev Stage -->
