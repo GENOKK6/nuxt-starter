@@ -308,73 +308,57 @@ onMounted(() => {
         </div>
       </div>
 
-      <!-- Terminal Output Simulations -->
+      <!-- Terminal Output Simulations & Ressources -->
       <div class="mb-16 reveal-up" style="animation-delay: 0.7s;">
-        <h2 class="text-2xl font-semibold mb-8 text-amber-400">Simulations des Systèmes Python</h2>
+        <h2 class="text-2xl font-semibold mb-8 text-amber-400">Rendus et Outils d'Analyse (Python)</h2>
         
-        <div class="grid lg:grid-cols-2 gap-8">
-          <!-- Simulation 1: Generation Pipeline -->
+        <div class="grid lg:grid-cols-2 gap-8 mb-12">
+          <!-- Image 1: gen.py -->
           <div>
             <h3 class="text-sm font-semibold mb-4 text-gray-400 flex items-center gap-2">
               <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
               Génération de Contenus (gen.py)
             </h3>
-            <div class="bg-black border border-gray-800 rounded-2xl p-1 shadow-2xl overflow-hidden h-[400px]">
-              <div class="flex items-center gap-2 px-4 py-3 border-b border-gray-800 bg-gray-900/50">
-                <div class="flex gap-1">
-                  <div class="w-2 h-2 rounded-full bg-red-500/50"></div>
-                  <div class="w-2 h-2 rounded-full bg-amber-500/50"></div>
-                  <div class="w-2 h-2 rounded-full bg-green-500/50"></div>
-                </div>
-                <span class="text-[10px] text-gray-500 font-mono ml-2 italic">generator_pipeline.py</span>
-              </div>
-              <div class="p-6 font-mono text-[11px] leading-relaxed overflow-y-auto custom-scrollbar h-full">
-                <p class="text-gray-500 mb-2"># Connexion OpenRouter (Gemini 2.0 Flash)...</p>
-                <p class="text-gray-300">$ python gen.py</p>
-                <div class="mt-4 space-y-1">
-                  <p class="text-blue-400">   Generating : <span class="text-white">Les dinosaures [Découverte]</span>...</p>
-                  <p class="text-green-500">      ✅ OK : 18 éléments JSON sauvegardés.</p>
-                  <p class="text-blue-400">   Generating : <span class="text-white">Le système solaire [Expert]</span>...</p>
-                  <p class="text-green-500">      ✅ OK : 29 éléments JSON sauvegardés.</p>
-                  <p class="text-blue-400">   Generating : <span class="text-white">L'alphabet anglais [Découverte]</span>...</p>
-                  <p class="text-green-500">      ✅ OK : 26 éléments JSON sauvegardés.</p>
-                  <p class="text-blue-400">   Generating : <span class="text-white">Les volcans [Amateur]</span>...</p>
-                  <p class="text-green-500">      ✅ OK : 22 éléments JSON sauvegardés.</p>
-                  <p class="text-amber-500 mt-4 font-bold">🚀 Mission accomplie : 500+ fichiers générés.</p>
-                </div>
-              </div>
+            <div class="bg-black border border-gray-800 rounded-2xl p-1 shadow-2xl overflow-hidden group">
+              <img src="/images/json-gen.py-resultat.png" alt="Terminal Output Gen.py" class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
           </div>
 
-          <!-- Simulation 2: Interactive Engine -->
+          <!-- Image 2: edupro.py -->
           <div>
             <h3 class="text-sm font-semibold mb-4 text-gray-400 flex items-center gap-2">
               <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
               Moteur de Dialogue (edupro.py)
             </h3>
-            <div class="bg-black border border-gray-800 rounded-2xl p-1 shadow-2xl overflow-hidden h-[400px]">
-              <div class="flex items-center gap-2 px-4 py-3 border-b border-gray-800 bg-gray-900/50">
-                <div class="flex gap-1">
-                  <div class="w-2 h-2 rounded-full bg-red-500/50"></div>
-                  <div class="w-2 h-2 rounded-full bg-amber-500/50"></div>
-                  <div class="w-2 h-2 rounded-full bg-green-500/50"></div>
-                </div>
-                <span class="text-[10px] text-gray-500 font-mono ml-2 italic">interaction_engine.py</span>
-              </div>
-              <div class="p-6 font-mono text-[11px] leading-relaxed overflow-y-auto custom-scrollbar h-full text-gray-300">
-                <p class="text-gray-500 mb-2"># Initialisation d'interaction avec Hugo (7 ans)...</p>
-                <p class="text-gray-300">$ python edupro.py --voice=on</p>
-                <div class="mt-4 space-y-3">
-                  <p><span class="text-amber-500">Ary &gt;</span> "Bonjour Hugo ! Quel thème choisit-on ?"</p>
-                  <p><span class="text-cyan-400">Hugo ➜</span> "L'espace !"</p>
-                  <p><span class="text-amber-500">Ary &gt;</span> "Super ! Sais-tu que le Soleil est une étoile ?"</p>
-                  <p><span class="text-gray-500 italic">[SYSTEM] Wait for keyword: 'étoile'</span></p>
-                  <p><span class="text-cyan-400">Hugo ➜</span> "Oui, il est très chaud !"</p>
-                  <p><span class="text-green-500">Ary &gt;</span> "✨ Bravo ! C'est exactement ça !"</p>
-                </div>
-              </div>
+            <div class="bg-black border border-gray-800 rounded-2xl p-1 shadow-2xl overflow-hidden group">
+              <img src="/images/json-terminal-edupro.py-suite.png" alt="Terminal Output Edupro.py" class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
           </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold mb-6 text-red-500 mt-12">Ressources & Outils Sécurité (Téléchargements)</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/downloads/HackAry.zip" download class="bg-red-900/10 p-6 rounded-2xl border border-red-900/30 hover:border-red-500/50 transition-colors group flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <div class="text-3xl">🔓</div>
+              <div>
+                <h3 class="font-semibold text-white group-hover:text-red-400 transition-colors">Dossier HackAry</h3>
+                <p class="text-sm text-gray-400 mt-1">Scripts et analyses (Red Teaming & Sécurité)</p>
+              </div>
+            </div>
+            <svg class="w-6 h-6 text-gray-500 group-hover:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          </a>
+
+          <a href="/downloads/TestAry.zip" download class="bg-blue-900/10 p-6 rounded-2xl border border-blue-900/30 hover:border-blue-500/50 transition-colors group flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <div class="text-3xl">🧪</div>
+              <div>
+                <h3 class="font-semibold text-white group-hover:text-blue-400 transition-colors">Dossier TestAry</h3>
+                <p class="text-sm text-gray-400 mt-1">Vérification de l'API de reconnaissance vocale</p>
+              </div>
+            </div>
+            <svg class="w-6 h-6 text-gray-500 group-hover:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          </a>
         </div>
       </div>
 
