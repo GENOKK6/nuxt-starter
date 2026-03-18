@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple d'Organisation - FlowBill</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .flowchart {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 40px;
+            position: relative;
+        }
+        .flowchart::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--card-border);
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        .flow-step {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+        .flow-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .flow-content {
+            width: 45%;
+            padding: 30px;
+        }
+        .flow-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--bg-dark);
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 0 40px;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+        }
+        @media (max-width: 768px) {
+            .flowchart::before { left: 30px; }
+            .flow-step, .flow-step:nth-child(even) { flex-direction: row; justify-content: flex-start; }
+            .flow-icon { margin-left: 0; margin-right: 20px; }
+            .flow-content { width: calc(100% - 80px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <nav class="navbar glass">
+        <div class="nav-content">
+            <div class="logo">
+                <i class="ri-blaze-fill"></i>
+                <span>FlowBill</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="dashboard.html">Essayer l'App</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1>Exemple d'Organization <br><span class="gradient-text">Le Parcours de Relance</span></h1>
+            <p>Découvrez comment FlowBill traite une facture impayée du début à la fin.</p>
+        </header>
+
+        <div class="flowchart">
+            <div class="flow-step">
+                <div class="flow-content card glass">
+                    <h3>1. Dépôt Sécurisé</h3>
+                    <p>L'entreprise dépose ses factures PDF ou synchronise directement son logiciel de facturation (Quickbooks, Pennylane...).</p>
+                </div>
+                <div class="flow-icon"><i class="ri-upload-cloud-2-line"></i></div>
+                <div style="width: 45%;"></div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content card glass">
+                    <h3>2. Extraction IA</h3>
+                    <p>Le moteur d'IA Documentaire lit le PDF, extrait le <strong>nom du client</strong>, l'<strong>adresse postale</strong>, l'<strong>email de contact</strong>, et le <strong>montant à recouvrer</strong>.</p>
+                </div>
+                <div class="flow-icon" style="color: var(--accent); border-color: var(--accent)"><i class="ri-robot-2-line"></i></div>
+                <div style="width: 45%;"></div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content card glass">
+                    <h3>3. Workflow Décisionnel</h3>
+                    <p>FlowBill détermine le niveau de relance (J+1, J+15, J+30) et génère automatiquement le texte de courtoisie adapté à la situation.</p>
+                </div>
+                <div class="flow-icon" style="color: var(--secondary); border-color: var(--secondary)"><i class="ri-git-branch-line"></i></div>
+                <div style="width: 45%;"></div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-content card glass">
+                    <h3>4. Action Automatisée</h3>
+                    <p>L'email, le SMS, ou même la lettre de mise en demeure postale est expédiée sans aucune intervention humaine. Le paiement est récupéré plus vite !</p>
+                </div>
+                <div class="flow-icon" style="color: var(--success); border-color: var(--success)"><i class="ri-mail-send-line"></i></div>
+                <div style="width: 45%;"></div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="dashboard.html" class="btn btn-primary btn-large">Tester l'extraction sur le Dashboard</a>
+        </div>
+    </main>
+</body>
+</html>

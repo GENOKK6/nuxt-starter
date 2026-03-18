@@ -55,7 +55,7 @@ onMounted(() => {
         </p>
 
         <!-- Tech stack -->
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div class="bg-apple-light-gray/30 p-4 rounded-xl text-center border border-gray-800">
             <div class="text-2xl mb-2">💎</div>
             <div class="text-xs text-gray-400">Laravel 10</div>
@@ -71,10 +71,6 @@ onMounted(() => {
           <div class="bg-apple-light-gray/30 p-4 rounded-xl text-center border border-gray-800">
             <div class="text-2xl mb-2">🎨</div>
             <div class="text-xs text-gray-400">Blade / CSS</div>
-          </div>
-          <div class="bg-apple-light-gray/30 p-4 rounded-xl text-center border border-gray-800">
-            <div class="text-2xl mb-2">⚡</div>
-            <div class="text-xs text-gray-400">Vite</div>
           </div>
         </div>
 
@@ -94,12 +90,10 @@ onMounted(() => {
         <h2 class="text-2xl font-semibold mb-6">Description du projet</h2>
         <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800">
           <p class="text-gray-400 leading-relaxed mb-6">
-            SicilyLines est un projet d'envergure réalisé en BTS SIO SLAM. Il simule les besoins d'une compagnie de transport maritime. 
-            L'objectif était de mettre en place une solution web capable de gérer des données complexes : de l'affectation des bateaux aux lignes, 
-            jusqu'au système de réservation pour les passagers.
+            SicilyLines est un des projets majeurs de mon BTS SIO SLAM. Il s'agit d'une simulation d'une compagnie de transport maritime visant à gérer des liaisons, des bateaux et des réservations de passagers.
           </p>
           <p class="text-gray-400 leading-relaxed">
-            Grâce à Laravel, j'ai pu implémenter une logique métier solide avec l'ORM Eloquent, permettant des relations complexes entre les ports, les secteurs, et les traversées. Le projet respecte les principes du "Clean Code" et de la séparation des responsabilités.
+            C'est véritablement le meilleur projet qui nous a permis de comprendre concrètement le fonctionnement de l'architecture MVC (Modèle-Vue-Contrôleur). Tout notre travail a tourné autour de cet objectif : structurer proprement l'application et comprendre le flux des données.
           </p>
         </div>
       </div>
@@ -139,27 +133,66 @@ onMounted(() => {
         </div>
       </div>
 
+      <!-- Aperçu / Galerie d'images -->
+      <div class="mb-16 reveal-up" style="animation-delay: 0.35s;">
+        <h2 class="text-2xl font-semibold mb-6">Aperçu en images</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-apple-light-gray/30 p-3 rounded-2xl border border-gray-800 flex flex-col group">
+            <div class="overflow-hidden rounded-xl bg-gray-900 flex-1 flex items-center justify-center">
+              <img src="/images/Page_accueil.png" alt="Page d'accueil" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <p class="text-center text-sm text-gray-400 mt-3 font-medium">Page d'accueil</p>
+          </div>
+          <div class="bg-apple-light-gray/30 p-3 rounded-2xl border border-gray-800 flex flex-col group">
+            <div class="overflow-hidden rounded-xl bg-gray-900 flex-1 flex items-center justify-center">
+              <img src="/images/connexion.png" alt="Authentification" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <p class="text-center text-sm text-gray-400 mt-3 font-medium">Authentification</p>
+          </div>
+          <div class="bg-apple-light-gray/30 p-3 rounded-2xl border border-gray-800 flex flex-col group">
+            <div class="overflow-hidden rounded-xl bg-gray-900 flex-1 flex items-center justify-center">
+              <img src="/images/liste.png" alt="Liste" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <p class="text-center text-sm text-gray-400 mt-3 font-medium">Vue liste</p>
+          </div>
+          <div class="bg-apple-light-gray/30 p-3 rounded-2xl border border-gray-800 flex flex-col group">
+            <div class="overflow-hidden rounded-xl bg-gray-900 flex-1 flex items-center justify-center">
+              <img src="/images/ajouter.png" alt="Formulaire" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <p class="text-center text-sm text-gray-400 mt-3 font-medium">Formulaire / Ajout</p>
+          </div>
+          <div class="bg-apple-light-gray/30 p-3 rounded-2xl border border-gray-800 flex flex-col group md:col-span-2">
+            <div class="overflow-hidden rounded-xl bg-gray-900 flex-1 flex items-center justify-center">
+              <img src="/images/bdd.png" alt="Structure SQL" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <p class="text-center text-sm text-gray-400 mt-3 font-medium">Diagramme de Base de Données</p>
+          </div>
+        </div>
+      </div>
+
       <!-- Architecture -->
       <div class="mb-16 reveal-up" style="animation-delay: 0.4s;">
         <h2 class="text-2xl font-semibold mb-6">Concepts Techniques</h2>
         <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800">
+          <p class="text-gray-400 leading-relaxed mb-6">
+            Nous avons d'abord commencé par modéliser la page du site que nous voulions avec différents outils de maquettage comme Figma. Derrière, nous avons commencé à coder le backend.
+          </p>
           <div class="grid md:grid-cols-2 gap-8">
             <div>
               <h3 class="font-semibold mb-4 text-amber-400">Laravel & Backend</h3>
               <ul class="space-y-2 text-sm text-gray-400">
-                <li>• Modèles Eloquent et relations (1:n, n:m)</li>
-                <li>• Migrations de base de données SQL</li>
-                <li>• Contrôleurs structurés et validation de formulaires</li>
-                <li>• Middlewares d'authentification</li>
+                <li>• Migrations de bases de données SQL</li>
+                <li>• Création des Contrôleurs</li>
+                <li>• Mise en place de middlewares d'authentification</li>
+                <li>• Architecture MVC</li>
               </ul>
             </div>
             <div>
-              <h3 class="font-semibold mb-4 text-amber-400">Base de données</h3>
+              <h3 class="font-semibold mb-4 text-amber-400">Frontend & Outils</h3>
               <ul class="space-y-2 text-sm text-gray-400">
-                <li>• Modélisation Merise (MCD/MLD)</li>
-                <li>• Optimisation des index</li>
-                <li>• Intégrité référentielle</li>
-                <li>• Requêtes complexes avec Query Builder</li>
+                <li>• Maquettage UI sur Figma</li>
+                <li>• Moteur de template Blade</li>
+                <li>• Routage web</li>
               </ul>
             </div>
           </div>

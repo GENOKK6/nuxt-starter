@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SioCards - Flashcards x IA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Vue 3 CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body class="dark-theme">
+    <div id="app">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+
+        <nav class="navbar glass">
+            <div class="nav-content">
+                <div class="logo">
+                    <i class="ri-brain-line"></i>
+                    <span>SioCards<span class="badge-ai">IA</span></span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="#" :class="{ active: currentView === 'dashboard' }" @click.prevent="currentView = 'dashboard'">Mes Cours</a>
+                    <a href="#" :class="{ active: currentView === 'generate' }" @click.prevent="currentView = 'generate'">Créer avec l'IA</a>
+                    <a href="#" :class="{ active: currentView === 'calendar' }" @click.prevent="currentView = 'calendar'">Calendrier</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn btn-icon notification-btn" title="Rappels de révision">
+                        <i class="ri-notification-3-line"></i>
+                        <span class="notification-badge" v-if="notifications.length > 0">{{ notifications.length }}</span>
+                    </button>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Gos&background=10b981&color=fff" alt="User">
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container">
+            
+            <!-- VIEW: DASHBOARD -->
+            <transition name="fade" mode="out-in">
+                <div v-if="currentView === 'dashboard'" class="view-dashboard">
+                    <header class="page-header">
+                        <h1>Bienvenue dans ton <span class="gradient-text">Espace de Révision</span></h1>
+                        <p>Ne perds plus de temps à créer des fiches. L'IA s'en occupe, toi tu mémorises.</p>
+                    </header>
+
+                    <div class="hero-stats glass">
+                        <div class="stat">
+                            <i class="ri-stack-line text-emerald"></i>
+                            <div class="stat-info">
+                                <h3>{{ decks.length }}</h3>
+                                <span>Decks Actifs</span>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="ri-fire-fill text-orange"></i>
+                            <div class="stat-info">
+                                <h3>12 Jours</h3>
+                                <span>Streak de Révision</span>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="ri-lightbulb-flash-line text-blue"></i>
+                            <div class="stat-info">
+                                <h3 style="font-size: 1.5rem">147 Maîtrisés</h3>
+                                <span>0 Note. 100% Focus.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-title">
+                        <h2>Decks à réviser aujourd'hui</h2>
+                        <button class="btn btn-primary btn-sm" @click="currentView = 'generate'"><i class="ri-add-line"></i> Nouveau Deck</button>
+                    </div>
+
+                    <div class="decks-grid">
+                        <div class="deck-card glass" v-for="deck in decks" :key="deck.id">
+                            <div class="deck-header">
+                                <span class="deck-tag">{{ deck.category }}</span>
+                                <i class="ri-more-2-fill"></i>
+                            </div>
+                            <h3 class="deck-name">{{ deck.name }}</h3>
+                            <p class="deck-desc">{{ deck.count }} Flashcards • {{ deck.exercises }} Exercices</p>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" :style="{ width: deck.mastery + '%' }"></div>
+                                </div>
+                                <span class="progress-text">{{ deck.mastery }}% Maîtrisé</span>
+                            </div>
+                            <div class="deck-actions">
+                                <button class="btn btn-secondary btn-full" @click="startRevision(deck)">
+                                    <i class="ri-play-circle-line"></i> Réviser
+                                </button>
+                                <button class="btn btn-outline btn-full" @click="startExam(deck)">
+                                    <i class="ri-test-tube-line"></i> Mode Examen
+                                </button>
+                                <button class="btn btn-outline btn-full" style="border-color: var(--accent); color: var(--text-main)" @click="alert('Génération du Podcast IA expérimental (simulé)...')">
+                                    <i class="ri-headphone-line text-accent"></i> Écouter (Podcast)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIEW: REVISION SESSION -->
+                <div v-else-if="currentView === 'revision'" class="view-revision">
+                    <div class="revision-header">
+                        <button class="btn btn-icon" @click="currentView = 'dashboard'"><i class="ri-arrow-left-line"></i> Quitter</button>
+                        <h2>Révision : {{ activeDeck.name }}</h2>
+                        <div class="flashcard-counter">{{ currentCardIndex + 1 }} / {{ activeDeck.cards.length }}</div>
+                    </div>
+
+                    <div class="flashcard-container" :class="{ 'is-flipped': isCardFlipped }">
+                        <div class="flashcard glass">
+                            <div class="flashcard-front">
+                                <i class="ri-question-answer-line card-icon"></i>
+                                <h3>{{ currentCard.question }}</h3>
+                                <button class="btn btn-primary btn-large mt-4" @click="isCardFlipped = true">Voir la réponse (Feedback IA)</button>
+                            </div>
+                            <div class="flashcard-back">
+                                <h3>La bonne réponse :</h3>
+                                <p class="answer">{{ currentCard.answer }}</p>
+                                
+                                <div class="ai-feedback glass">
+                                    <h4 class="text-emerald"><i class="ri-robot-2-line"></i> Contexte IA :</h4>
+                                    <p>{{ currentCard.context }}</p>
+                                </div>
+
+                                <h4>Comment as-tu trouvé cette carte ?</h4>
+                                <div class="spaced-rep-buttons">
+                                    <button class="btn btn-danger" @click="nextCard('A revoir')">A revoir (1min)</button>
+                                    <button class="btn btn-warning" @click="nextCard('Difficile')">Difficile (10min)</button>
+                                    <button class="btn btn-primary" @click="nextCard('Correct')">Correct (1j)</button>
+                                    <button class="btn btn-success" @click="nextCard('Facile')">Facile (4j)</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIEW: EXAM MODE -->
+                <div v-else-if="currentView === 'exam'" class="view-exam">
+                    <div class="revision-header">
+                        <button class="btn btn-icon" @click="currentView = 'dashboard'"><i class="ri-arrow-left-line"></i> Abandonner</button>
+                        <h2>Mode Examen : {{ activeDeck.name }}</h2>
+                        <div class="timer text-orange"><i class="ri-timer-line"></i> 59:45</div>
+                    </div>
+
+                    <div class="exam-setup glass" v-if="!examStarted">
+                        <h3 style="margin-bottom: 20px;">Configuration de l'Examen</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 30px;">L'IA va générer une épreuve sur-mesure basée sur {{ activeDeck.name }}. Vous serez dans les mêmes conditions qu'au BTS.</p>
+                        
+                        <div class="form-group">
+                            <label>Difficulté (Génération IA)</label>
+                            <div class="difficulty-selector">
+                                <div class="diff-btn" :class="{active: examLevel === 'easy'}" @click="examLevel = 'easy'">Facile</div>
+                                <div class="diff-btn" :class="{active: examLevel === 'medium'}" @click="examLevel = 'medium'">Moyen</div>
+                                <div class="diff-btn" :class="{active: examLevel === 'hard'}" @click="examLevel = 'hard'">Extrêmement Difficile</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-large btn-full mt-4" @click="examStarted = true">
+                            <i class="ri-flask-fill"></i> Lancer la session
+                        </button>
+                    </div>
+
+                    <div class="exam-active glass" v-else>
+                        <span class="badge badge-ai">Généré par IA en mode {{ examLevel }}</span>
+                        <h3 class="mt-4">Sujet d'étude de cas : Déploiement Active Directory</h3>
+                        <p class="exam-context">Vous êtes administrateur réseau dans une entreprise de 150 employés. L'entreprise souhaite migrer son infrastructure vers un annuaire AD géré sous Windows Server 2022...</p>
+                        <h4 class="mt-4">Question 1 (sur 5)</h4>
+                        <p>Détaillez les étapes de l'installation des rôles AD DS et DNS, et justifiez l'ordre d'exécution.</p>
+                        <textarea class="form-control" rows="6" placeholder="Saisissez votre réponse ici... L'IA analysera votre copie complète."></textarea>
+                        <button class="btn btn-primary mt-4" @click="currentView = 'dashboard'; examStarted = false">Soumettre la copie à l'IA</button>
+                    </div>
+
+                </div>
+
+                <!-- VIEW: CALENDAR & SETTINGS -->
+                <div v-else-if="currentView === 'calendar'" class="view-calendar">
+                    <header class="page-header">
+                        <h1>Calendrier & <span class="gradient-text">Rappels</span></h1>
+                        <p>Paramétrez vos notifications pour ne rater aucune session de répétition espacée.</p>
+                    </header>
+
+                    <div class="grid-2">
+                        <!-- Left: Real Calendar -->
+                        <div class="card glass">
+                            <h3><i class="ri-calendar-event-fill text-blue"></i> Planning de Révision</h3>
+                            <div class="real-calendar">
+                                <div class="calendar-times">
+                                    <span>09:00</span>
+                                    <span>10:00</span>
+                                    <span>11:00</span>
+                                    <span>12:00</span>
+                                </div>
+                                <div class="calendar-events">
+                                    <div class="event-block">
+                                        <div class="event-title">Sécurité des Systèmes</div>
+                                        <div class="event-desc">25 Flashcards + 1 Exercice Pratique</div>
+                                    </div>
+                                    <div class="event-block blue">
+                                        <div class="event-title">Programmation Objet (Java)</div>
+                                        <div class="event-desc">Audio Podcast + Mode Examen</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Routine & Options -->
+                        <div style="display: flex; flex-direction: column; gap: 30px;">
+                            <div class="card glass">
+                                <h3><i class="ri-line-chart-fill text-orange"></i> Suivi & Discipline</h3>
+                                <p class="text-muted mb-4">Exercices traités récemment (sans notation, ni X/20, uniquement de la validation pour avancer).</p>
+                                <ul style="list-style: none; display: flex; flex-direction: column; gap: 15px;">
+                                    <li style="display: flex; justify-content: space-between;"><span class="text-muted">Ex. AD DS</span> <span class="text-emerald"><i class="ri-check-line"></i> Validé</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span class="text-muted">Ex. Exceptions Java</span> <span class="text-danger"><i class="ri-close-line"></i> Échoué (A refaire demain)</span></li>
+                                    <li style="display: flex; justify-content: space-between;"><span class="text-muted">Contexte CEJM : TJM</span> <span class="text-emerald"><i class="ri-check-line"></i> Validé</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="card glass">
+                                <h3><i class="ri-notification-badge-line text-emerald"></i> Canaux de Rappel</h3>
+                                <div class="reminder-toggle">
+                                    <div class="toggle-group">
+                                        <label>Notifications Email / SMS</label>
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </transition>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

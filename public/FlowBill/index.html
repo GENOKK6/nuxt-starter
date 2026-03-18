@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowBill - Le Futur de la Relance Client</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <nav class="navbar glass">
+        <div class="nav-content">
+            <div class="logo">
+                <i class="ri-blaze-fill"></i>
+                <span>FlowBill</span>
+            </div>
+            <div class="nav-links">
+                <a href="#produit">Le Produit</a>
+                <a href="#equipe">Notre Équipe</a>
+                <a href="#tarifs">Tarifs</a>
+                <a href="example.html">Exemple</a>
+            </div>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-btn">Se connecter</a>
+                <a href="dashboard.html" class="btn btn-primary" style="margin-left: 15px; text-decoration: none;">Essayer l'App</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container landing-page">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="hero-title">Ne perdez plus de temps sur les impayés. <br><span class="gradient-text">Automatisez vos relances.</span></h1>
+            <p class="hero-subtitle">Notre IA documentaire lit vos devis et factures, identifie les montants et les clients, et s'occupe de la relance. Vous vous concentrez sur votre métier, nous gérons votre trésorerie.</p>
+            <div class="hero-cta">
+                <a href="dashboard.html" class="btn btn-primary btn-large">Voir la démo interactive</a>
+                <a href="#produit" class="btn btn-secondary btn-large">En savoir plus</a>
+            </div>
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200&h=600" alt="Dashboard Preview" class="hero-image glass hidden-mobile" style="margin-top: 50px; border-radius: 20px; width: 100%; object-fit: cover; opacity: 0.8; height: 400px;">
+        </section>
+
+        <!-- Le Projet et le Besoin -->
+        <section id="produit" class="product-section">
+            <div class="section-header-landing">
+                <h2>Le <span class="gradient-text">Projet</span> & Le Besoin</h2>
+                <p>Pourquoi avons-nous créé FlowBill ?</p>
+            </div>
+            <div class="grid-2">
+                <div class="card glass">
+                    <i class="ri-alert-line gradient-text" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                    <h3>Le Problème</h3>
+                    <p>La réalité, c'est que les entreprises et freelances ne perdent pas que du temps : <strong>ils perdent de l'argent</strong>. Souvent, la trésorerie ne rentre pas à temps, risquant la fermeture de l'entreprise. En plus de cela, il existe une véritable <em>"gêne"</em> à devoir sans cesse réclamer son dû auprès de ses clients.</p>
+                </div>
+                <div class="card glass">
+                    <i class="ri-magic-line gradient-text" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                    <h3>La Solution</h3>
+                    <p>Une plateforme intelligente qui ingère vos PDF. L'IA extrait automatiquement l'adresse, le client et le montant. Les relances (emails, courriers) sont programmées et envoyées automatiquement selon des scénarios personnalisés.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- L'Équipe -->
+        <section id="equipe" class="team-section">
+            <div class="section-header-landing">
+                <h2>Qui sommes-nous ?</h2>
+                <p>Deux jeunes associés passionnés par la tech et l'entrepreneuriat.</p>
+            </div>
+            <div class="grid-2 team-grid">
+                <div class="team-card glass">
+                    <img src="https://ui-avatars.com/api/?name=Maxime&background=6366f1&color=fff&size=150" alt="Maxime">
+                    <h3>Maxime</h3>
+                    <p class="role">Co-fondateur - Étudiant BTS SIO</p>
+                    <p>Étudiant en 2ème année de BTS SIO, impliqué dans la conception et le développement de la solution pour résoudre ce vrai problème d'entreprise.</p>
+                </div>
+                <div class="team-card glass">
+                    <img src="https://ui-avatars.com/api/?name=Gospel&background=ec4899&color=fff&size=150" alt="Gospel">
+                    <h3>Gospel</h3>
+                    <p class="role">Co-fondateur - Étudiant BTS SIO</p>
+                    <p>Étudiant en 2ème année de BTS SIO, passionné par la tech et l'automatisation, avec la volonté d'aider les freelances et entreprises.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tarifs -->
+        <section id="tarifs" class="pricing-section">
+            <div class="section-header-landing">
+                <h2>Des tarifs <span class="gradient-text">simples et transparents</span></h2>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card glass">
+                    <h3>Starter</h3>
+                    <div class="price">19€ <span>/mois</span></div>
+                    <ul>
+                        <li><i class="ri-check-line"></i> Jusqu'à 50 PDF / mois</li>
+                        <li><i class="ri-check-line"></i> Relances par email</li>
+                        <li><i class="ri-close-line" style="color:red"></i> Scénarios personnalisés</li>
+                    </ul>
+                    <a href="login.html" class="btn btn-secondary btn-full">Choisir Starter</a>
+                </div>
+                <div class="pricing-card glass popular">
+                    <div class="popular-badge">Le plus populaire</div>
+                    <h3>Pro</h3>
+                    <div class="price">49€ <span>/mois</span></div>
+                    <ul>
+                        <li><i class="ri-check-line"></i> Jusqu'à 300 PDF / mois</li>
+                        <li><i class="ri-check-line"></i> Relances email & SMS</li>
+                        <li><i class="ri-check-line"></i> Scénarios de relance IA</li>
+                        <li><i class="ri-check-line"></i> Support prioritaire</li>
+                    </ul>
+                    <a href="login.html" class="btn btn-primary btn-full">Choisir Pro</a>
+                </div>
+                <div class="pricing-card glass">
+                    <h3>Entreprise</h3>
+                    <div class="price">Sur devis</div>
+                    <ul>
+                        <li><i class="ri-check-line"></i> Volume illimité</li>
+                        <li><i class="ri-check-line"></i> Intégration ERP / API courte</li>
+                        <li><i class="ri-check-line"></i> Relances par courrier postal</li>
+                        <li><i class="ri-check-line"></i> Account Manager dédié</li>
+                    </ul>
+                    <a href="login.html" class="btn btn-secondary btn-full">Nous contacter</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass" style="margin-top: 100px; padding: 40px; text-align: center; border-radius: 20px 20px 0 0;">
+        <p>© 2025 FlowBill. Projet B2B en phase de prototypage.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowBill - Relance Client Automatisée IA</title>
+    <meta name="description" content="Automatisez intégralement vos relances d'impayés grâce à l'IA avec FlowBill.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <nav class="navbar glass">
+        <div class="nav-content">
+            <div class="logo">
+                <i class="ri-blaze-fill"></i>
+                <span>FlowBill</span>
+            </div>
+            <div class="nav-links">
+                <a href="#dashboard" class="active">Tableau de Bord</a>
+                <a href="#history">Historique</a>
+                <a href="#settings">Paramètres</a>
+            </div>
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=User&background=6366f1&color=fff" alt="User Profile">
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1>Bienvenue, <span class="gradient-text">Entreprise</span></h1>
+            <p>Uploadez vos devis et factures. Notre IA s'occupe de la relance.</p>
+        </header>
+
+        <div class="dashboard-grid">
+            <!-- Upload Section -->
+            <section class="card glass upload-section" id="upload-area">
+                <div class="upload-content">
+                    <div class="upload-icon">
+                        <i class="ri-file-upload-line"></i>
+                    </div>
+                    <h2>Glissez-déposez vos PDF</h2>
+                    <p>Factures, devis, ou cliquez pour parcourir</p>
+                    <input type="file" id="file-input" accept=".pdf" hidden multiple>
+                    <button class="btn btn-primary" onclick="document.getElementById('file-input').click()">Sélectionner des fichiers</button>
+                </div>
+            </section>
+
+            <!-- Processing Status (Hidden by default) -->
+            <section class="card glass processing-section hidden" id="processing-area">
+                <div class="ai-loader">
+                    <div class="scanner"></div>
+                    <i class="ri-robot-2-line robot-icon"></i>
+                </div>
+                <h3>Analyse IA en cours...</h3>
+                <p>Extraction des adresses et des montants à recouvrer</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="card glass results-section">
+                <div class="section-header">
+                    <h3>Extraction Récente</h3>
+                    <span class="badge badge-success">Prêt pour la relance</span>
+                </div>
+                
+                <div class="extracted-data empty" id="extracted-data">
+                    <div class="empty-state">
+                        <i class="ri-file-list-3-line"></i>
+                        <p>Aucun document traité</p>
+                    </div>
+                    <!-- Data will be injected here -->
+                </div>
+                
+                <div class="action-footer">
+                    <button class="btn btn-primary btn-full disabled" id="launch-workflow" disabled>
+                        <i class="ri-rocket-line"></i> Lancer le workflow de relance
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <section class="stats-grid">
+            <div class="stat-card glass">
+                <div class="stat-icon purple"><i class="ri-money-dollar-circle-line"></i></div>
+                <div class="stat-info">
+                    <h4>Montant à recouvrer</h4>
+                    <span class="stat-value">0,00 €</span>
+                </div>
+            </div>
+            <div class="stat-card glass">
+                <div class="stat-icon blue"><i class="ri-file-search-line"></i></div>
+                <div class="stat-info">
+                    <h4>Documents Analysés</h4>
+                    <span class="stat-value">0</span>
+                </div>
+            </div>
+            <div class="stat-card glass">
+                <div class="stat-icon green"><i class="ri-mail-send-line"></i></div>
+                <div class="stat-info">
+                    <h4>Relances Automatisées</h4>
+                    <span class="stat-value">0</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

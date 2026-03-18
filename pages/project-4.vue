@@ -1,8 +1,8 @@
 <script setup>
 useHead({
-  title: 'Bureau d\'études & Gestion - Kizamba Gospel',
+  title: 'SioCards - Kizamba Gospel',
   meta: [
-    { name: 'description', content: 'Projets orientés vers la gestion immobilière et les applications métiers du bâtiment - PHP et calculs dynamiques.' }
+    { name: 'description', content: 'SioCards : Application d\'apprentissage web couplant Flashcards et IA avec répétition espacée, conçue pour le BTS SIO.' }
   ]
 })
 
@@ -38,82 +38,74 @@ onMounted(() => {
       <!-- Hero -->
       <div class="mb-16 reveal-up" style="animation-delay: 0.1s;">
         <div class="flex items-center gap-3 mb-4">
-          <span class="badge">
-            <span class="w-2 h-2 rounded-full bg-blue-400"></span>
-            Gestion Métier
+          <span class="badge" style="display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.1); padding:6px 16px; border-radius:20px; font-size:12px; font-weight:600;">
+            <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+            Projet Personnel / Apprentissage
           </span>
-          <span class="text-gray-400 text-sm">2024-25</span>
+          <span class="text-gray-400 text-sm">2025</span>
         </div>
 
-        <h1 class="text-section apple-heading mb-6">
-          Projets <span class="gradient-text">Bureau d'études</span>
+        <h1 class="text-section mb-6 text-4xl font-bold">
+          SioCards : <span style="background: linear-gradient(135deg, #9333ea 0%, #a855f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Flashcards x IA</span>
         </h1>
 
-        <p class="text-xl apple-body mb-8">
-          Développement d'outils de gestion spécifiques pour le secteur du bâtiment et de l'immobilier. Une passerelle entre mon background en Bâtiment (Bac Pro) et mes compétences actuelles en développement logiciel.
+        <p class="text-xl mb-8 text-gray-300">
+          Ce logiciel web s'inspire de célèbres solutions de mémorisation comme Anki. En y intégrant l'Intelligence Artificielle de bout en bout, il permet à l'étudiant de saisir un cours et de générer instantanément des flashcards révisables intelligemment via un algorithme de répétition espacée, accompagnées de feedbacks sur-mesure.
         </p>
 
         <!-- Tech stack -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div class="bg-apple-light-gray/30 p-4 rounded-xl text-center border border-gray-800">
-            <div class="text-2xl mb-2">🏠</div>
-            <div class="text-xs text-gray-400">Gestion Immobilière</div>
+          <div class="p-4 rounded-xl text-center border border-gray-800" style="background: rgba(255,255,255,0.05)">
+            <div class="text-2xl mb-2"> Vue</div>
+            <div class="text-xs text-gray-400">Vue.js / Nuxt</div>
           </div>
-          <div class="bg-apple-light-gray/30 p-4 rounded-xl text-center border border-gray-800">
-            <div class="text-2xl mb-2">📋</div>
-            <div class="text-xs text-gray-400">PHP Formulaires</div>
+          <div class="p-4 rounded-xl text-center border border-gray-800" style="background: rgba(255,255,255,0.05)">
+            <div class="text-2xl mb-2">🧠</div>
+            <div class="text-xs text-gray-400">Génération IA</div>
           </div>
-          <div class="bg-apple-light-gray/30 p-4 rounded-xl text-center border border-gray-800">
-            <div class="text-2xl mb-2">🧱</div>
-            <div class="text-xs text-gray-400">Logique Bâtiment</div>
+          <div class="p-4 rounded-xl text-center border border-gray-800" style="background: rgba(255,255,255,0.05)">
+            <div class="text-2xl mb-2">📅</div>
+            <div class="text-xs text-gray-400">Répétition Espacée</div>
           </div>
-          <div class="bg-apple-light-gray/30 p-4 rounded-xl text-center border border-gray-800">
-            <div class="text-2xl mb-2">🧮</div>
-            <div class="text-xs text-gray-400">Calculs dynamiques</div>
+          <div class="p-4 rounded-xl text-center border border-gray-800" style="background: rgba(255,255,255,0.05)">
+            <div class="text-2xl mb-2">🎯</div>
+            <div class="text-xs text-gray-400">Machine Learning</div>
           </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex flex-wrap gap-4 mt-8">
+          <a href="/SioCards/index.html" target="_blank" class="px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white rounded-xl transition-colors font-medium flex items-center gap-2">
+            Voir la Démo Live (Frontend)
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Live Preview -->
+      <div class="mb-16 reveal-up" style="animation-delay: 0.15s;">
+        <h2 class="text-2xl font-semibold mb-6">Aperçu interactif du Prototype</h2>
+        <div class="w-full bg-apple-light-gray/30 rounded-2xl border border-gray-800 overflow-hidden" style="height: 600px;">
+          <iframe src="/SioCards/index.html" class="w-full h-full" frameborder="0"></iframe>
         </div>
       </div>
 
       <!-- Description -->
       <div class="mb-16 reveal-up" style="animation-delay: 0.2s;">
-        <h2 class="text-2xl font-semibold mb-6">L’union du digital et du métier</h2>
-        <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800">
+        <h2 class="text-2xl font-semibold mb-6">Mémorisation & Contexte BTS SIO</h2>
+        <div class="p-8 rounded-2xl border border-gray-800" style="background: rgba(255,255,255,0.05)">
           <p class="text-gray-400 leading-relaxed mb-6">
-            Ces projets, tels que la **Société Immobilière de Gestion**, montrent ma capacité à comprendre les règles métiers métier complexes du bâtiment et à les traduire en code. J'ai développé des systèmes permettant de quantifier des pièces, de gérer des formulaires techniques et d'automatiser des processus administratifs.
+            L'origine du projet vient d'un besoin personnel : maximiser ma rétention de connaissances dans le cadre de mon BTS (SLAM, matières générales) et pour ma future poursuite d'études. M'inspirant de "Anki", cette plateforme web rend la révision indolore !
           </p>
           <p class="text-gray-400 leading-relaxed">
-            Ma connaissance du terrain acquise lors de mon Bac Pro Technicien du Bâtiment me donne un avantage unique pour concevoir des outils digitaux réellement adaptés aux besoins des entrepreneurs du secteur.
+            Plutôt que de concevoir fastidieusement les questions/réponses de mes flashcards, le modèle LLM lit mes exercices et leçons, génère les combinaisons, et un calendrier de "spaced repetition" est assigné automatiquement.
+            Au moment de la révision, l'IA écoute mes réponses (orales ou saisies rapides) pour me donner un feedback qui remet parfois dans le contexte l'information manquante, au lieu d'un bête "vrai/faux".
           </p>
         </div>
       </div>
 
-      <!-- Features -->
-      <div class="mb-16 reveal-up" style="animation-delay: 0.3s;">
-        <h2 class="text-2xl font-semibold mb-6">Outils développés</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
-            <div class="text-3xl mb-4">📄</div>
-            <h3 class="font-semibold mb-3">Formulaire de Pièces</h3>
-            <p class="text-sm text-gray-400">
-              Système de saisie dynamique pour le métré et la quantification des éléments de construction.
-            </p>
-          </div>
-          <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
-            <div class="text-3xl mb-4">🏘️</div>
-            <h3 class="font-semibold mb-3">Suivi Immobilier</h3>
-            <p class="text-sm text-gray-400">
-              Outil de gestion des biens et des dossiers pour les compagnies immobilières.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Back -->
-      <div class="text-center reveal-up" style="animation-delay: 0.5s;">
-        <NuxtLink to="/portfolio" class="btn-outline">
-          ← Retour au portfolio
-        </NuxtLink>
-      </div>
     </div>
   </section>
 </template>

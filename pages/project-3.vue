@@ -1,8 +1,8 @@
 <script setup>
 useHead({
-  title: 'AnimoSIO - Kizamba Gospel',
+  title: 'FlowBill - Kizamba Gospel',
   meta: [
-    { name: 'description', content: 'Boutique en ligne animalière développée en PHP natif - Gestion de catalogue, paniers et sessions.' }
+    { name: 'description', content: 'FlowBill : Plateforme B2B en cours de développement pour automatiser la relance des factures client.' }
   ]
 })
 
@@ -38,45 +38,45 @@ onMounted(() => {
       <!-- Hero -->
       <div class="mb-16 reveal-up" style="animation-delay: 0.1s;">
         <div class="flex items-center gap-3 mb-4">
-          <span class="badge">
-            <span class="w-2 h-2 rounded-full bg-orange-500"></span>
-            PHP Natif
+          <span class="badge" style="display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.1); padding:6px 16px; border-radius:20px; font-size:12px; font-weight:600;">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            Développement en cours
           </span>
-          <span class="text-gray-400 text-sm">2024</span>
+          <span class="text-gray-400 text-sm">2025</span>
         </div>
 
-        <h1 class="text-section apple-heading mb-6">
-          AnimoSIO : Boutique <span class="gradient-text">Animalière</span>
+        <h1 class="text-section mb-6 text-4xl font-bold">
+          FlowBill : <span style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Relance Client Automatisée</span>
         </h1>
 
-        <p class="text-xl apple-body mb-8">
-          Développement d'une boutique en ligne "from scratch" en PHP natif. Un projet fondamental pour maîtriser la logique backend sans framework, la gestion des sessions utilisateurs et les bases de données SQL.
+        <p class="text-xl mb-8 text-gray-300">
+          FlowBill est mon prochain grand projet B2B ("Business to Business"). Il a pour vocation de permettre aux entreprises et freelances de ne plus perdre de temps sur les impayés, en automatisant intégralement leurs processus de relance grâce à la lecture IA des devis.
         </p>
 
         <!-- Tech stack -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div class="bg-apple-light-gray/30 p-4 rounded-xl text-center border border-gray-800">
-            <div class="text-2xl mb-2">🐘</div>
-            <div class="text-xs text-gray-400">PHP 8</div>
-          </div>
-          <div class="bg-apple-light-gray/30 p-4 rounded-xl text-center border border-gray-800">
-            <div class="text-2xl mb-2">💾</div>
-            <div class="text-xs text-gray-400">MySQL</div>
-          </div>
-          <div class="bg-apple-light-gray/30 p-4 rounded-xl text-center border border-gray-800">
+          <div class="p-4 rounded-xl text-center border border-gray-800" style="background: rgba(255,255,255,0.05)">
             <div class="text-2xl mb-2">🎨</div>
-            <div class="text-xs text-gray-400">CSS3 / HTML5</div>
+            <div class="text-xs text-gray-400">HTML5 / CSS3</div>
           </div>
-          <div class="bg-apple-light-gray/30 p-4 rounded-xl text-center border border-gray-800">
-            <div class="text-2xl mb-2">📦</div>
-            <div class="text-xs text-gray-400">Session Management</div>
+          <div class="p-4 rounded-xl text-center border border-gray-800" style="background: rgba(255,255,255,0.05)">
+            <div class="text-2xl mb-2">🧠</div>
+            <div class="text-xs text-gray-400">IA Documentaire</div>
+          </div>
+          <div class="p-4 rounded-xl text-center border border-gray-800" style="background: rgba(255,255,255,0.05)">
+            <div class="text-2xl mb-2">⚙️</div>
+            <div class="text-xs text-gray-400">PHP (Réflexion)</div>
+          </div>
+          <div class="p-4 rounded-xl text-center border border-gray-800" style="background: rgba(255,255,255,0.05)">
+            <div class="text-2xl mb-2">🚀</div>
+            <div class="text-xs text-gray-400">Phase Prototypage</div>
           </div>
         </div>
 
         <!-- Actions -->
-        <div class="flex flex-wrap gap-4">
-          <a href="https://github.com/GENOKK6" target="_blank" class="btn-primary flex items-center gap-2">
-            Voir le code
+        <div class="flex flex-wrap gap-4 mt-8">
+          <a href="/FlowBill/index.html" target="_blank" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl transition-colors font-medium flex items-center gap-2">
+            Voir la Démo Live (Frontend)
             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
             </svg>
@@ -84,60 +84,30 @@ onMounted(() => {
         </div>
       </div>
 
+      <!-- Live Preview -->
+      <div class="mb-16 reveal-up" style="animation-delay: 0.15s;">
+        <h2 class="text-2xl font-semibold mb-6">Aperçu interactif du Prototype</h2>
+        <div class="w-full bg-apple-light-gray/30 rounded-2xl border border-gray-800 overflow-hidden" style="height: 600px;">
+          <iframe src="/FlowBill/index.html" class="w-full h-full" frameborder="0"></iframe>
+        </div>
+      </div>
+
       <!-- Description -->
       <div class="mb-16 reveal-up" style="animation-delay: 0.2s;">
-        <h2 class="text-2xl font-semibold mb-6">Un projet socle</h2>
-        <div class="bg-apple-light-gray/30 p-8 rounded-2xl border border-gray-800">
+        <h2 class="text-2xl font-semibold mb-6">Phase de Création : Où en est le projet ?</h2>
+        <div class="p-8 rounded-2xl border border-gray-800" style="background: rgba(255,255,255,0.05)">
           <p class="text-gray-400 leading-relaxed mb-6">
-            AnimoSIO est l'un de mes premiers projets dynamiques complets. Il m'a permis de comprendre comment construire une application web à partir de rien : de la création du catalogue de produits à la gestion complexe d'un panier d'achat persistant via les sessions PHP.
+            Actuellement au <strong>tout début du cycle de développement</strong>, l'interface utilisateur de la plateforme a été imaginée et développée de zéro (from scratch) pour l'instant en HTML et CSS pur.
+          </p>
+          <p class="text-gray-400 leading-relaxed mb-6">
+            Nous ne sommes qu'en phase d'analyse de l'architecture. La réflexion est portée sur une question majeure : <em>Comment concevoir l'expérience de téléchargement de documents (PDF formatés de devis / factures), puis configurer l'intelligence artificielle pour extraire proprement l'adresse du client et le montant à recouvrer ?</em>
           </p>
           <p class="text-gray-400 leading-relaxed">
-            L'application gère également l'upload et l'affichage dynamique de photos de produits, ainsi qu'un système de filtrage par catégories (chiens, chats, oiseaux, etc.), offrant une expérience utilisateur fluide.
+            Dans les semaines à venir, un développement Backend (très probablement en PHP) viendra supporter cette partie "Front-end" pour offrir la logique d'authentification des entreprises et le stockage en base de données. 
           </p>
         </div>
       </div>
 
-      <!-- Technical Points -->
-      <div class="mb-16 reveal-up" style="animation-delay: 0.3s;">
-        <h2 class="text-2xl font-semibold mb-6">Points techniques abordés</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
-            <div class="text-3xl mb-4">🛒</div>
-            <h3 class="font-semibold mb-3">Panier Dynamique</h3>
-            <p class="text-sm text-gray-400">
-              Utilisation de tableaux circulaires et de variables de session pour maintenir les articles dans le panier durant la navigation.
-            </p>
-          </div>
-          <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
-            <div class="text-3xl mb-4">🖼️</div>
-            <h3 class="font-semibold mb-3">Gestion des Médias</h3>
-            <p class="text-sm text-gray-400">
-              Liaison entre les fichiers physiques stockés sur le serveur et les références en base de données pour un affichage optimisé.
-            </p>
-          </div>
-          <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
-            <div class="text-3xl mb-4">📋</div>
-            <h3 class="font-semibold mb-3">Formulaires & Validation</h3>
-            <p class="text-sm text-gray-400">
-              Système de commande avec vérification des entrées utilisateurs et stockage sécurisé des informations en base MySQL.
-            </p>
-          </div>
-          <div class="bg-apple-light-gray/30 p-6 rounded-2xl border border-gray-800">
-            <div class="text-3xl mb-4">📱</div>
-            <h3 class="font-semibold mb-3">Responsive Design</h3>
-            <p class="text-sm text-gray-400">
-              Interface adaptée aux mobiles pour permettre aux clients de consulter le catalogue en déplacement.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Back -->
-      <div class="text-center reveal-up" style="animation-delay: 0.5s;">
-        <NuxtLink to="/portfolio" class="btn-outline">
-          ← Retour au portfolio
-        </NuxtLink>
-      </div>
     </div>
   </section>
 </template>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SioCards - L'Apprentissage par l'IA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+    <nav class="navbar glass">
+        <div class="nav-content">
+            <div class="logo">
+                <i class="ri-brain-line"></i>
+                <span>SioCards<span class="badge-ai">IA</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#vision">La Vision</a>
+                <a href="#fonctionnalites">L'Outil Complet</a>
+                <a href="#tarifs">Tarifs</a>
+                <a href="#fondateur">Qui suis-je ?</a>
+            </div>
+            <div class="nav-actions">
+                <a href="dashboard.html" class="btn btn-primary" style="text-decoration: none;">Essayer l'App</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container landing-page">
+        <!-- Hero -->
+        <section class="hero-section text-center" style="padding: 80px 0;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Arrêtez de jongler entre <span class="gradient-text text-orange">40 outils</span> pour réviser.</h1>
+            <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 40px;">SioCards regroupe l'ingestion de vos cours, la génération de flashcards, les exercices sur-mesure et l'audio podcast dans une seule plateforme intelligente propulsée par l'IA.</p>
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <a href="dashboard.html" class="btn btn-primary btn-large">Accéder au Dashboard</a>
+                <a href="#fonctionnalites" class="btn btn-outline btn-large">Découvrir les fonctions</a>
+            </div>
+        </section>
+
+        <!-- Le Problème & La Vision -->
+        <section id="vision" style="margin: 80px 0;">
+            <div class="section-title text-center" style="display: block; margin-bottom: 50px;">
+                <h2>Le <span class="gradient-text">Problème</span> de la révision classique</h2>
+            </div>
+            <div class="grid-2">
+                <div class="card glass">
+                    <i class="ri-error-warning-line text-orange" style="font-size: 3rem; margin-bottom: 20px; display: block;"></i>
+                    <h3>Trop de friction</h3>
+                    <p class="text-muted">Aujourd'hui, pour bien réviser, un étudiant doit créer ses fiches sur Word, les transférer sur Anki, chercher des exercices sur Google, et utiliser un calendrier à part pour sa répétition espacée. Cette friction tue la motivation.</p>
+                </div>
+                <div class="card glass">
+                    <i class="ri-forbid-line text-danger" style="font-size: 3rem; margin-bottom: 20px; display: block;"></i>
+                    <h3>Apprendre =/= Avoir une note</h3>
+                    <p class="text-muted">Le but n'est pas d'avoir 20/20 à un QCM. Le système classique note, mais n'aide pas à comprendre l'erreur. Ici, <strong>pas de notes</strong>. Que de l'apprentissage. Et tricher est impossible : l'IA ne te donnera pas la réponse si tu la lui demandes simplement.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fonctionnalités -->
+        <section id="fonctionnalites" style="margin: 80px 0;">
+            <div class="section-title text-center" style="display: block; margin-bottom: 50px;">
+                <h2>L'outil parfait <span class="text-emerald">tout-en-un</span></h2>
+                <p class="text-muted">Choisis comment tu veux réviser ton cours injecté.</p>
+            </div>
+            <div class="decks-grid">
+                <!-- Podcasting -->
+                <div class="deck-card glass">
+                    <i class="ri-mic-line text-accent" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
+                    <h3>Podcast de Cours (Audio)</h3>
+                    <p class="text-muted">L'IA simplifie ton cours et te le lit comme un podcast vulgarisé. Parfait pour réviser dans les transports.</p>
+                </div>
+                <!-- Flashcards -->
+                <div class="deck-card glass">
+                    <i class="ri-stack-line text-emerald" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
+                    <h3>Flashcards IA</h3>
+                    <p class="text-muted">Génération automatique des concepts clés en cartes mémoires avec répétition espacée intelligente.</p>
+                </div>
+                <!-- Exercices -->
+                <div class="deck-card glass">
+                    <i class="ri-pencil-ruler-2-line text-blue" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
+                    <h3>Exercices Pratiques</h3>
+                    <p class="text-muted">Générez des cas pratiques sur-mesure (ex: BTS SIO). Vous rédigez, l'IA corrige et explique sans donner de note.</p>
+                </div>
+                <!-- Calendrier -->
+                <div class="deck-card glass">
+                    <i class="ri-calendar-event-line text-orange" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
+                    <h3>Calendrier & Routine</h3>
+                    <p class="text-muted">Un vrai planning style Google Calendar. Suivez vos révisions à venir, jour par jour, heure par heure.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fondateur -->
+        <section id="fondateur" class="card glass text-center" style="margin: 80px auto; max-width: 800px; padding: 50px;">
+            <div class="user-profile mx-auto" style="justify-content: center; margin-bottom: 20px;">
+                <img src="https://ui-avatars.com/api/?name=Gos&background=8b5cf6&color=fff&size=80" alt="Fondateur" style="width: 80px; height: 80px;">
+            </div>
+            <h2 style="margin-bottom: 15px;">Pourquoi ai-je créé SioCards ?</h2>
+            <p class="text-muted" style="line-height: 1.8;">À la base, c'est un projet 100% personnel. Je voulais ma propre application pour réviser mon BTS SIO sans friction. Devoir utiliser des dizaines d'outils m'épuisait. En créant SioCards, j'ai voulu une app rapide, honnête (qui t'oblige à comprendre, pas juste à lire), et qui intègre l'IA au cœur du processus d'apprentissage.</p>
+        </section>
+
+        <!-- Tarifs -->
+        <section id="tarifs" style="margin: 80px 0;">
+            <div class="section-title text-center" style="display: block; margin-bottom: 50px;">
+                <h2>Un tarif pensé <span class="gradient-text">pour les étudiants</span></h2>
+            </div>
+            <div class="grid-2" style="max-width: 900px; margin: 0 auto;">
+                <div class="card glass" style="border-color: var(--primary);">
+                    <div class="badge-ai" style="display: inline-block; margin-bottom: 15px;">Période d'Examen</div>
+                    <h3 style="font-size: 2rem; margin-bottom: 10px;">Gratuit <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/ 1 mois</span></h3>
+                    <p class="text-muted mb-4">Envoyez une simple photo de votre convocation d'examen (vous pouvez cacher vos noms/infos sensibles). Nous vous offrons 1 mois complet pour tout déchirer.</p>
+                    <a href="dashboard.html" class="btn btn-primary btn-full">Demander mon mois offert</a>
+                </div>
+                <div class="card glass">
+                    <h3 style="font-size: 2rem; margin-bottom: 10px;">Premium <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/ mois</span></h3>
+                    <div style="font-size: 3rem; font-weight: 700; margin-bottom: 20px;">10€</div>
+                    <ul style="list-style: none; color: var(--text-muted); margin-bottom: 30px; line-height: 1.8;">
+                        <li><i class="ri-check-line text-emerald"></i> Accès illimité aux générations IA</li>
+                        <li><i class="ri-check-line text-emerald"></i> Podcasts audio</li>
+                        <li><i class="ri-check-line text-emerald"></i> Révisions et entraînements illimités</li>
+                    </ul>
+                    <a href="dashboard.html" class="btn btn-outline btn-full">S'abonner</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="text-center text-muted" style="padding: 40px; border-top: 1px solid var(--card-border);">
+        <p>SioCards © 2025. Réalisé avec passion pour les étudiants.</p>
+    </footer>
+
+</body>
+</html>

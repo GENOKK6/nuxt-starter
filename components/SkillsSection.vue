@@ -108,48 +108,16 @@ const getColorClasses = (color) => {
           </div>
 
           <!-- Liste des compétences -->
-          <div class="space-y-5">
-            <div v-for="skill in category.skills" :key="skill.name" class="space-y-2">
-              <!-- Header avec nom et niveau -->
-              <div class="flex justify-between items-center">
-                <span class="text-sm font-semibold text-gray-200">
-                  {{ skill.name }}
-                </span>
-                <span class="text-xs px-2 py-1 rounded-full"
-                      :class="skill.status === 'Maîtrisé' ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' :
-                               skill.status === 'Compétent' ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400' :
-                               'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400'">
-                  {{ skill.status }}
-                </span>
-              </div>
-
-              <!-- Barre de progression -->
-              <div class="w-full h-2.5 bg-gray-800 rounded-full overflow-hidden">
-                <div
-                  class="h-full rounded-full transition-all duration-1000 ease-out"
-                  :class="getColorClasses(category.color).progress"
-                  :style="{ width: skill.level + '%' }"
-                ></div>
-              </div>
-
-              <!-- Pourcentage en petit -->
-              <div class="text-right">
-                <span class="text-xs text-gray-500 dark:text-gray-400">{{ skill.level }}%</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Badge de maîtrise globale de la catégorie -->
-          <div class="mt-6 pt-4 border-t border-gray-800">
-            <div class="flex items-center justify-between text-sm">
-              <span class="text-gray-400">Maîtrise moyenne</span>
-              <span class="font-bold"
-                    :class="getColorClasses(category.color).text">
-                {{
-                  Math.round(
-                    category.skills.reduce((sum, s) => sum + s.level, 0) / category.skills.length
-                  )
-                }}%
+          <div class="space-y-3">
+            <div v-for="skill in category.skills" :key="skill.name" class="p-3 bg-black/20 rounded-lg flex justify-between items-center border border-gray-800/50">
+              <span class="text-sm font-semibold text-gray-200">
+                {{ skill.name }}
+              </span>
+              <span class="text-xs px-2 py-1 rounded-full font-medium"
+                    :class="skill.status === 'Maîtrisé' ? 'bg-green-500/10 text-green-400 border border-green-500/20' :
+                             skill.status === 'Compétent' ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20' :
+                             'bg-orange-500/10 text-orange-400 border border-orange-500/20'">
+                {{ skill.status }}
               </span>
             </div>
           </div>

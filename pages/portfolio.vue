@@ -31,12 +31,12 @@ const projectsData = [
   {
     id: 1,
     title: 'SicilyLines',
-    type: 'Projet Laravel',
+    type: 'Projet de cours / PHP',
     context: 'Gestion de traversées maritimes - BTS SIO',
     year: '2024-25',
     description: 'Application complète développée avec Laravel permettant la gestion des traversées, des réservations et des horaires entre la Sicile et les îles environnantes.',
-    technologies: ['Laravel', 'PHP', 'Blade', 'Eloquent ORM', 'MySQL'],
-    githubUrl: 'https://github.com/KizambaGospel',
+    technologies: ['Laravel', 'PHP', 'Blade', 'Figma', 'MySQL'],
+    githubUrl: 'https://github.com/GENOKK6',
     detailUrl: '/project-1',
     gradient: 'from-[#FFD700] to-[#8B6508]',
     statusColor: 'bg-green-500',
@@ -44,18 +44,18 @@ const projectsData = [
       'Architecture MVC Laravel',
       'Gestion des réservations',
       'Authentification sécurisée',
-      'Modélisation MCD/MLD'
+      'Maquettage & Intégration'
     ]
   },
   {
     id: 2,
     title: 'GestionEcole',
-    type: 'Projet Laravel',
+    type: 'Projet de cours / PHP',
     context: 'Système de gestion académique - BTS SIO',
     year: '2024-25',
     description: 'Plateforme de gestion centralisée pour les établissements scolaires : gestion des élèves, des notes, des classes et des professeurs.',
     technologies: ['Laravel', 'PHP', 'Vite', 'MySQL', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/KizambaGospel',
+    githubUrl: 'https://github.com/GENOKK6',
     detailUrl: '/project-2',
     gradient: 'from-[#FFD700] to-[#DAA520]',
     statusColor: 'bg-green-500',
@@ -68,119 +68,40 @@ const projectsData = [
   },
   {
     id: 3,
-    title: 'AnimoSIO',
-    type: 'PHP Natif',
-    context: 'Boutique en ligne animalière',
-    year: '2024',
-    description: 'Site e-commerce dynamique développé en PHP natif pour la vente d\'accessoires et de nourriture pour animaux de compagnie.',
-    technologies: ['PHP', 'HTML5', 'CSS3', 'MySQL', 'Sessions'],
-    githubUrl: 'https://github.com/KizambaGospel',
-    detailUrl: '/project-3',
-    gradient: 'from-[#FFD700] to-[#DAA520]',
-    statusColor: 'bg-amber-500',
-    highlights: [
-      'Catalogue dynamique',
-      'Système de panier',
-      'Espace client / Connexion',
-      'Gestion des images'
-    ]
-  },
-  {
-    id: 6,
-    title: 'SicilyLines Desktop',
-    type: 'Application C# / WinForms',
-    context: 'Gestion administrative - BTS SIO',
-    year: '2024',
-    description: 'Interface d\'administration de bureau permettant la gestion des paramètres système, des tarifs et des liaisons maritimes avec connexion SQL.',
-    technologies: ['C#', 'WinForms', 'SQL Server', 'ADO.NET'],
-    githubUrl: 'https://github.com/KizambaGospel',
-    detailUrl: '/project-6',
-    gradient: 'from-amber-600 to-[#8B6508]',
-    statusColor: 'bg-amber-400',
-    image: '/images/project-6.png',
-    highlights: [
-      'Architecture N-Tier',
-      'CRUD Secteurs et Liaisons',
-      'Gestion des erreurs avancée',
-      'Intégration base de données'
-    ]
-  },
-  {
-    id: 7,
-    title: 'Gestion de Bibliothèque',
-    type: 'Application .NET MAUI',
-    context: 'Projet Mobile Multi-plateforme',
+    title: 'FlowBill',
+    type: 'Projet entrepreneurial / B2B',
+    context: 'En cours de développement (Frontend)',
     year: '2025',
-    description: 'Application moderne pour la gestion d\'un catalogue de livres, permettant le suivi des stocks et des emprunts sur mobile et desktop.',
-    technologies: ['C#', '.NET MAUI', 'XAML', 'SQLite'],
-    githubUrl: 'https://github.com/KizambaGospel',
-    detailUrl: '/project-7',
-    gradient: 'from-[#FFD700] to-[#8B6508]',
-    statusColor: 'bg-amber-600',
-    image: '/images/project-7.png',
+    description: 'Plateforme B2B en cours de conception pour la relance des factures et devis. L\'IA se chargera d\'extraire les données des PDFs clients pour automatiser le processus.',
+    technologies: ['HTML5', 'CSS3', 'IA Extraction', 'PHP (à venir)'],
+    githubUrl: 'https://github.com/GENOKK6',
+    detailUrl: '/project-3',
+    gradient: 'from-emerald-600 to-teal-800',
+    statusColor: 'bg-emerald-400',
     highlights: [
-      'Interface Cross-platform',
-      'Navigation Shell MAUI',
-      'Persistance SQLite locale',
-      'Architecture MVVM'
-    ]
-  },
-  {
-    id: 8,
-    title: 'Système Bancaire POO',
-    type: 'Application C# Console/IHM',
-    context: 'Perfectionnement Algorithmique',
-    year: '2024',
-    description: 'Mise en œuvre approfondie des concepts de programmation orientée objet à travers une simulation de services bancaires complexes.',
-    technologies: ['C#', '.NET Core', 'POO', 'Unit Testing'],
-    githubUrl: 'https://github.com/KizambaGospel',
-    detailUrl: '/project-8',
-    gradient: 'from-amber-600 to-[#8B6508]',
-    statusColor: 'bg-amber-600',
-    image: '/images/project-8.png',
-    highlights: [
-      'Héritage et Polymorphisme',
-      'Gestion des transactions',
-      'Sécurité des comptes',
-      'Algorithmique avancée'
+      'Intégration d\'une plateforme HTML/CSS',
+      'Réflexion sur l\'architecture backend',
+      'Analyse IA pour lecture des PDFs',
+      'Phase de prototypage'
     ]
   },
   {
     id: 4,
-    title: 'Projets Bureau d\'études',
-    type: 'PHP / Gestion métier',
-    context: 'Immobilier & Formulaires complexes',
-    year: '2024-25',
-    description: 'Ensemble de solutions métiers incluant la "Société Immobilière de Gestion" et des systèmes de formulaires dynamiques pour le bâtiment.',
-    technologies: ['PHP', 'JavaScript', 'HTML5', 'CSS3'],
-    githubUrl: 'https://github.com/KizambaGospel',
-    detailUrl: '/project-4',
-    gradient: 'from-gray-700 to-gray-900',
-    statusColor: 'bg-amber-500',
-    highlights: [
-      'Gestion de formulaires complexes',
-      'Validation de données',
-      'Calculs métiers dynamiques',
-      'Liaison avec le Bac Pro Bâtiment'
-    ]
-  },
-  {
-    id: 5,
-    title: 'Architecture MVC & POO',
-    type: 'Concepts logiciaux',
-    context: 'Maîtrise de la programmation objet',
+    title: 'SioCards (Anki AI)',
+    type: 'Projet personnel / Études',
+    context: 'Apprentissage par Flashcards & IA',
     year: '2025',
-    description: 'Mise en œuvre approfondie des concepts de programmation orientée objet (POO) et de l\'architecture Model-View-Controller.',
-    technologies: ['PHP 8.x', 'POO', 'MVC', 'Design Patterns'],
-    githubUrl: 'https://github.com/KizambaGospel',
-    detailUrl: '/project-5',
-    gradient: 'from-amber-600 to-amber-800',
-    statusColor: 'bg-amber-500',
+    description: 'Une application web d\'apprentissage reprenant le fonctionnement des flashcards d\'Anki mais propulsée par l\'IA, avec un calendrier de révisions espacées.',
+    technologies: ['Vue.js', 'Machine Learning', 'IA Générative', 'Nuxt'],
+    githubUrl: 'https://github.com/GENOKK6',
+    detailUrl: '/project-4',
+    gradient: 'from-purple-600 to-purple-900',
+    statusColor: 'bg-purple-500',
     highlights: [
-      'Classes et Héritage',
-      'Séparation des préoccupations',
-      'Code propre et réutilisable',
-      'Abstractions avancées'
+      'Génération de Flashcards via IA',
+      'Calendrier de Révision Espacée',
+      'Feedback intelligent',
+      'Conçu pour le BTS et poursuite d\'études'
     ]
   }
 ]
