@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: 'À propos - Kizamba Gospel',
+  title: 'À propos - Gospel Kizamba',
   meta: [
     {
       name: 'description',

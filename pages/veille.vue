@@ -6,7 +6,7 @@ definePageMeta({
 useHead({
   title: 'Ma Veille Technologique - Gospel Kizamba',
   meta: [
-    { name: 'description', content: 'Découvrez ma méthodologie de veille technologique sur l\'IA générative dans le développement.' }
+    { name: 'description', content: 'Découvrez ma méthodologie de veille technologique sur l\'IA dans le développement.' }
   ]
 })
 
@@ -183,7 +183,7 @@ onMounted(() => {
       <div class="max-w-4xl relative z-10 mx-auto text-center">
             <span class="text-sm font-semibold text-amber-500 tracking-widest uppercase">Veille Technologique</span>
         <h1 class="text-section apple-heading mt-4 mb-6">
-          L'impact de l'<span class="gradient-text">IA Générative</span>
+          L'impact de l'<span class="gradient-text">IA dans le développement</span>
         </h1>
         <p class="apple-body text-xl max-w-2xl mx-auto animate-fade-in" style="color: rgba(255,255,255,0.85);">
           Comment je reste à jour dans un monde où l'IA redéfinit le code chaque semaine.
